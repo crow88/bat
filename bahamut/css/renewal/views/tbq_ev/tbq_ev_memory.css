@@ -1,39 +1,270 @@
 @charset "UTF-8";
-.btn-voice { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; }
 
-.btn-voice { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png); background-position: center center; background-repeat: no-repeat; background-size: 36px 36px; }
-.btn-voice:active, .btn-voice .touch { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_active.png); background-position: center center; background-repeat: no-repeat; background-size: 36px 36px; }
-.btn-voice:active.off, .btn-voice .touch.off { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_off.png); background-position: center center; background-repeat: no-repeat; background-size: 36px 36px; }
-.btn-voice.stop { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png); background-position: center center; background-repeat: no-repeat; background-size: 36px 36px; }
-.btn-voice.none { width: 40px; height: 40px; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png); background-position: center center; background-repeat: no-repeat; background-size: 40px 40px; }
-.btn-voice.off { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_off.png); background-position: center center; background-repeat: no-repeat; background-size: 36px 36px; }
+.btn-voice {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+}
 
-.box-paper { position: relative; width: 300px; color: #000000; margin: 15px auto; }
-.box-paper .text-color-subitem { text-shadow: 1px 1px 3px #000; color: #ffbf00; }
-.box-paper .text-color-explain, .box-paper .text-color-unactive { color: #666666; }
-.box-paper.bg-white { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_middle.png); background-position: top center; background-repeat: repeat-y; background-size: 300px 37px; }
-.box-paper.bg-white:before { display: block; position: absolute; width: 300px; height: 56px; top: -10px; left: 0; right: 0; margin: 0 auto; z-index: 2; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_header.png); background-position: top center; background-repeat: no-repeat; background-size: 300px 56px; content: ""; }
-.box-paper.bg-white:after { display: block; position: absolute; width: 300px; height: 10px; bottom: -10px; left: 0; right: 0; margin: 0 auto; z-index: 2; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_footer.png); background-position: bottom center; background-repeat: no-repeat; background-size: 300px 10px; content: ""; }
-.box-paper.bg-white .wrapper { padding: 5px; position: relative; z-index: 10; }
-.box-paper.bg-cream { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Fpaper_2.png); background-position: top center; background-repeat: repeat-y; background-size: 292px 160px; }
-.box-paper.bg-cream:before { display: block; position: absolute; width: 292px; height: 50px; top: -10px; left: 0; right: 0; margin: 0 auto; z-index: 2; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Fpaper_1.png); background-position: top center; background-repeat: no-repeat; background-size: 292px 50px; content: ""; }
-.box-paper.bg-cream:after { display: block; position: absolute; width: 292px; height: 50px; bottom: -10px; left: 0; right: 0; margin: 0 auto; z-index: 2; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Fpaper_3.png); background-position: bottom center; background-repeat: no-repeat; background-size: 292px 50px; content: ""; }
-.box-paper.bg-cream .wrapper { padding: 5px; position: relative; z-index: 10; }
-.box-paper .btn-voice-area { position: absolute; width: 36px; height: 36px; }
-.box-paper .btn-voice-area.pos-t { top: 0; right: 10px; }
-.box-paper .btn-voice-area.pos-b { bottom: -5px; right: 10px; }
+.btn-voice {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
 
-.link-chara-memory .link { width: 287px; height: 44px; line-height: 44px; margin: 3px auto; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Fbar_memorial_window.png); background-position: center center; background-repeat: no-repeat; background-size: 287px 44px; font-size: 1.2rem; }
-.link-chara-memory .link a { display: block; width: 287px; height: 44px; color: #ffffff; }
-.link-chara-memory .link .chara { display: inline-block; vertical-align: middle; height: 42px; padding-top: 2px; width: 74px; text-align: center; }
-.link-chara-memory .link .name { display: inline-block; vertical-align: middle; height: 44px; width: 206px; text-align: left; }
+.btn-voice:active,
+.btn-voice .touch {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_active.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
 
-.title-memory .text { text-shadow: 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110; }
+.btn-voice:active.off,
+.btn-voice .touch.off {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_off.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
 
-.title-memory { width: 194px; height: 24px; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Ftitle_bg_area.png); background-position: center center; background-repeat: no-repeat; background-size: 194px 24px; display: inline-block; text-align: center; }
-.title-memory .text { display: inline-block; padding: 6px 0 0 0; font-family: "HGP明朝E", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif; font-size: 1.2rem; font-weight: bold; color: #d9b982; }
+.btn-voice.stop {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
 
-.title-memory .text { text-shadow: 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110; }
+.btn-voice.none {
+    width: 40px;
+    height: 40px;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
 
-.frame-extrastory-area .image-area { position: relative; display: block; width: 261px; height: 163px; margin: 0 auto; z-index: 0; }
-.frame-extrastory-area .image-area::after { position: absolute; width: 274px; height: 174px; top: -6px; left: -6.5px; z-index: 500; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fframe_extrastory.png); background-position: top center; background-repeat: no-repeat; background-size: 274px 174px; content: ""; }
+.btn-voice.off {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_off.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+}
+
+.box-paper {
+    position: relative;
+    width: 300px;
+    color: #000000;
+    margin: 15px auto;
+}
+
+.box-paper .text-color-subitem {
+    text-shadow: 1px 1px 3px #000;
+    color: #ffbf00;
+}
+
+.box-paper .text-color-explain,
+.box-paper .text-color-unactive {
+    color: #666666;
+}
+
+.box-paper.bg-white {
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_middle.png);
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 300px 37px;
+}
+
+.box-paper.bg-white:before {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 56px;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_header.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 300px 56px;
+    content: "";
+}
+
+.box-paper.bg-white:after {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 10px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fradio%2Fbg_white_footer.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300px 10px;
+    content: "";
+}
+
+.box-paper.bg-white .wrapper {
+    padding: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+.box-paper.bg-cream {
+    background-image: url(../../../../../bahamut/image_sp/tbq_ev/common/memory/paper_2.png);
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 292px 160px;
+}
+
+.box-paper.bg-cream:before {
+    display: block;
+    position: absolute;
+    width: 292px;
+    height: 50px;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    background-image: url(../../../../../bahamut/image_sp/tbq_ev/common/memory/paper_1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 292px 50px;
+    content: "";
+}
+
+.box-paper.bg-cream:after {
+    display: block;
+    position: absolute;
+    width: 292px;
+    height: 50px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    background-image: url(../../../../../bahamut/image_sp/tbq_ev/common/memory/paper_3.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 292px 50px;
+    content: "";
+}
+
+.box-paper.bg-cream .wrapper {
+    padding: 5px;
+    position: relative;
+    z-index: 10;
+}
+
+.box-paper .btn-voice-area {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+}
+
+.box-paper .btn-voice-area.pos-t {
+    top: 0;
+    right: 10px;
+}
+
+.box-paper .btn-voice-area.pos-b {
+    bottom: -5px;
+    right: 10px;
+}
+
+.link-chara-memory .link {
+    width: 287px;
+    height: 44px;
+    line-height: 44px;
+    margin: 3px auto;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Fbar_memorial_window.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 287px 44px;
+    font-size: 1.2rem;
+}
+
+.link-chara-memory .link a {
+    display: block;
+    width: 287px;
+    height: 44px;
+    color: #ffffff;
+}
+
+.link-chara-memory .link .chara {
+    display: inline-block;
+    vertical-align: middle;
+    height: 42px;
+    padding-top: 2px;
+    width: 74px;
+    text-align: center;
+}
+
+.link-chara-memory .link .name {
+    display: inline-block;
+    vertical-align: middle;
+    height: 44px;
+    width: 206px;
+    text-align: left;
+}
+
+.title-memory .text {
+    text-shadow: 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110;
+}
+
+.title-memory {
+    width: 194px;
+    height: 24px;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Ftbq_ev%2Fcommon%2Fmemory%2Ftitle_bg_area.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 194px 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+.title-memory .text {
+    display: inline-block;
+    padding: 6px 0 0 0;
+    font-family: "HGP明朝E", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d9b982;
+}
+
+.title-memory .text {
+    text-shadow: 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110, 0px 0px 3px #111110;
+}
+
+.frame-extrastory-area .image-area {
+    position: relative;
+    display: block;
+    width: 261px;
+    height: 163px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.frame-extrastory-area .image-area::after {
+    position: absolute;
+    width: 274px;
+    height: 174px;
+    top: -6px;
+    left: -6.5px;
+    z-index: 500;
+    background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fframe_extrastory.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 274px 174px;
+    content: "";
+}
