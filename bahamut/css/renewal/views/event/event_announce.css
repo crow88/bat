@@ -1,0 +1,26 @@
+.announce-header { position: relative; }
+.announce-header .period-area { position: absolute; top: 120px; left: 176px; width: 136px; height: 16px; line-height: 16px; }
+.announce-header .period-area.no-party { top: inherit; bottom: 12px; left: 124px; }
+
+.announce-party-area { position: relative; padding: 5px 0 3px 0; }
+.announce-party-area:before { content: ""; position: absolute; display: block; top: 0; left: 0; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbox_party-s2fde6dc666.png); background-repeat: no-repeat; -webkit-background-size: 320px 49px; -moz-background-size: 320px 49px; -o-background-size: 320px 49px; background-size: 320px 49px; width: 320px; height: 10px; background-position: 0 -36px; }
+.announce-party-area:after { content: ""; position: absolute; display: block; bottom: 0; left: 0; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbox_party-s2fde6dc666.png); background-repeat: no-repeat; -webkit-background-size: 320px 49px; -moz-background-size: 320px 49px; -o-background-size: 320px 49px; background-size: 320px 49px; width: 320px; height: 1px; background-position: 0 -48px; }
+.announce-party-area .btn-area { position: relative; }
+.announce-party-area .btn-area .btn { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbtn_party-s0639f75f4a.png); background-repeat: no-repeat; -webkit-background-size: 140px 186px; -moz-background-size: 140px 186px; -o-background-size: 140px 186px; background-size: 140px 186px; }
+.announce-party-area .btn-area .btn.btn-party { background-position: 0 -94px; width: 140px; height: 45px; position: relative; z-index: 0; }
+.announce-party-area .btn-area .btn.btn-party a { position: absolute; top: 0; left: 0; width: 140px; height: 45px; z-index: 1000; color: #fff; }
+.announce-party-area .btn-area .btn.btn-party:active, .announce-party-area .btn-area .btn.btn-party.is-touch { background-position: 0 -141px; width: 140px; height: 45px; }
+.announce-party-area .btn-area .btn.btn-registration { background-position: 0 0; width: 140px; height: 45px; position: relative; z-index: 0; }
+.announce-party-area .btn-area .btn.btn-registration a { position: absolute; top: 0; left: 0; width: 140px; height: 45px; z-index: 1000; color: #fff; }
+.announce-party-area .btn-area .btn.btn-registration:active, .announce-party-area .btn-area .btn.btn-registration.is-touch { background-position: 0 -47px; width: 140px; height: 45px; }
+.announce-party-area .btn-area .btn a, .announce-party-area .btn-area .btn input[type="submit"] { display: block; position: relative; z-index: 1; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: none; background: none; }
+.announce-party-area .btn-area .btn a.text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.announce-party-area .btn-area .btn input[type="submit"].text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.announce-party-area .btn-area .date-area { position: absolute; bottom: 6px; width: 140px; margin: 0 auto; }
+.announce-party-area .party-text { display: inline-block; width: 145px; height: 34px; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbox_party-s2fde6dc666.png); background-repeat: no-repeat; -webkit-background-size: 320px 49px; -moz-background-size: 320px 49px; -o-background-size: 320px 49px; background-size: 320px 49px; width: 145px; height: 34px; background-position: 0 0; overflow: hidden; text-indent: 200%; white-space: nowrap; }
+
+.box-paper { color: #000000; text-shadow: none; }
+
+.announce-avatar-area { position: relative; }
+
+.announce-avatar-area .avatar-layer { position: absolute; z-index: 1; top: 0; left: 50%; }

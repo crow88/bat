@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* ------------------------------
+Flash
+------------------------------ */
+body {
+	font-size: 1.4rem;
+ 	background-color: #111110;
+ 	color:#fff;
+	vertical-align: baseline;
+	font-family:'Helvetica';
+	width:320px;
+	margin: 0 auto;
+}
+
+#canvas { -webkit-tap-highlight-color: rgba(0,0,0,0); }
