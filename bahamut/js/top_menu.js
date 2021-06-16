@@ -99,7 +99,7 @@ $.fn.disableOnSubmit = function(disableList){
 	
 };
 $(function(){
-	$("#loading").replaceWith("<div id='loading'><img src='http://ava-a.mbga.jp/i/dot.gif' height='570px' width='1px' ></div>");
+	$("#loading").replaceWith("<div id='loading'><img src='https://crow88.github.io/bat/dot.gif' height='570px' width='1px' ></div>");
 	var isTouch = ('ontouchstart' in window);
 	var thisPage = document.URL.match(/error/i);
 	var topPage  = document.URL.match(/bahamut/i);
