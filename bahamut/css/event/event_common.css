@@ -1,0 +1,1234 @@
+@charset "UTF-8";
+/*各イベント共通CSS*/
+#event_wrap {
+  position: relative;
+}
+
+h1 + h2.ev-notice-headline:before, h1 + h2.ev-sub-notice-headline:before, h1 + h2.ev-sub-bossname-headline:before, h1 + h2.ev-notice-silver-headline:before, h1 + h2.ev-sub-notice-silver-headline:before, h2 + h3.ev-notice-headline:before, h2 + h3.ev-sub-notice-headline:before, h2 + h3.ev-sub-bossname-headline:before, h2 + h3.ev-notice-silver-headline:before, h2 + h3.ev-sub-notice-silver-headline:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0px;
+  content: "";
+  background: none;
+}
+
+h1.ev-subitem-headline, h1.ev-sub-subitem-headline, h1.ev-bossname-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  border-top: 12px solid transparent;
+  border-bottom: 7px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+}
+h1.ev-subitem-headline:before, h1.ev-sub-subitem-headline:before, h1.ev-bossname-headline:before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 12px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -68px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h1.ev-subitem-headline:after, h1.ev-sub-subitem-headline:after, h1.ev-bossname-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -58px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h1.ev-subitem-silver-headline, h1.ev-sub-subitem-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+  border-top: 13px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+h1.ev-subitem-silver-headline:before, h1.ev-sub-subitem-silver-headline:before {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 13px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -91px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h1.ev-subitem-silver-headline:after, h1.ev-sub-subitem-silver-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -116px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h1.ev-notice-headline, h1.ev-sub-notice-headline, h1.ev-sub-bossname-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid transparent;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+}
+h1.ev-notice-headline:before, h1.ev-sub-notice-headline:before, h1.ev-sub-bossname-headline:before {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -125px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h1.ev-notice-headline:after, h1.ev-sub-notice-headline:after, h1.ev-sub-bossname-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h1.ev-notice-silver-headline, h1.ev-sub-notice-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+h1.ev-notice-silver-headline:before, h1.ev-sub-notice-silver-headline:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h1.ev-notice-silver-headline:after, h1.ev-sub-notice-silver-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+
+h2.ev-subitem-headline, h2.ev-sub-subitem-headline, h2.ev-bossname-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  border-top: 12px solid transparent;
+  border-bottom: 7px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+}
+h2.ev-subitem-headline:before, h2.ev-sub-subitem-headline:before, h2.ev-bossname-headline:before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 12px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -68px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h2.ev-subitem-headline:after, h2.ev-sub-subitem-headline:after, h2.ev-bossname-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -58px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h2.ev-subitem-silver-headline, h2.ev-sub-subitem-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  border-top: 13px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+h2.ev-subitem-silver-headline:before, h2.ev-sub-subitem-silver-headline:before {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 13px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -91px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h2.ev-subitem-silver-headline:after, h2.ev-sub-subitem-silver-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -116px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h2.ev-notice-headline, h2.ev-sub-notice-headline, h2.ev-sub-bossname-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+}
+h2.ev-notice-headline:before, h2.ev-sub-notice-headline:before, h2.ev-sub-bossname-headline:before {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -125px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h2.ev-notice-headline:after, h2.ev-sub-notice-headline:after, h2.ev-sub-bossname-headline:after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h2.ev-notice-silver-headline, h2.ev-sub-notice-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+h2.ev-notice-silver-headline:before, h2.ev-sub-notice-silver-headline:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h2.ev-notice-silver-headline:after, h2.ev-sub-notice-silver-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h1 + h2.ev-notice-headline, h1 + h2.ev-sub-notice-headline, h1 + h2.ev-sub-bossname-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+}
+h1 + h2.ev-notice-headline:after, h1 + h2.ev-sub-notice-headline:after, h1 + h2.ev-sub-bossname-headline:after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h1 + h2.ev-notice-silver-headline, h1 + h2.ev-sub-notice-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  border-top: 2px solid transparent;
+}
+h1 + h2.ev-notice-silver-headline:after, h1 + h2.ev-sub-notice-silver-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+
+h3.ev-subitem-headline, h3.ev-sub-subitem-headline, h3.ev-bossname-headline {
+  position: relative;
+  padding: 3px 0;
+  width: 100%;
+  height: auto;
+  border-top: 12px solid transparent;
+  border-bottom: 7px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+h3.ev-subitem-headline:before, h3.ev-sub-subitem-headline:before, h3.ev-bossname-headline:before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 12px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -68px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h3.ev-subitem-headline:after, h3.ev-sub-subitem-headline:after, h3.ev-bossname-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -58px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h3.ev-subitem-silver-headline, h3.ev-sub-subitem-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  border-top: 13px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+h3.ev-subitem-silver-headline:before, h3.ev-sub-subitem-silver-headline:before {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 13px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -91px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h3.ev-subitem-silver-headline:after, h3.ev-sub-subitem-silver-headline:after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -116px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h3.ev-notice-headline, h3.ev-sub-notice-headline, h3.ev-sub-bossname-headline {
+  position: relative;
+  padding: 3px 0;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+h3.ev-notice-headline:before, h3.ev-sub-notice-headline:before, h3.ev-sub-bossname-headline:before {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -125px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h3.ev-notice-headline:after, h3.ev-sub-notice-headline:after, h3.ev-sub-bossname-headline:after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h3.ev-notice-silver-headline, h3.ev-sub-notice-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+h3.ev-notice-silver-headline:before, h3.ev-sub-notice-silver-headline:before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h3.ev-notice-silver-headline:after, h3.ev-sub-notice-silver-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+h2 + h3.ev-notice-headline, h2 + h3.ev-sub-notice-headline, h2 + h3.ev-sub-bossname-headline {
+  position: relative;
+  padding: 3px 0;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+}
+h2 + h3.ev-notice-headline:after, h2 + h3.ev-sub-notice-headline:after, h2 + h3.ev-sub-bossname-headline:after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat;
+  -webkit-background-size: 320px, 131px;
+  background-size: 320px, 131px;
+}
+h2 + h3.ev-notice-silver-headline, h2 + h3.ev-sub-notice-silver-headline {
+  position: relative;
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 2.0rem;
+  border-top: 2px solid transparent;
+}
+h2 + h3.ev-notice-silver-headline:after, h2 + h3.ev-sub-notice-silver-headline:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110;
+  -webkit-background-size: 320px 131px;
+  background-size: 320px 131px;
+}
+
+.darkred-linkline li {
+  position: relative;
+  border-bottom: 1px solid #170000;
+}
+.darkred-linkline a {
+  color: #fff;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  text-shadow: 1px 1px 1px #000;
+}
+.darkred-linkline .next {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #2f0b0b), color-stop(50%, #650000), color-stop(100%, #650000));
+  background-image: -webkit-linear-gradient(left, #2f0b0b 0%, #650000 50%, #650000 100%);
+  background-image: linear-gradient(left, #2f0b0b 0%, #650000 50%, #650000 100%);
+}
+.darkred-linkline .next a {
+  text-align: right;
+  padding: 13px 27px;
+}
+.darkred-linkline .next a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fcommon%2Fbutton%2Fnavi_sprite.png) -4px center no-repeat;
+  -webkit-background-size: 65px 32px;
+  background-size: 65px 32px;
+}
+.darkred-linkline .next:active, .darkred-linkline .next:hover {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1e0f0e), color-stop(50%, #750000), color-stop(100%, #750000));
+  background-image: -webkit-linear-gradient(left, #1e0f0e 0%, #750000 50%, #750000 100%);
+  background-image: linear-gradient(left, #1e0f0e 0%, #750000 50%, #750000 100%);
+}
+.darkred-linkline .prev {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #650000), color-stop(50%, #650000), color-stop(100%, #2f0b0b));
+  background-image: -webkit-linear-gradient(left, #650000 0%, #650000 50%, #2f0b0b 100%);
+  background-image: linear-gradient(left, #650000 0%, #650000 50%, #2f0b0b 100%);
+}
+.darkred-linkline .prev a {
+  text-align: left;
+  padding: 13px 27px;
+}
+.darkred-linkline .prev a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fcommon%2Fbutton%2Fnavi_sprite.png) -30px center no-repeat;
+  -webkit-background-size: 65px 32px;
+  background-size: 65px 32px;
+}
+.darkred-linkline .prev:active, .darkred-linkline .prev:hover {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #750000), color-stop(50%, #750000), color-stop(100%, #1e0f0e));
+  background-image: -webkit-linear-gradient(left, #750000 0%, #750000 50%, #1e0f0e 100%);
+  background-image: linear-gradient(left, #750000 0%, #750000 50%, #1e0f0e 100%);
+}
+.darkred-linkline .non {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #2f0b0b), color-stop(50%, #650000), color-stop(100%, #2f0b0b));
+  background-image: -webkit-linear-gradient(left, #2f0b0b 0%, #650000 50%, #2f0b0b 100%);
+  background-image: linear-gradient(left, #2f0b0b 0%, #650000 50%, #2f0b0b 100%);
+}
+.darkred-linkline .non a {
+  padding: 13px 10px;
+  text-align: center;
+}
+.darkred-linkline .non:active, .darkred-linkline .non:hover {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #1e0f0e), color-stop(50%, #750000), color-stop(100%, #1e0f0e));
+  background-image: -webkit-linear-gradient(left, #1e0f0e 0%, #750000 50%, #1e0f0e 100%);
+  background-image: linear-gradient(left, #1e0f0e 0%, #750000 50%, #1e0f0e 100%);
+}
+.darkred-linkline .goto-top {
+  background-color: #450807;
+}
+.darkred-linkline .goto-top a {
+  text-align: right;
+  padding: 13px 27px;
+}
+.darkred-linkline .goto-top a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fcommon%2Fbutton%2Fnavi_anchor_sprite.png) -31px center no-repeat;
+  -webkit-background-size: 65px 32px;
+  background-size: 65px 32px;
+}
+.darkred-linkline .goto-top:active, .darkred-linkline .goto-top:hover {
+  background-color: #750000;
+}
+.darkred-linkline .goto-bottom {
+  background-color: #450807;
+}
+.darkred-linkline .goto-bottom a {
+  text-align: right;
+  padding: 13px 27px;
+}
+.darkred-linkline .goto-bottom a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fcommon%2Fbutton%2Fnavi_anchor_sprite.png) 2px center no-repeat;
+  -webkit-background-size: 65px 32px;
+  background-size: 65px 32px;
+}
+.darkred-linkline .goto-bottom:active, .darkred-linkline .goto-bottom:hover {
+  background-color: #750000;
+}
+
+.ev-common-tab-area-col2, .ev-common-tab-area-col3, .ev-common-tab-area-col4 {
+  width: 300px;
+  padding: 0 10px;
+  position: relative;
+  display: -webkit-box;
+  display: box;
+}
+
+.ev-common-tab-area-col2 li, .ev-common-tab-area-col3 li, .ev-common-tab-area-col4 li {
+  font-size: 1.3rem;
+  margin-bottom: 3px;
+  padding: 10px 0 8px;
+  position: relative;
+  z-index: 0;
+  border-top: 1px solid #868686;
+  border-left: 1px solid #868686;
+  border-right: 1px solid #868686;
+  background-color: #181818;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ev-common-tab-area-col2 li.active, .ev-common-tab-area-col3 li.active, .ev-common-tab-area-col4 li.active {
+  border-top: 1px solid #bb975c;
+  border-left: 1px solid #bb975c;
+  border-right: 1px solid #bb975c;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aa7e15), color-stop(30%, #8a6310), color-stop(100%, #452904));
+  background-image: -webkit-linear-gradient(top, #aa7e15 0%, #8a6310 30%, #452904 100%);
+  background-image: linear-gradient(top, #aa7e15 0%, #8a6310 30%, #452904 100%);
+  z-index: 50;
+}
+
+.ev-common-tab-area-col2 li.active:after, .ev-common-tab-area-col3 li.active:after, .ev-common-tab-area-col4 li.active:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  border-bottom: 4px solid #452904;
+}
+
+.ev-common-tab-area-col2:after, .ev-common-tab-area-col3:after, .ev-common-tab-area-col4:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  padding-top: 6px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left bottom no-repeat;
+  -webkit-background-size: 320px 6px;
+  background-size: 320px 6px;
+  z-index: 2;
+}
+
+.ev-common-tab-area-col2 li {
+  width: 48%;
+}
+.ev-common-tab-area-col2 li:first-child {
+  width: 49%;
+  margin: 0 5px 3px 0;
+}
+.ev-common-tab-area-col2 .ev-tab-alert {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  display: block;
+}
+.ev-common-tab-area-col2:before {
+  z-index: 1;
+}
+
+.ev-common-tab-area-col3 li {
+  width: 32%;
+}
+.ev-common-tab-area-col3 li:nth-child(2) {
+  margin: 0 5px 3px;
+  width: 31%;
+}
+.ev-common-tab-area-col3 .ev-tab-alert {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  display: block;
+}
+.ev-common-tab-area-col3:before {
+  z-index: 1;
+}
+
+.ev-common-tab-area-col4 li {
+  width: 23%;
+}
+.ev-common-tab-area-col4 li:first-child {
+  margin: 0 5px 2px 0;
+}
+.ev-common-tab-area-col4 li:nth-child(2) {
+  margin: 0 5px 2px 0;
+}
+.ev-common-tab-area-col4 li:nth-child(3) {
+  margin: 0 5px 2px 0;
+}
+.ev-common-tab-area-col4 .ev-tab-alert {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  display: block;
+}
+.ev-common-tab-area-col4:before {
+  z-index: 1;
+}
+
+.ev-common-tab-wraps {
+  position: relative;
+  background-color: #111110;
+}
+.ev-common-tab-wraps:before {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  content: "";
+  width: 100%;
+  padding-top: 50px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #452904), color-stop(100%, #111110));
+  background-image: -webkit-linear-gradient(#452904, #111110);
+  background-image: linear-gradient(#452904, #111110);
+  z-index: 1;
+}
+.ev-common-tab-wraps:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  padding-bottom: 50px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111110), color-stop(100%, #563707));
+  background-image: -webkit-linear-gradient(#111110, #563707);
+  background-image: linear-gradient(#111110, #563707);
+  z-index: 1;
+}
+
+.ev-common-tab-contents {
+  position: relative;
+  padding: 15px 0;
+  display: none;
+  z-index: 30;
+}
+.ev-common-tab-contents:after {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  content: "";
+  width: 100%;
+  padding-bottom: 6px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left bottom no-repeat;
+  -webkit-background-size: 320px 6px;
+  background-size: 320px 6px;
+  z-index: 10;
+}
+
+.ev-common-tab-link {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.object-none {
+  display: none;
+}
+
+li.ev-tab-quest p,
+li.ev-tab-reward p,
+li.ev-tab-eventrank p,
+li.ev-tab-rank p,
+li.ev-tab-menu p,
+li.ev-tab-deck p,
+li.ev-tab-battle p,
+li.ev-tab-hunt p,
+li.ev-tab-support p,
+li.ev-tab-pre-item p,
+li.ev-tab-pre-card p,
+li.ev-tab-main p,
+li.ev-tab-seal p,
+li.ev-tab-exchange p,
+li.ev-tab-memorial p,
+li.ev-tab-bbs p,
+li.ev-tab-info p,
+li.ev-tab-mission p,
+li.ev-tab-battle-result p,
+li.ev-tab-alchemy-low p,
+li.ev-tab-alchemy-high p,
+li.ev-tab-howto p,
+li.ev-tab-setting p {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 16px;
+}
+li.ev-tab-quest p a,
+li.ev-tab-reward p a,
+li.ev-tab-eventrank p a,
+li.ev-tab-rank p a,
+li.ev-tab-menu p a,
+li.ev-tab-deck p a,
+li.ev-tab-battle p a,
+li.ev-tab-hunt p a,
+li.ev-tab-support p a,
+li.ev-tab-pre-item p a,
+li.ev-tab-pre-card p a,
+li.ev-tab-main p a,
+li.ev-tab-seal p a,
+li.ev-tab-exchange p a,
+li.ev-tab-memorial p a,
+li.ev-tab-bbs p a,
+li.ev-tab-info p a,
+li.ev-tab-mission p a,
+li.ev-tab-battle-result p a,
+li.ev-tab-alchemy-low p a,
+li.ev-tab-alchemy-high p a,
+li.ev-tab-howto p a,
+li.ev-tab-setting p a {
+  display: block;
+  width: 100%;
+  height: 16px;
+  text-decoration: none;
+}
+
+li.ev-tab-quest p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_01_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-quest.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_01.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-reward p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_02_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-reward.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_02.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-eventrank p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_03_off.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-eventrank.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_03.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-rank p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_11_off.png) center top no-repeat;
+  -webkit-background-size: 40px 16px;
+  background-size: 40px 16px;
+}
+
+li.ev-tab-rank.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_11.png) center top no-repeat;
+  -webkit-background-size: 40px 16px;
+  background-size: 40px 16px;
+}
+
+li.ev-tab-menu p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_04_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-menu.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_04.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-deck p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_05_off.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-deck.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_05.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-battle p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_06_off.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-battle.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_06.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-main p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_12_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-main.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_12.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-seal p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_13_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-seal.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_13.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-exchange p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_14_off.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-exchange.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_14.png) center top no-repeat;
+  -webkit-background-size: 80px 16px;
+  background-size: 80px 16px;
+}
+
+li.ev-tab-memorial p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_22_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-memorial.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_22.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-bbs p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_16_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-bbs.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_16.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-info p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_17_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-info.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_17.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-mission p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_20_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-mission.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_20.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-battle-result p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_21_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-battle-result.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_21.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-howto p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_26_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-howto.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_26.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-setting p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_27_off.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+li.ev-tab-setting.active p {
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_27.png) center top no-repeat;
+  -webkit-background-size: 60px 16px;
+  background-size: 60px 16px;
+}
+
+.ev-info-large-box .title-area, .ev-info-unrule-large-box .title-area, .ev-info-middle-box .title-area, .ev-info-unrule-middle-box .title-area {
+  width: 100%;
+  font-weight: bold;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #7d6134;
+  text-align: center;
+}
+
+.ev-info-large-box .group-area, .ev-info-large-box .text-area, .ev-info-unrule-large-box .group-area, .ev-info-unrule-large-box .text-area, .ev-info-middle-box .group-area, .ev-info-middle-box .text-area, .ev-info-unrule-middle-box .group-area, .ev-info-unrule-middle-box .text-area {
+  font-weight: normal;
+  padding: 5px 0px 3px;
+}
+
+.ev-info-large-box, .ev-info-unrule-large-box {
+  position: relative;
+  width: 264px;
+  padding: 10px 20px;
+  border-top: 1px solid #7d6134;
+  border-bottom: 1px solid #7d6134;
+  background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_middle_l.png), url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_middle_r.png);
+  -webkit-background-size: 2px 1px, 2px 1px;
+  background-size: 2px 1px, 2px 1px;
+  background-position: top left, top right;
+  background-repeat: repeat-y, repeat-y;
+}
+.ev-info-large-box:before, .ev-info-unrule-large-box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 14px;
+  height: 25px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_decoration_top.png) no-repeat;
+  -webkit-background-size: 14px 25px;
+  background-size: 14px 25px;
+}
+.ev-info-large-box:after, .ev-info-unrule-large-box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 14px;
+  height: 25px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_decoration_bottom.png) no-repeat;
+  -webkit-background-size: 14px 25px;
+  background-size: 14px 25px;
+}
+
+.ev-info-middle-box, .ev-info-unrule-middle-box {
+  position: relative;
+  width: 232px;
+  padding: 10px 20px;
+  border-top: 1px solid #7d6134;
+  border-bottom: 1px solid #7d6134;
+  background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_middle_l.png), url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_middle_r.png);
+  -webkit-background-size: 2px 1px, 2px 1px;
+  background-size: 2px 1px, 2px 1px;
+  background-position: top left, top right;
+  background-repeat: repeat-y, repeat-y;
+}
+.ev-info-middle-box:before, .ev-info-unrule-middle-box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 14px;
+  height: 25px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_decoration_top.png) no-repeat;
+  -webkit-background-size: 14px 25px;
+  background-size: 14px 25px;
+}
+.ev-info-middle-box:after, .ev-info-unrule-middle-box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 14px;
+  height: 25px;
+  background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_box_bgimg_decoration_bottom.png) no-repeat;
+  -webkit-background-size: 14px 25px;
+  background-size: 14px 25px;
+}
+
+.ev-info-large-box .gold-solid-all, .ev-info-middle-box .gold-solid-all {
+  border: 1px solid #7d6134;
+}
+.ev-info-large-box .gold-solid-t, .ev-info-middle-box .gold-solid-t {
+  border-top: 1px solid #7d6134;
+}
+.ev-info-large-box .gold-solid-l, .ev-info-middle-box .gold-solid-l {
+  border-left: 1px solid #7d6134;
+}
+.ev-info-large-box .gold-solid-r, .ev-info-middle-box .gold-solid-r {
+  border-right: 1px solid #7d6134;
+}
+.ev-info-large-box .gold-solid-b, .ev-info-middle-box .gold-solid-b {
+  border-bottom: 1px solid #7d6134;
+}
+.ev-info-large-box .gold-dashed-all, .ev-info-middle-box .gold-dashed-all {
+  border: 1px dashed #7d6134;
+}
+.ev-info-large-box .gold-dashed-t, .ev-info-middle-box .gold-dashed-t {
+  border-top: 1px dashed #7d6134;
+}
+.ev-info-large-box .gold-dashed-l, .ev-info-middle-box .gold-dashed-l {
+  border-left: 1px dashed #7d6134;
+}
+.ev-info-large-box .gold-dashed-r, .ev-info-middle-box .gold-dashed-r {
+  border-right: 1px dashed #7d6134;
+}
+.ev-info-large-box .gold-dashed-b, .ev-info-middle-box .gold-dashed-b {
+  border-bottom: 1px dashed #7d6134;
+}
+.ev-info-large-box .gold-solid-wrap, .ev-info-middle-box .gold-solid-wrap {
+  border: 1px solid #7d6134;
+  border-collapse: collapse;
+}
+.ev-info-large-box .gold-solid-wrap td, .ev-info-middle-box .gold-solid-wrap td {
+  border: 1px solid #7d6134;
+  border-collapse: collapse;
+}

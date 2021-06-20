@@ -1,0 +1,90 @@
+.gauge-area .gauge-bar-reward_progress .gauge-bar-area .gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c7137), color-stop(8%, #395628), color-stop(15%, #729666), color-stop(23%, #c0ecbb), color-stop(31%, #afd9a8), color-stop(38%, #86ab7b), color-stop(46%, #486637), color-stop(54%, #314f21), color-stop(69%, #1e3e11), color-stop(77%, #16380c), color-stop(92%, #0b3004), color-stop(100%, #082a03)); background-image: -webkit-linear-gradient(top, #4c7137 0%, #395628 8%, #729666 15%, #c0ecbb 23%, #afd9a8 31%, #86ab7b 38%, #486637 46%, #314f21 54%, #1e3e11 69%, #16380c 77%, #0b3004 92%, #082a03 100%); background-image: -moz-linear-gradient(top, #4c7137 0%, #395628 8%, #729666 15%, #c0ecbb 23%, #afd9a8 31%, #86ab7b 38%, #486637 46%, #314f21 54%, #1e3e11 69%, #16380c 77%, #0b3004 92%, #082a03 100%); background-image: -o-linear-gradient(top, #4c7137 0%, #395628 8%, #729666 15%, #c0ecbb 23%, #afd9a8 31%, #86ab7b 38%, #486637 46%, #314f21 54%, #1e3e11 69%, #16380c 77%, #0b3004 92%, #082a03 100%); background-image: linear-gradient(top, #4c7137 0%, #395628 8%, #729666 15%, #c0ecbb 23%, #afd9a8 31%, #86ab7b 38%, #486637 46%, #314f21 54%, #1e3e11 69%, #16380c 77%, #0b3004 92%, #082a03 100%); }
+
+.reward-btns .btn { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbtn_reward-s25a8ddd6c5.png); background-repeat: no-repeat; -webkit-background-size: 600px 289px; -moz-background-size: 600px 289px; -o-background-size: 600px 289px; background-size: 600px 289px; }
+.reward-btns .btn.btn-bonusmedal { background-position: -144px -175px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-bonusmedal a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-bonusmedal:active, .reward-btns .btn.btn-bonusmedal.is-touch { background-position: -144px -61px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-bonusmedal2 { background-position: 0 -61px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-bonusmedal2 a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-bonusmedal2:active, .reward-btns .btn.btn-bonusmedal2.is-touch { background-position: -72px -61px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-score { background-position: -504px -118px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-score a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-score:active, .reward-btns .btn.btn-score.is-touch { background-position: -504px -175px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-dailymission { background-position: 0 -4px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-dailymission a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-dailymission:active, .reward-btns .btn.btn-dailymission.is-touch { background-position: -72px -4px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-challengemission { background-position: -360px -61px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-challengemission a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-challengemission:active, .reward-btns .btn.btn-challengemission.is-touch { background-position: -432px -61px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-dailyranking { background-position: -144px -4px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-dailyranking a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-dailyranking:active, .reward-btns .btn.btn-dailyranking.is-touch { background-position: -216px -4px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-specialmission { background-position: 0 -232px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-specialmission a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-specialmission:active, .reward-btns .btn.btn-specialmission.is-touch { background-position: -72px -232px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-knightsmission { background-position: -288px -4px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-knightsmission a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-knightsmission:active, .reward-btns .btn.btn-knightsmission.is-touch { background-position: -360px -4px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-lovelv { background-position: -504px -61px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-lovelv a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-lovelv:active, .reward-btns .btn.btn-lovelv.is-touch { background-position: -390px -232px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-lovelv2 { background-position: 0 -175px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-lovelv2 a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-lovelv2:active, .reward-btns .btn.btn-lovelv2.is-touch { background-position: -72px -175px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-winmedal { background-position: -360px -118px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-winmedal a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-winmedal:active, .reward-btns .btn.btn-winmedal.is-touch { background-position: -288px -118px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-support { background-position: -216px -175px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-support a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-support:active, .reward-btns .btn.btn-support.is-touch { background-position: -432px -118px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-chain { background-position: -216px -61px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-chain a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-chain:active, .reward-btns .btn.btn-chain.is-touch { background-position: -288px -61px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-library { background-position: -432px -4px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-library a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-library:active, .reward-btns .btn.btn-library.is-touch { background-position: -504px -4px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-pot_team { background-position: -360px -175px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-pot_team a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-pot_team:active, .reward-btns .btn.btn-pot_team.is-touch { background-position: -72px -118px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-pot_team2 { background-position: -432px -175px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-pot_team2 a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-pot_team2:active, .reward-btns .btn.btn-pot_team2.is-touch { background-position: 0 -118px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-pot_solo { background-position: -144px -232px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-pot_solo a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-pot_solo:active, .reward-btns .btn.btn-pot_solo.is-touch { background-position: -288px -175px; width: 70px; height: 55px; }
+.reward-btns .btn.btn-pot_total_love { background-position: -144px -118px; width: 70px; height: 55px; position: relative; z-index: 0; }
+.reward-btns .btn.btn-pot_total_love a { position: absolute; top: 0; left: 0; width: 70px; height: 55px; z-index: 1000; color: #fff; }
+.reward-btns .btn.btn-pot_total_love:active, .reward-btns .btn.btn-pot_total_love.is-touch { background-position: -216px -118px; width: 70px; height: 55px; }
+.reward-btns .btn a, .reward-btns .btn input[type="submit"] { display: block; position: relative; z-index: 1; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: none; background: none; }
+.reward-btns .btn a.text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.reward-btns .btn input[type="submit"].text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.reward-btns .alert-icon { top: 4px; right: 0; }
+
+.reward-list { position: relative; }
+.reward-list .btn { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbtn_reward-s25a8ddd6c5.png); background-repeat: no-repeat; -webkit-background-size: 600px 289px; -moz-background-size: 600px 289px; -o-background-size: 600px 289px; background-size: 600px 289px; }
+.reward-list .btn.btn-receive { background-position: -332px -232px; width: 56px; height: 56px; position: relative; z-index: 0; }
+.reward-list .btn.btn-receive a { position: absolute; top: 0; left: 0; width: 56px; height: 56px; z-index: 1000; color: #fff; }
+.reward-list .btn.btn-receive:active, .reward-list .btn.btn-receive.is-touch { background-position: -274px -232px; width: 56px; height: 56px; }
+.reward-list .btn.btn-receive.off { background-position: -216px -232px; width: 56px; height: 56px; }
+.reward-list .btn.btn-receive.off.text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.reward-list .btn a, .reward-list .btn input[type="submit"] { display: block; position: relative; z-index: 1; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); border: none; background: none; }
+.reward-list .btn a.text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.reward-list .btn input[type="submit"].text-none { overflow: hidden; text-indent: 200%; white-space: nowrap; }
+.reward-list .wrapper { position: relative; z-index: 1; }
+.reward-list.is-received { color: #999 !important; }
+.reward-list.is-received .thumb { display: block; position: relative; }
+.reward-list.is-received .thumb:after { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17, 17, 16, 0.8); content: ""; }
+.reward-list.is-received .mark { display: block; position: absolute; z-index: 0; right: -4px; bottom: -4px; }
+
+.mask-hover-checked { position: relative; }
+.mask-hover-checked:after { content: ""; display: inline-block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; border-style: solid; border-width: 1px; border-color: #fffeed; border-radius: 0; background-color: rgba(0, 0, 0, 0); background: none; box-shadow: -2px -2px 5px #fffeed, 2px -2px 5px #fffeed, -2px 2px 5px #fffeed, 2px 2px 5px #fffeed; opacity: 0.7; z-index: 1000; cursor: pointer; }
+
+.gauge_reward_progress { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Freward_ui-s0635d4a98e.png); background-repeat: no-repeat; -webkit-background-size: 217px 119px; -moz-background-size: 217px 119px; -o-background-size: 217px 119px; background-size: 217px 119px; background-position: 0 -109px; width: 217px; height: 10px; }
+
+.mark_clear { background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Freward_ui-s0635d4a98e.png); background-repeat: no-repeat; -webkit-background-size: 217px 119px; -moz-background-size: 217px 119px; -o-background-size: 217px 119px; background-size: 217px 119px; background-position: 0 0; width: 144px; height: 107px; }
+
+.gauge-area .gauge-bar-reward_progress { position: relative; width: 217px; height: 10px; }
+.gauge-area .gauge-bar-reward_progress .gauge-bar-area { width: 206px; height: 5px; padding: 3px 6px 2px 5px; background-image: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Freward_ui-s0635d4a98e.png); background-repeat: no-repeat; -webkit-background-size: 217px 119px; -moz-background-size: 217px 119px; -o-background-size: 217px 119px; background-size: 217px 119px; background-position: 0 -109px; }
+.gauge-area .gauge-bar-reward_progress .gauge-bar-area .gauge-bar { height: 5px; -webkit-border-radius: 1px; -moz-border-radius: 1px; -ms-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; }
+
+.mark_clear { position: absolute; bottom: -6px; right: 0px; z-index: 100; }

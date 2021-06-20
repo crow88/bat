@@ -1,0 +1,1249 @@
+@charset "utf-8";
+/*各イベントCSS*/
+h1.ev-subitem-headline, h1.ev-notice-headline, h1.ev-subitem-silver-headline, h1.ev-notice-silver-headline, h2.ev-subitem-headline, h2.ev-notice-headline, h2.ev-subitem-silver-headline, h2.ev-notice-silver-headline, h3.ev-subitem-headline, h3.ev-notice-headline, h3.ev-subitem-silver-headline, h3.ev-notice-silver-headline { background-color: #5c0e0e; }
+
+h1.ev-sub-subitem-headline, h1.ev-sub-notice-headline, h1.ev-sub-subitem-silver-headline, h1.ev-sub-notice-silver-headline, h2.ev-sub-subitem-headline, h2.ev-sub-notice-headline, h2.ev-sub-subitem-silver-headline, h2.ev-sub-notice-silver-headline, h3.ev-sub-subitem-headline, h3.ev-sub-notice-headline, h3.ev-sub-subitem-silver-headline, h3.ev-sub-notice-silver-headline { background-color: #2e0b0b; }
+
+h1.ev-bossname-headline, h1.ev-sub-bossname-headline, h2.ev-bossname-headline, h2.ev-sub-bossname-headline, h3.ev-bossname-headline, h3.ev-sub-bossname-headline { background-color: #8a0000; }
+
+.ev-tab-area-col2, .ev-tab-area-col3, .ev-tab-area-col4 { width: 300px; padding: 0 10px; position: relative; display: -webkit-box; display: box; }
+
+.ev-tab-area-col2 li, .ev-tab-area-col3 li, .ev-tab-area-col4 li { font-size: 1.3rem; margin-bottom: 3px; padding: 10px 0 8px; position: relative; z-index: 0; border-top: 1px solid #bb975c; border-left: 1px solid #bb975c; border-right: 1px solid #bb975c; background-color: #181818; -webkit-border-top-left-radius: 8px; border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; border-top-right-radius: 8px; }
+
+.ev-tab-area-col2 li.active, .ev-tab-area-col3 li.active, .ev-tab-area-col4 li.active { border-top: 1px solid #868686; border-left: 1px solid #868686; border-right: 1px solid #868686; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5c0e0e), color-stop(30%, #670a0a), color-stop(100%, #2e0b0b)); background-image: -webkit-linear-gradient(top, #5c0e0e 0%, #670a0a 30%, #2e0b0b 100%); background-image: linear-gradient(top, #5c0e0e 0%, #670a0a 30%, #2e0b0b 100%); z-index: 50; }
+
+.ev-tab-area-col2 li.active:after, .ev-tab-area-col3 li.active:after, .ev-tab-area-col4 li.active:after { position: absolute; content: ""; left: 0; bottom: -4px; width: 100%; border-bottom: 4px solid #2e0b0b; }
+
+.ev-tab-area-col2:after, .ev-tab-area-col3:after, .ev-tab-area-col4:after { position: absolute; content: ""; width: 100%; bottom: -2px; left: 0; padding-top: 6px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left bottom no-repeat; -webkit-background-size: 320px 6px; background-size: 320px 6px; z-index: 2; }
+
+.ev-tab-area-col2 li { width: 48%; }
+.ev-tab-area-col2 li:first-child { width: 49%; margin: 0 5px 3px 0; }
+.ev-tab-area-col2 .ev-tab-alert { width: 25px; height: 25px; position: absolute; top: -6px; right: -7px; display: block; }
+.ev-tab-area-col2:before { z-index: 1; }
+
+.ev-tab-area-col3 li { width: 32%; }
+.ev-tab-area-col3 li:nth-child(2) { margin: 0 5px 3px; width: 31%; }
+.ev-tab-area-col3 .ev-tab-alert { width: 25px; height: 25px; position: absolute; top: -6px; right: -7px; display: block; }
+.ev-tab-area-col3:before { z-index: 1; }
+
+.ev-tab-area-col4 li { width: 23%; }
+.ev-tab-area-col4 li:first-child { margin: 0 5px 2px 0; }
+.ev-tab-area-col4 li:nth-child(2) { margin: 0 5px 2px 0; }
+.ev-tab-area-col4 li:nth-child(3) { margin: 0 5px 2px 0; }
+.ev-tab-area-col4 .ev-tab-alert { width: 25px; height: 25px; position: absolute; top: -6px; right: -7px; display: block; }
+.ev-tab-area-col4:before { z-index: 1; }
+
+li.ev-tab-quest p, li.ev-tab-reward p, li.ev-tab-eventrank p, li.ev-tab-rank p, li.ev-tab-menu p, li.ev-tab-deck p, li.ev-tab-battle p, li.ev-tab-hunt p, li.ev-tab-support p, li.ev-tab-pre-item p, li.ev-tab-pre-card p, li.ev-tab-main p, li.ev-tab-seal p, li.ev-tab-exchange p, li.ev-tab-memorial p, li.ev-tab-bbs p, li.ev-tab-info p, li.ev-tab-mission p, li.ev-tab-battle-result p, li.ev-tab-alchemy-low p, li.ev-tab-alchemy-high p, li.ev-tab-howto p, li.ev-tab-campain p, li.ev-tab-manastone p, li.ev-tab-support-mana p, li.ev-tab-grow p { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 100%; height: 16px; }
+li.ev-tab-quest p a, li.ev-tab-reward p a, li.ev-tab-eventrank p a, li.ev-tab-rank p a, li.ev-tab-menu p a, li.ev-tab-deck p a, li.ev-tab-battle p a, li.ev-tab-hunt p a, li.ev-tab-support p a, li.ev-tab-pre-item p a, li.ev-tab-pre-card p a, li.ev-tab-main p a, li.ev-tab-seal p a, li.ev-tab-exchange p a, li.ev-tab-memorial p a, li.ev-tab-bbs p a, li.ev-tab-info p a, li.ev-tab-mission p a, li.ev-tab-battle-result p a, li.ev-tab-alchemy-low p a, li.ev-tab-alchemy-high p a, li.ev-tab-howto p a, li.ev-tab-campain p a, li.ev-tab-manastone p a, li.ev-tab-support-mana p a, li.ev-tab-grow p a { display: block; width: 100%; height: 16px; text-decoration: none; }
+
+li.ev-tab-quest p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_01_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-quest.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_01.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-reward p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_02_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-reward.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_02.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-eventrank p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_03_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-eventrank.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_03.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-rank p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_11_off.png) center top no-repeat; -webkit-background-size: 40px 16px; background-size: 40px 16px; }
+
+li.ev-tab-rank.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_11.png) center top no-repeat; -webkit-background-size: 40px 16px; background-size: 40px 16px; }
+
+li.ev-tab-menu p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_04_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-menu.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_04.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-deck p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_05_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-deck.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_05.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-battle p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_06_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-battle.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_06.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-main p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_12_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-main.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_12.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-seal p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_13_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-seal.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_13.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-exchange p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_14_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-exchange.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_14.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-memorial p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_22_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-memorial.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_22.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-bbs p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_16_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-bbs.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_16.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-info p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_17_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-info.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_17.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-mission p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_20_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-mission.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_20.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-battle-result p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_21_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-battle-result.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_21.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-support p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_08_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-support.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_08.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-howto p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_26_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-howto.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_26.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-campain p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_28_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-campain.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_28.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-manastone p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_29_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-manastone.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_29.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-setting p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_27_off.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-setting.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_27.png) center top no-repeat; -webkit-background-size: 60px 16px; background-size: 60px 16px; }
+
+li.ev-tab-grow p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_31_off.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+li.ev-tab-grow.active p { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_tab_text_31.png) center top no-repeat; -webkit-background-size: 80px 16px; background-size: 80px 16px; }
+
+.ev-tab-wraps { position: relative; background-color: #111; }
+.ev-tab-wraps:before { position: absolute; left: 0; top: -2px; content: ""; width: 100%; padding-top: 50px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e0b0b), color-stop(100%, #111110)); background-image: -webkit-linear-gradient(#2e0b0b, #111110); background-image: linear-gradient(#2e0b0b, #111110); z-index: 1; }
+.ev-tab-wraps:after { position: absolute; left: 0; bottom: 0; content: ""; width: 100%; padding-bottom: 50px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #111110), color-stop(100%, #5c0e0e)); background-image: -webkit-linear-gradient(#111110, #5c0e0e); background-image: linear-gradient(#111110, #5c0e0e); z-index: 1; }
+
+.ev-tab-contents { position: relative; padding: 15px 0; display: none; z-index: 30; }
+.ev-tab-contents:after { position: absolute; left: 0; bottom: -6px; content: ""; width: 100%; padding-bottom: 6px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left bottom no-repeat; -webkit-background-size: 320px 6px; background-size: 320px 6px; z-index: 10; }
+
+.ev-tab-link { display: none; }
+
+.active { display: block; }
+
+.object-none { display: none; }
+
+.btn-ev-small-goldline, .btn-ev-goldline, .btn-ev-large-goldline, .form-ev-small-goldline, .form-ev-goldline, .form-ev-large-goldline, .btn-ev-firstbreak-goldline, .form-ev-firstbreak-goldline, .btn-ev-boss-small-goldline, .btn-ev-boss-goldline, .btn-ev-boss-large-goldline, .form-ev-boss-small-goldline, .form-ev-boss-goldline, .form-ev-boss-large-goldline { padding: 1px; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #6f4d0d), color-stop(50%, #f7f6c8), color-stop(100%, #6f4d0d)); background-image: -webkit-linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); background-image: linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); }
+
+.btn-ev-small-goldline a:active, .btn-ev-small-goldline a:hover, .btn-ev-goldline a:active, .btn-ev-goldline a:hover, .btn-ev-large-goldline a:active, .btn-ev-large-goldline a:hover, .form-ev-small-goldline input[type="submit"]:active, .form-ev-small-goldline input[type="submit"]:hover, .form-ev-goldline input[type="submit"]:active, .form-ev-goldline input[type="submit"]:hover, .form-ev-large-goldline input[type="submit"]:active, .form-ev-large-goldline input[type="submit"]:hover, .btn-ev-firstbreak-goldline a:active, .btn-ev-firstbreak-goldline a:hover, .form-ev-firstbreak-goldline input[type="submit"]:active, .form-ev-firstbreak-goldline input[type="submit"]:hover, .btn-ev-boss-small-goldline a:active, .btn-ev-boss-small-goldline a:hover, .btn-ev-boss-goldline a:active, .btn-ev-boss-goldline a:hover, .btn-ev-boss-large-goldline a:active, .btn-ev-boss-large-goldline a:hover, .form-ev-boss-small-goldline input:active, .form-ev-boss-small-goldline input:hover, .form-ev-boss-goldline input:active, .form-ev-boss-goldline input:hover, .form-ev-boss-large-goldline input:active, .form-ev-boss-large-goldline input:hover { -webkit-box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.7), inset -1px -1px 1px rgba(0, 0, 0, 0.5); box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.7), inset -1px -1px 1px rgba(0, 0, 0, 0.5); }
+
+.btn-ev-small-goldline a, .btn-ev-goldline a, .btn-ev-large-goldline a { display: block; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e0b0b), color-stop(100%, #140606)); background-image: -webkit-linear-gradient(#2e0b0b, #140606); background-image: linear-gradient(#2e0b0b, #140606); }
+
+.form-ev-small-goldline input[type="submit"], .form-ev-goldline input[type="submit"], .form-ev-large-goldline input[type="submit"] { display: block; width: 100%; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e0b0b), color-stop(100%, #140606)); background-image: -webkit-linear-gradient(#2e0b0b, #140606); background-image: linear-gradient(#2e0b0b, #140606); }
+
+.btn-ev-firstbreak-goldline a { display: block; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bf4015), color-stop(100%, #271d16)); background-image: -webkit-linear-gradient(#bf4015, #271d16); background-image: linear-gradient(#bf4015, #271d16); }
+
+.form-ev-firstbreak-goldline input[type="submit"] { display: block; width: 100%; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bf4015), color-stop(100%, #271d16)); background-image: -webkit-linear-gradient(#bf4015, #271d16); background-image: linear-gradient(#bf4015, #271d16); }
+
+.btn-ev-small-goldline a, .form-ev-small-goldline input[type="submit"], .btn-ev-boss-small-goldline a, .form-ev-boss-small-goldline input { font-size: 1.3rem; line-height: 1.5rem; padding: 7px; font-weight: none; }
+
+.btn-ev-goldline a, .btn-ev-firstbreak-goldline a, .form-ev-goldline input[type="submit"], .form-ev-firstbreak-goldline input[type="submit"], .btn-ev-boss-goldline a, .form-ev-boss-goldline input { font-size: 1.5rem; line-height: 1.5rem; padding: 7px; font-weight: none; }
+
+.btn-ev-large-goldline a, .form-ev-large-goldline input[type="submit"], .btn-ev-boss-large-goldline a, .form-ev-boss-large-goldline input { font-size: 1.5rem; line-height: 1.6rem; padding: 12px 7px; }
+
+.ev-info-large-box, .ev-info-middle-box { background-color: #140606; }
+
+.ev-info-unrule-large-box, .ev-info-unrule-middle-box { background-color: #111110; }
+
+.ev-grad-box { width: 320px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e0b0b), color-stop(100%, #111110)); background-image: -webkit-linear-gradient(#2e0b0b, #111110); background-image: linear-gradient(#2e0b0b, #111110); }
+.ev-grad-box:before { content: ""; width: 100%; display: block; padding-top: 14px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left top no-repeat; -webkit-background-size: 320px 6px; background-size: 320px 6px; }
+.ev-grad-box:after { content: ""; width: 100%; display: block; padding-bottom: 14px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_bar_01.png) left bottom no-repeat; -webkit-background-size: 320px 6px; background-size: 320px 6px; }
+
+.view-gold-box, .view-silver-box, .view-box { background-color: #140606; }
+.view-gold-box.non-bgcolor, .view-silver-box.non-bgcolor, .view-box.non-bgcolor { background-color: transparent; }
+.view-gold-box.grow-bgcolor, .view-silver-box.grow-bgcolor, .view-box.grow-bgcolor { background-color: #200303; }
+.view-gold-box .title-bgcolor-area, .view-silver-box .title-bgcolor-area, .view-box .title-bgcolor-area { width: 100%; margin: -5px 0 0; padding: 5px 0; background-color: #5c0e0e; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.view-gold-box .title-bgcolor-area-nonactive, .view-silver-box .title-bgcolor-area-nonactive, .view-box .title-bgcolor-area-nonactive { width: 100%; margin: -5px 0 0; padding: 5px 0; background-color: #434343; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+
+.color-box.ev-bgcolor-event { background-color: #140606; }
+
+.btn-nest-boxline-title { background-color: #5c0e0e; }
+
+.right-balloon .chara-area { width: 100px; position: absolute; left: 0; bottom: 0; z-index: 10; }
+.right-balloon .chara-off { width: 100px; position: absolute; right: 0; bottom: 0; z-index: 10; }
+.right-balloon .text-area { width: 205px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 10px 20px 30px; position: absolute; top: 0; left: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_01.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-balloon.chara-talk .text-area { width: 165px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 50px 20px 30px; position: absolute; top: 0; left: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_01.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-balloon.no-talk .text-area { width: 170px; height: 60px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_000_navi_balloon_top.png) no-repeat; -webkit-background-size: 320px 15px; background-size: 180px 65px; font-size: 1.2rem; line-height: 1.4rem; text-align: left; padding: 6px 15px 8px 5px; color: #1d1d1d; font-weight: bold; top: 30px; left: 90px; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; }
+.right-balloon .btn-area { width: 140px; height: 30px; position: absolute; right: 15px; bottom: 25px; z-index: 150; }
+.right-balloon .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-balloon .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; left: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-balloon .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-balloon.no-talk .voice-area, .right-balloon.no-talk .no-voice-area, .right-balloon.no-talk .voice-stop-area { left: inherit; right: 35px; bottom: 18px; }
+
+.left-balloon { width: 320px; height: 130px; position: relative; }
+.left-balloon .chara-area { width: 100px; position: absolute; right: 0; bottom: 0; z-index: 10; }
+.left-balloon .chara-off { width: 100px; position: absolute; left: 0; bottom: 0; z-index: 10; }
+.left-balloon .text-area { width: 190px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 35px 20px 25px; position: absolute; top: 0; right: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_03.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.left-balloon.chara-talk .text-area { width: 170px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 25px 20px 55px; position: absolute; top: 0; right: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_03.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.left-balloon .btn-area { width: 140px; height: 30px; position: absolute; left: 20px; bottom: 25px; z-index: 150; }
+.left-balloon .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.left-balloon .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.left-balloon .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+
+.left-small-balloon { width: 320px; height: 77px; position: relative; }
+.left-small-balloon .chara-area { width: 71px; position: absolute; right: 0; bottom: 0; z-index: 10; }
+.left-small-balloon .chara-off { width: 71px; position: absolute; left: 0; bottom: 0; z-index: 10; }
+.left-small-balloon .text-area { width: 190px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 35px 20px 25px; position: absolute; top: 0; right: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_03.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.left-small-balloon.chara-talk .text-area { width: 170px; height: 95px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 25px 20px 55px; position: absolute; top: 0; right: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_03.png) left top no-repeat; -webkit-background-size: 250px 130px; background-size: 250px 130px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.left-small-balloon .btn-area { width: 140px; height: 30px; position: absolute; left: 20px; bottom: 25px; z-index: 150; }
+.left-small-balloon .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.left-small-balloon .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.left-small-balloon .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 85px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+
+.bottom-balloon { position: relative; margin: 0 auto 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_meswindow_down.gif) left bottom no-repeat #fff; -webkit-background-size: 320px 14px; background-size: 320px 14px; padding: 0 0 14px; }
+.bottom-balloon .text-area { font-size: 1.3rem; text-align: left; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; padding: 5px 10px 15px; }
+.bottom-balloon .voice-area { width: 36px; height: 36px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; bottom: -15px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-balloon .voice-stop-area { width: 36px; height: 36px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; bottom: -15px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-balloon .icon-area-free .voice-area { width: 36px; height: 36px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 71px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-balloon .icon-area-free .voice-stop-area { width: 36px; height: 36px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 71px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-balloon .icon-area-free .charaname-start-area { width: 100px; height: 24px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 80px; right: 45px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_notice%2Fev_char_name_01_l.png) right center no-repeat; -webkit-background-size: 100px 24px; background-size: 100px 24px; }
+.bottom-balloon .icon-area-free .charaname-end-area { width: 100px; height: 24px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 80px; right: 45px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_notice%2Fev_char_name_02_l.png) right center no-repeat; -webkit-background-size: 100px 24px; background-size: 100px 24px; }
+
+.bottom-name-balloon { position: relative; margin: 0 auto 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_meswindow_down.gif) left bottom no-repeat #fff; -webkit-background-size: 320px 14px; background-size: 320px 14px; padding: 0 0 14px; }
+.bottom-name-balloon .text-area { font-size: 1.3rem; text-align: left; color: #1d1d1d; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; padding: 5px 10px 15px; }
+.bottom-name-balloon .voice-area { width: 40px; height: 40px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; bottom: -15px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-name-balloon .voice-stop-area { width: 40px; height: 40px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; bottom: -15px; right: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-name-balloon .icon-area-free .voice-area { width: 40px; height: 40px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 71px; right: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-name-balloon .icon-area-free .voice-stop-area { width: 40px; height: 40px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 71px; right: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.bottom-name-balloon .icon-area-free .charaname-start-area { width: 100px; height: 24px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 80px; right: 165px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_notice%2Fev_char_name_01_l.png) right center no-repeat; -webkit-background-size: 100px 24px; background-size: 100px 24px; }
+.bottom-name-balloon .icon-area-free .charaname-end-area { width: 100px; height: 24px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 80px; right: 165px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_notice%2Fev_char_name_02_l.png) right center no-repeat; -webkit-background-size: 100px 24px; background-size: 100px 24px; }
+
+.right-balloon-pos { width: 320px; height: 90px; position: relative; }
+.right-balloon-pos .bgimage-area { position: absolute; left: 0; bottom: 0; width: 320px; height: 90px; overflow: hidden; }
+.right-balloon-pos .bgimage-area img { position: absolute; bottom: 0; left: 0; width: 320px; }
+.right-balloon-pos .chara-area { width: 100px; position: absolute; left: 0; bottom: 0; z-index: 500; }
+.right-balloon-pos .chara-off { width: 100px; position: absolute; right: 0; bottom: 0; z-index: 500; }
+.right-balloon-pos .text-area { width: 215px; height: 64px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 15px 10px 15px 55px; position: absolute; top: 0; left: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_map_l.png) left top no-repeat; -webkit-background-size: 270px 94px; background-size: 270px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.right-balloon-pos.chara-talk .text-area { width: 185px; height: 64px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 15px 30px 15px 55px; position: absolute; top: 0; left: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_map_l.png) left top no-repeat; -webkit-background-size: 270px 94px; background-size: 270px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.right-balloon-pos .btn-area { width: 65px; height: 30px; position: absolute; right: 15px; bottom: 5px; z-index: 650; }
+.right-balloon-pos .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.right-balloon-pos .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; left: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.right-balloon-pos .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.right-balloon-pos .endsign-area { position: absolute; right: 25px; bottom: 5px; z-index: 650; color: #1d1d1d; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; }
+
+.left-balloon-pos { width: 320px; height: 90px; position: relative; }
+.left-balloon-pos .bgimage-area { position: absolute; left: 0; bottom: 0; width: 320px; height: 90px; overflow: hidden; }
+.left-balloon-pos .bgimage-area img { position: absolute; bottom: 0; left: 0; width: 320px; }
+.left-balloon-pos .chara-area { width: 100px; position: absolute; right: 0; bottom: 0; z-index: 500; }
+.left-balloon-pos .chara-off { width: 100px; position: absolute; left: 0; bottom: 0; z-index: 500; }
+.left-balloon-pos .text-area { width: 210px; height: 64px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 15px 35px 15px 25px; position: absolute; top: 0; right: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_map_r.png) left top no-repeat; -webkit-background-size: 270px 94px; background-size: 270px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.left-balloon-pos.chara-talk .text-area { width: 190px; height: 64px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 15px 55px 15px 25px; position: absolute; top: 0; right: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_map_r.png) left top no-repeat; -webkit-background-size: 270px 94px; background-size: 270px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.left-balloon-pos .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.left-balloon-pos .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.left-balloon-pos .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 55px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.left-balloon-pos .endsign-area { position: absolute; right: 100px; bottom: 5px; z-index: 650; color: #1d1d1d; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; }
+
+.right-balloon-growth { width: 320px; height: 90px; position: relative; }
+.right-balloon-growth .bgimage-area { position: absolute; left: 0; bottom: 0; width: 320px; height: 90px; overflow: hidden; }
+.right-balloon-growth .bgimage-area img { position: absolute; bottom: 0; left: 0; width: 320px; }
+.right-balloon-growth .chara-area { width: 100px; position: absolute; left: 0; bottom: -2px; z-index: 500; }
+.right-balloon-growth .chara-off { width: 100px; position: absolute; right: 0; bottom: -2px; z-index: 500; }
+.right-balloon-growth .text-area { width: 185px; height: 54px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 30px 20px 55px; position: absolute; top: 0; left: 67px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_growth_l.png) left top no-repeat; -webkit-background-size: 250px 94px; background-size: 250px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.right-balloon-growth.chara-talk .text-area { width: 185px; height: 54px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 30px 20px 55px; position: absolute; top: 0; left: 67px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_growth_l.png) left top no-repeat; -webkit-background-size: 250px 94px; background-size: 250px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.right-balloon-growth .btn-area { width: 65px; height: 30px; position: absolute; right: 15px; bottom: 5px; z-index: 650; }
+.right-balloon-growth .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.right-balloon-growth .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; left: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.right-balloon-growth .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; left: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+
+.left-balloon-growth { width: 320px; height: 90px; position: relative; }
+.left-balloon-growth .bgimage-area { position: absolute; left: 0; bottom: 0; width: 320px; height: 90px; overflow: hidden; }
+.left-balloon-growth .bgimage-area img { position: absolute; bottom: 0; left: 0; width: 320px; }
+.left-balloon-growth .chara-area { width: 100px; position: absolute; right: 0; bottom: -2px; z-index: 500; }
+.left-balloon-growth .chara-off { width: 100px; position: absolute; left: 0; bottom: -2px; z-index: 500; }
+.left-balloon-growth .text-area { width: 190px; height: 54px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 65px 20px 15px; position: absolute; top: 0; right: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_growth_r.png) left top no-repeat; -webkit-background-size: 250px 94px; background-size: 250px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.left-balloon-growth.chara-talk .text-area { width: 190px; height: 54px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 65px 20px 15px; position: absolute; top: 0; right: 47px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_218_navi_balloon_growth_r.png) left top no-repeat; -webkit-background-size: 250px 94px; background-size: 250px 94px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 600; }
+.left-balloon-growth .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.left-balloon-growth .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+.left-balloon-growth .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 75px; bottom: 8px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 650; }
+
+.board-balloon { position: relative; padding: 5px 0; -webkit-border-radius: 5px; border-radius: 5px; background-color: #fff; }
+
+.board-balloon p { color: #000; padding: 0 10px; }
+
+.board-user-balloon .board-balloon { margin-left: 10px; }
+.board-user-balloon .board-balloon:before { position: absolute; top: 50%; left: -9px; display: block; margin-top: -5px; border-top: 5px solid transparent; border-right: 10px solid #fff; border-bottom: 5px solid transparent; content: ''; }
+
+.board-my-balloon .board-balloon { margin-right: 10px; }
+.board-my-balloon .board-balloon:before { position: absolute; top: 50%; right: -9px; display: block; margin-top: -5px; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 10px solid #fff; content: ''; }
+
+.right-large-balloon { width: 320px; height: 270px; position: relative; }
+.right-large-balloon .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 20px; top: 130px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 20px; top: 130px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 20px; top: 130px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon .chara-area { width: 100px; position: absolute; left: 0; top: 0; z-index: 10; }
+.right-large-balloon .text-area { width: 125px; height: 90px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 10px 20px 30px; position: absolute; top: 50px; right: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fsp_navi_baloon_top.png) left top no-repeat; -webkit-background-size: 168px 120px; background-size: 168px 120px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon .text-area .chara-talk { width: 165px; height: 90px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 50px 20px 30px; position: absolute; top: 50px; left: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fsp_navi_baloon_top.png) left top no-repeat; -webkit-background-size: 168px 120px; background-size: 168px 120px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon .text-area-mini { width: 177px; height: 65px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 10px; position: absolute; top: 83px; right: 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_000_navi_balloon_top.png) left top no-repeat; -webkit-background-size: 197px 65px; background-size: 197px 65px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon .ev-mask-buttom { position: absolute; bottom: 0px; left: 0; width: 320px; height: 90px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fraid_battle_stay_mask_3.png) no-repeat; -webkit-background-size: 320px 90px; background-size: 320px 90px; z-index: 200; }
+.right-large-balloon .ev-mask-top { content: ""; display: block; position: absolute; top: 0; left: 0; width: 320px; height: 80px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fraid_battle_stay_mask_2.png) no-repeat; -webkit-background-size: 320px 90px; background-size: 320px 80px; z-index: 0; }
+
+.bottom-balloon-pos .character-area .left-chara-area, .bottom-balloon-pos.left-talk .left-chara-area, .bottom-balloon-pos.leftcenter-talk .left-chara-area { position: absolute; bottom: 0; left: 0; }
+
+.bottom-balloon-pos .character-area .center-chara-area { position: absolute; top: 0; left: 0; }
+
+.bottom-balloon-pos .character-area .right-chara-area, .bottom-balloon-pos.right-talk .right-chara-area, .bottom-balloon-pos.rightcenter-talk .right-chara-area { position: absolute; bottom: 0; right: 0; }
+
+.bottom-balloon-pos .character-area:before { display: block; z-index: 600; position: absolute; top: 0; right: 0; width: 320px; height: 200px; content: ""; }
+
+.bottom-balloon-pos.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.left-talk.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.center-talk.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.right-talk.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-normal .balloon-area .balloon-text-area, .bottom-balloon-pos.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.left-talk.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.center-talk.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.right-talk.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-shout .balloon-area .balloon-text-area, .bottom-balloon-pos.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.left-talk.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.center-talk.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.right-talk.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-fancy .balloon-area .balloon-text-area, .bottom-balloon-pos.balloon-type-narration .balloon-area .balloon-text-area { background-color: #ffffff; margin-top: -1px; min-height: 55px; line-height: 1.4rem; color: #1d1d1d; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; }
+
+.bottom-balloon-pos.balloon-type-normal .balloon-area, .bottom-balloon-pos.left-talk.balloon-type-normal .balloon-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-normal .balloon-area, .bottom-balloon-pos.center-talk.balloon-type-normal .balloon-area, .bottom-balloon-pos.right-talk.balloon-type-normal .balloon-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-normal .balloon-area, .bottom-balloon-pos.balloon-type-shout .balloon-area, .bottom-balloon-pos.left-talk.balloon-type-shout .balloon-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-shout .balloon-area, .bottom-balloon-pos.center-talk.balloon-type-shout .balloon-area, .bottom-balloon-pos.right-talk.balloon-type-shout .balloon-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-shout .balloon-area, .bottom-balloon-pos.balloon-type-fancy .balloon-area, .bottom-balloon-pos.left-talk.balloon-type-fancy .balloon-area, .bottom-balloon-pos.leftcenter-talk.balloon-type-fancy .balloon-area, .bottom-balloon-pos.center-talk.balloon-type-fancy .balloon-area, .bottom-balloon-pos.right-talk.balloon-type-fancy .balloon-area, .bottom-balloon-pos.rightcenter-talk.balloon-type-fancy .balloon-area, .bottom-balloon-pos.balloon-type-narration .balloon-area { position: absolute; top: 163px; left: 0; width: 100%; min-height: 60px; z-index: 1000; border-top: 30px solid transparent; }
+
+.bottom-balloon-pos.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.center-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.right-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.center-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.right-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.center-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.right-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.balloon-type-narration .balloon-area:before { content: ""; display: block; position: absolute; top: -30px; left: 0; width: 100%; height: 30px; z-index: 1000; }
+
+.bottom-balloon-pos.balloon-type-normal .balloon-area:after, .bottom-balloon-pos.left-talk.balloon-type-normal .balloon-area:after, .bottom-balloon-pos.leftcenter-talk.balloon-type-normal .balloon-area:after, .bottom-balloon-pos.center-talk.balloon-type-normal .balloon-area:after, .bottom-balloon-pos.right-talk.balloon-type-normal .balloon-area:after, .bottom-balloon-pos.rightcenter-talk.balloon-type-normal .balloon-area:after { content: ""; display: block; position: absolute; bottom: -29px; left: 0; width: 100%; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -538px; width: 320px; height: 30px; z-index: 1000; }
+
+.bottom-balloon-pos.balloon-type-narration .balloon-area:after { content: ""; display: block; position: absolute; bottom: -29px; left: 0; width: 100%; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -602px; width: 320px; height: 30px; z-index: 1000; }
+
+.bottom-balloon-pos.balloon-type-shout .balloon-area:after, .bottom-balloon-pos.left-talk.balloon-type-shout .balloon-area:after, .bottom-balloon-pos.leftcenter-talk.balloon-type-shout .balloon-area:after, .bottom-balloon-pos.center-talk.balloon-type-shout .balloon-area:after, .bottom-balloon-pos.right-talk.balloon-type-shout .balloon-area:after, .bottom-balloon-pos.rightcenter-talk.balloon-type-shout .balloon-area:after { content: ""; display: block; position: absolute; bottom: -29px; left: 0; width: 100%; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -32px; width: 320px; height: 30px; z-index: 1000; }
+
+.bottom-balloon-pos.balloon-type-fancy .balloon-area:after, .bottom-balloon-pos.left-talk.balloon-type-fancy .balloon-area:after, .bottom-balloon-pos.leftcenter-talk.balloon-type-fancy .balloon-area:after, .bottom-balloon-pos.center-talk.balloon-type-fancy .balloon-area:after, .bottom-balloon-pos.right-talk.balloon-type-fancy .balloon-area:after, .bottom-balloon-pos.rightcenter-talk.balloon-type-fancy .balloon-area:after { content: ""; display: block; position: absolute; bottom: -29px; left: 0; width: 100%; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -224px; width: 320px; height: 30px; z-index: 1000; }
+
+.bottom-balloon-pos.chara-talk .balloon-area .prev-arr-area, .bottom-balloon-pos.chara-talk .balloon-area .next-arr-area, .bottom-balloon-pos.chara-talk .balloon-area .replay-arr-area { display: block; overflow: hidden; position: absolute; top: -2px; text-indent: 100%; white-space: nowrap; width: 35px; height: 60px; z-index: 1000; }
+
+.bottom-balloon-pos .voice-area, .bottom-balloon-pos .no-voice-area, .bottom-balloon-pos .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 36px; height: 36px; position: absolute; right: 36px; bottom: -35px; z-index: 1200; }
+
+.bottom-balloon-pos { position: relative; width: 100%; min-height: 255px; border-bottom: 37px solid transparent; }
+.bottom-balloon-pos .character-area { position: relative; width: 100%; height: 200px; }
+.bottom-balloon-pos .character-area .left-chara-area { z-index: 300; }
+.bottom-balloon-pos .character-area .center-chara-area { z-index: 200; }
+.bottom-balloon-pos .character-area .right-chara-area { z-index: 300; }
+.bottom-balloon-pos.left-talk .character-area:before { background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(17, 17, 16, 0)), color-stop(30%, rgba(17, 17, 16, 0.4)), color-stop(60%, rgba(17, 17, 16, 0.6))); background: -webkit-linear-gradient(left, rgba(17, 17, 16, 0), rgba(17, 17, 16, 0.4) 30%, rgba(17, 17, 16, 0.6) 60%); background: linear-gradient(left, rgba(17, 17, 16, 0), rgba(17, 17, 16, 0.4) 30%, rgba(17, 17, 16, 0.6) 60%); }
+.bottom-balloon-pos.left-talk .left-chara-area { z-index: 800; }
+.bottom-balloon-pos.leftcenter-talk .character-area:before { background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(20%, rgba(17, 17, 16, 0)), color-stop(70%, rgba(17, 17, 16, 0.3)), color-stop(100%, rgba(17, 17, 16, 0.5))); background: -webkit-linear-gradient(left, rgba(17, 17, 16, 0) 20%, rgba(17, 17, 16, 0.3) 70%, rgba(17, 17, 16, 0.5)); background: linear-gradient(left, rgba(17, 17, 16, 0) 20%, rgba(17, 17, 16, 0.3) 70%, rgba(17, 17, 16, 0.5)); }
+.bottom-balloon-pos.leftcenter-talk .left-chara-area { z-index: 800; }
+.bottom-balloon-pos.center-talk .character-area:before { background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(17, 17, 16, 0.5)), color-stop(20%, rgba(17, 17, 16, 0.3)), color-stop(50%, rgba(17, 17, 16, 0)), color-stop(80%, rgba(17, 17, 16, 0.3)), color-stop(100%, rgba(17, 17, 16, 0.5))); background: -webkit-linear-gradient(left, rgba(17, 17, 16, 0.5), rgba(17, 17, 16, 0.3) 20%, rgba(17, 17, 16, 0) 50%, rgba(17, 17, 16, 0.3) 80%, rgba(17, 17, 16, 0.5)); background: linear-gradient(left, rgba(17, 17, 16, 0.5), rgba(17, 17, 16, 0.3) 20%, rgba(17, 17, 16, 0) 50%, rgba(17, 17, 16, 0.3) 80%, rgba(17, 17, 16, 0.5)); }
+.bottom-balloon-pos.right-talk .character-area:before { background: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, rgba(17, 17, 16, 0)), color-stop(30%, rgba(17, 17, 16, 0.4)), color-stop(60%, rgba(17, 17, 16, 0.6))); background: -webkit-linear-gradient(right, rgba(17, 17, 16, 0), rgba(17, 17, 16, 0.4) 30%, rgba(17, 17, 16, 0.6) 60%); background: linear-gradient(right, rgba(17, 17, 16, 0), rgba(17, 17, 16, 0.4) 30%, rgba(17, 17, 16, 0.6) 60%); }
+.bottom-balloon-pos.right-talk .right-chara-area { z-index: 800; }
+.bottom-balloon-pos.rightcenter-talk .character-area:before { background: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(20%, rgba(17, 17, 16, 0)), color-stop(70%, rgba(17, 17, 16, 0.3)), color-stop(100%, rgba(17, 17, 16, 0.5))); background: -webkit-linear-gradient(right, rgba(17, 17, 16, 0) 20%, rgba(17, 17, 16, 0.3) 70%, rgba(17, 17, 16, 0.5)); background: linear-gradient(right, rgba(17, 17, 16, 0) 20%, rgba(17, 17, 16, 0.3) 70%, rgba(17, 17, 16, 0.5)); }
+.bottom-balloon-pos.rightcenter-talk .right-chara-area { z-index: 800; }
+.bottom-balloon-pos.no-talk .character-area:before { background: rgba(17, 17, 16, 0.6); }
+.bottom-balloon-pos.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-normal .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -320px; width: 320px; height: 30px; }
+.bottom-balloon-pos.center-talk.balloon-type-normal .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -256px; width: 320px; height: 30px; }
+.bottom-balloon-pos.right-talk.balloon-type-normal .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-normal .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -288px; width: 320px; height: 30px; }
+.bottom-balloon-pos.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-shout .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -64px; width: 320px; height: 30px; }
+.bottom-balloon-pos.center-talk.balloon-type-shout .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -96px; width: 320px; height: 30px; }
+.bottom-balloon-pos.right-talk.balloon-type-shout .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-shout .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 0; width: 320px; height: 30px; }
+.bottom-balloon-pos.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.left-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.leftcenter-talk.balloon-type-fancy .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -128px; width: 320px; height: 30px; }
+.bottom-balloon-pos.center-talk.balloon-type-fancy .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -192px; width: 320px; height: 30px; }
+.bottom-balloon-pos.right-talk.balloon-type-fancy .balloon-area:before, .bottom-balloon-pos.rightcenter-talk.balloon-type-fancy .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -160px; width: 320px; height: 30px; }
+.bottom-balloon-pos.balloon-type-narration .balloon-area:before { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -570px; width: 320px; height: 30px; }
+.bottom-balloon-pos .balloon-text-area { padding: 5px 10px 0; width: 300px; }
+.bottom-balloon-pos.chara-talk .balloon-area .prev-arr-area { left: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -476px; width: 35px; height: 60px; }
+.bottom-balloon-pos.chara-talk .balloon-area .next-arr-area { right: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -414px; width: 35px; height: 60px; }
+.bottom-balloon-pos.chara-talk .balloon-area .replay-arr-area { right: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fballoon-motif-s4302dc6067.png) no-repeat; -webkit-background-size: 320px 632px; background-size: 320px 632px; background-position: 0 -352px; width: 35px; height: 60px; }
+.bottom-balloon-pos.chara-talk .balloon-area .balloon-text-area { padding: 5px 35px 0; width: 250px; }
+.bottom-balloon-pos .voice-area { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 36px 36px; background-size: 36px 36px; }
+.bottom-balloon-pos .voice-area:active { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2_active.png) right center no-repeat; -webkit-background-size: 36px 36px; background-size: 36px 36px; }
+.bottom-balloon-pos .no-voice-area { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 36px 36px; background-size: 36px 36px; }
+.bottom-balloon-pos .voice-stop-area { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 36px 36px; background-size: 36px 36px; }
+
+.popup-area { position: absolute; top: 10px; left: 10px; width: 296px; border: 2px solid #754e00; background-color: #000; opacity: 0.99; -webkit-border-radius: 5px; border-radius: 5px; visibility: hidden; z-index: 500; }
+.popup-area .event_ui { display: block; overflow: hidden; margin: 5px auto; text-indent: 100%; white-space: nowrap; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_gauge_ap.png) no-repeat; -webkit-background-size: 105px 168px; background-size: 105px 168px; }
+.popup-area .ev_gauge_ap_0 { width: 105px; height: 24px; background-position: 0 -96px; }
+.popup-area .ev_gauge_ap_1 { width: 105px; height: 24px; background-position: 0 -144px; }
+.popup-area .ev_gauge_ap_2 { width: 105px; height: 24px; background-position: 0 -120px; }
+.popup-area .ev_gauge_ap_3 { width: 105px; height: 24px; background-position: 0 -24px; }
+.popup-area .ev_gauge_ap_4 { width: 105px; height: 24px; background-position: 0 -72px; }
+.popup-area .ev_gauge_ap_5 { width: 105px; height: 24px; background-position: 0 0; }
+.popup-area .ev_gauge_ap_6 { width: 105px; height: 24px; background-position: 0 -48px; }
+.popup-area .ev_apTime { position: absolute; top: 50px; left: 205px; width: 80px; font-size: 0.85rem; text-align: right; }
+.popup-area .btn-close { position: absolute; top: -15px; right: -10px; visibility: hidden; }
+
+.popup-card-area { position: absolute; top: 10px; left: 20px; width: 276px; border: 2px solid #754e00; background-color: #000; opacity: 0.99; -webkit-border-radius: 5px; border-radius: 5px; visibility: hidden; z-index: 500; }
+.popup-card-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; visibility: hidden; }
+
+.growth-area, .growth-area-male, .growth-area-female, .train-area { position: absolute; left: 20px; width: 276px; display: none; z-index: 800; }
+.growth-area .btn-close, .growth-area-male .btn-close, .growth-area-female .btn-close, .train-area .btn-close { position: absolute; display: none; }
+
+.summon-area { position: absolute; left: 20px; width: 276px; display: none; z-index: 1050; }
+.summon-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; display: none; }
+
+.ability-area-1, .ability-area-2, .ability-area-3, .ability-area-4, .ability-area-5 { position: absolute; left: 20px; width: 276px; display: none; z-index: 800; }
+.ability-area-1 .btn-close, .ability-area-2 .btn-close, .ability-area-3 .btn-close, .ability-area-4 .btn-close, .ability-area-5 .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; display: none; }
+
+.ev-battle-mvp-mask { position: absolute; top: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 5000; }
+
+.ev-battle-mvp-pop { position: absolute; top: 60px; left: 0; width: 100%; z-index: 6000; }
+.ev-battle-mvp-pop .btn-close { position: absolute; top: -15px; right: 8px; width: 30px; height: 30px; }
+
+.ev-top-battle-area { position: absolute; left: 20px; width: 276px; display: none; z-index: 1100; }
+.ev-top-battle-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; display: none; }
+
+.ev-deck-area { position: absolute; left: 20px; width: 276px; display: none; z-index: 1100; }
+.ev-deck-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; display: none; }
+
+.ev-pop-howto-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 2000; }
+.ev-pop-howto-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+h1.ev-boss-notice-headline, h1.ev-boss-notice-silver-headline, h2.ev-boss-notice-headline, h2.ev-boss-notice-silver-headline, h3.ev-boss-notice-headline, h3.ev-boss-notice-silver-headline { background-color: #06141d; }
+
+h1.ev-boss-notice-headline, h2.ev-boss-notice-headline, h3.ev-boss-notice-headline { position: relative; padding: 5px 0; width: 100%; height: auto; border-top: 3px solid transparent; border-bottom: 3px solid transparent; text-align: center; font-weight: bold; font-size: 1.6rem; line-height: 2.0rem; }
+h1.ev-boss-notice-headline:before, h2.ev-boss-notice-headline:before, h3.ev-boss-notice-headline:before { position: absolute; top: -3px; left: 0; display: block; width: 100%; height: 3px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -125px no-repeat; -webkit-background-size: 320px, 131px; background-size: 320px, 131px; }
+h1.ev-boss-notice-headline:after, h2.ev-boss-notice-headline:after, h3.ev-boss-notice-headline:after { position: absolute; bottom: -3px; left: 0; display: block; width: 100%; height: 3px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat; -webkit-background-size: 320px, 131px; background-size: 320px, 131px; }
+h1.ev-boss-notice-silver-headline, h2.ev-boss-notice-silver-headline, h3.ev-boss-notice-silver-headline { position: relative; padding: 5px 0; width: 100%; height: auto; text-align: center; font-weight: bold; font-size: 1.6rem; line-height: 2.0rem; border-top: 2px solid transparent; border-bottom: 2px solid transparent; }
+h1.ev-boss-notice-silver-headline:before, h2.ev-boss-notice-silver-headline:before, h3.ev-boss-notice-silver-headline:before { position: absolute; top: -2px; left: 0; display: block; width: 100%; height: 2px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+h1.ev-boss-notice-silver-headline:after, h2.ev-boss-notice-silver-headline:after, h3.ev-boss-notice-silver-headline:after { position: absolute; bottom: -2px; left: 0; display: block; width: 100%; height: 2px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+
+.btn-ev-boss-small-goldline a, .btn-ev-boss-goldline a, .btn-ev-boss-large-goldline a { display: block; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #004b7d), color-stop(30%, #00244a), color-stop(70%, #00152a), color-stop(100%, #00050a)); background-image: -webkit-linear-gradient(top, #004b7d 0%, #00244a 30%, #00152a 70%, #00050a 100%); background-image: linear-gradient(top, #004b7d 0%, #00244a 30%, #00152a 70%, #00050a 100%); }
+
+.form-ev-boss-small-goldline input, .form-ev-boss-goldline input, .form-ev-boss-large-goldline input { display: block; width: 100%; color: #f4f4f4; text-align: center; text-decoration: none; border: none; -webkit-border-radius: 8px; border-radius: 8px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #004b7d), color-stop(30%, #00244a), color-stop(70%, #00152a), color-stop(100%, #00050a)); background-image: -webkit-linear-gradient(top, #004b7d 0%, #00244a 30%, #00152a 70%, #00050a 100%); background-image: linear-gradient(top, #004b7d 0%, #00244a 30%, #00152a 70%, #00050a 100%); }
+
+.btn-ev-small-goldline a, .form-ev-small-goldline input[type="submit"], .btn-ev-boss-small-goldline a, .form-ev-boss-small-goldline input { font-size: 1.3rem; line-height: 1.5rem; padding: 7px; font-weight: none; }
+
+.btn-ev-goldline a, .btn-ev-firstbreak-goldline a, .form-ev-goldline input[type="submit"], .form-ev-firstbreak-goldline input[type="submit"], .btn-ev-boss-goldline a, .form-ev-boss-goldline input { font-size: 1.5rem; line-height: 1.5rem; padding: 7px; font-weight: none; }
+
+.btn-ev-large-goldline a, .form-ev-large-goldline input[type="submit"], .btn-ev-boss-large-goldline a, .form-ev-boss-large-goldline input { font-size: 1.5rem; line-height: 1.6rem; padding: 12px 7px; }
+
+.color-box.ev-bgcolor-eventboss { background-color: #0f202b; }
+
+.quest_item100 { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fquest_recovery_item00.png) no-repeat; background-size: 100px 800px; }
+
+.quest_item80 { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fquest_recovery_item00.png) no-repeat; background-size: 80px 640px; }
+
+.cure_water100 { width: 100px; height: 100px; background-position: 0 -400px; }
+
+.cure_water_half100 { width: 100px; height: 100px; background-position: 0 -500px; }
+
+.my_cure_water100 { width: 100px; height: 100px; background-position: 0 -600px; }
+
+.event_cure_water100 { width: 100px; height: 100px; background-position: 0 -700px; }
+
+.cure_water80.off { width: 80px; height: 80px; background-position: 0 -0px; }
+
+.cure_water_half80.off { width: 80px; height: 80px; background-position: 0 -80px; }
+
+.my_cure_water80.off { width: 80px; height: 80px; background-position: 0 -160px; }
+
+.event_cure_water80.off { width: 80px; height: 80px; background-position: 0 -240px; }
+
+.cure_water80.on { width: 80px; height: 80px; background-position: 0 -320px; }
+
+.cure_water_half80.on { width: 80px; height: 80px; background-position: 0 -400px; }
+
+.my_cure_water80.on { width: 80px; height: 80px; background-position: 0 -480px; }
+
+.event_cure_water80.on { width: 80px; height: 80px; background-position: 0 -560px; }
+
+/*アイテム画像アニメーション*/
+#quest_item_list { -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; }
+
+/*ステータスバーアニメーション*/
+.motif-gauge-strength .motif-gauge-bar, .motif-gauge-experience .motif-gauge-bar, .motif-gauge-attainment .motif-gauge-bar { -webkit-transition-duration: 1s; -moz-transition-duration: 1s; }
+
+.ev-btn-quest-darkred { background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #c02a16), color-stop(30%, #be3d16), color-stop(100%, #4f0402)); background-image: -webkit-radial-gradient(50% 50%, circle, #c02a16 0%, #be3d16 30%, #4f0402 100%); background-image: radial-gradient(50% 50%, circle, #c02a16 0%, #be3d16 30%, #4f0402 100%); }
+
+.ev-btn-quest-darkblue { background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #1777cf), color-stop(30%, #0c578a), color-stop(100%, #083350)); background-image: -webkit-radial-gradient(50% 50%, circle, #1777cf 0%, #0c578a 30%, #083350 100%); background-image: radial-gradient(50% 50%, circle, #1777cf 0%, #0c578a 30%, #083350 100%); }
+
+.ev-btn-quest-area { width: 96px; height: 96px; padding: 2px; -webkit-border-radius: 25px; border-radius: 25px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #6f4d0d), color-stop(50%, #f7f6c8), color-stop(100%, #6f4d0d)); background-image: -webkit-linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); background-image: linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); }
+
+.ev-btn-quest-darkred { width: 96px; height: 96px; -webkit-border-radius: 25px; border-radius: 25px; -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6); box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6); }
+.ev-btn-quest-darkred a { color: #ffffff; text-decoration: none; width: 96px; height: 96px; display: block; line-height: 96px; text-shadow: 0 0 2px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8); }
+
+.ev-btn-quest-darkred { background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #c02a16), color-stop(30%, #be3d16), color-stop(100%, #4f0402)); background-image: -webkit-radial-gradient(50% 50%, circle, #c02a16 0%, #be3d16 30%, #4f0402 100%); background-image: radial-gradient(50% 50%, circle, #c02a16 0%, #be3d16 30%, #4f0402 100%); }
+
+.ev-btn-quest-darkblue { background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #1777cf), color-stop(30%, #0c578a), color-stop(100%, #083350)); background-image: -webkit-radial-gradient(50% 50%, circle, #1777cf 0%, #0c578a 30%, #083350 100%); background-image: radial-gradient(50% 50%, circle, #1777cf 0%, #0c578a 30%, #083350 100%); }
+
+.ev-btn-quest-area { width: 96px; height: 96px; padding: 2px; -webkit-border-radius: 25px; border-radius: 25px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #6f4d0d), color-stop(50%, #f7f6c8), color-stop(100%, #6f4d0d)); background-image: -webkit-linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); background-image: linear-gradient(left, #6f4d0d 0%, #f7f6c8 50%, #6f4d0d 100%); }
+
+.ev-btn-quest-darkblue { width: 96px; height: 96px; -webkit-border-radius: 25px; border-radius: 25px; -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6); box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6); }
+.ev-btn-quest-darkblue a { color: #ffffff; text-decoration: none; width: 96px; height: 96px; display: block; line-height: 96px; text-shadow: 0 0 2px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8); }
+
+.ev-ap-recovery { background-color: rgba(0, 0, 0, 0.7); -webkit-border-radius: 5px; border-radius: 5px; }
+
+.ev-recovery-item { width: 60px; height: 60px; }
+.ev-recovery-item.non-active, .ev-recovery-item.non-active-1 { position: relative; }
+.ev-recovery-item.non-active:after, .ev-recovery-item.non-active-1:after { content: ""; position: absolute; top: 0; left: 0; width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.65); z-index: 1600; }
+
+.right-large-balloon .ev-top-mask:after { content: ""; display: block; position: absolute; bottom: 0px; left: 0; width: 320px; height: 80px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fraid_battle_stay_mask.png) no-repeat; -webkit-background-size: 320px 90px; background-size: 320px 80px; z-index: 800; }
+.right-large-balloon .ev-main-button-solo-play { position: absolute; top: 260px; left: 0; width: 100%; height: 0px; z-index: 900; }
+.right-large-balloon .ev-main-button { z-index: 900; position: absolute; left: 8px; height: 0px; }
+
+.ev_deck-leadercard-frame { padding: 3px; border: 1px solid #3a3; background-color: #242; }
+
+.ev_versus-currenttitle { position: relative; width: 320px; height: auto; padding: 5px 0 7px; background-color: #333333; text-align: center; font-weight: bold; font-size: 1.6rem; line-height: 2.0rem; }
+.ev_versus-currenttitle:after { position: absolute; bottom: 0; left: 0; display: block; width: 320px; height: 2px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+
+.ev_versus-pointarea { position: relative; width: 320px; height: 110px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_background_battle.jpg) center top no-repeat; -webkit-background-size: 320px 110px; background-size: 320px 110px; }
+.ev_versus-pointarea:after { content: ""; display: block; width: 320px; height: 2px; position: absolute; bottom: -2px; left: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+.ev_versus-pointarea .myteam-pointarea { position: absolute; top: 3px; left: 5px; }
+.ev_versus-pointarea .rivalteam-pointarea { position: absolute; bottom: 3px; right: 5px; }
+.ev_versus-pointarea .ev_mydata-area { position: absolute; top: 8px; left: 0; width: 150px; }
+.ev_versus-pointarea .ev_rival-area { position: absolute; top: 8px; right: 0; width: 150px; }
+
+.ev_timecount-area { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_count-area-gradorange { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_questbtn-area { width: 160px; }
+
+.ev-imageinfo-area { position: relative; min-height: 40px; }
+.ev-imageinfo-area .ev-image-area { position: absolute; top: 0; left: 0; text-align: center; width: 320px; min-height: 40px; z-index: 100; }
+.ev-imageinfo-area .ev-text-area { position: relative; border-top: 26px solid transparent; line-height: 1.4rem; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; z-index: 200; }
+
+.ev-phantom-area { position: relative; }
+.ev-phantom-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-teamfever-area { position: relative; }
+.ev-teamfever-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-card-image-area .ev-count-text, .ev-card-image-area .ev-count-minitext { font-size: 1.2rem; margin: 0 auto; padding: 5px 0; background-color: #262626; -webkit-border-radius: 7px 7px 0 0; border-radius: 7px 7px 0 0; border-top: 1px solid #7f7f7f; border-left: 1px solid #7f7f7f; border-right: 1px solid #7f7f7f; }
+.separate-box-col1 .ev-card-image-area .ev-count-text { width: 148px; }
+.separate-box-col2 .ev-card-image-area .ev-count-text { width: 108px; }
+.separate-box-col3 .ev-card-image-area .ev-count-text { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-text { width: 58px; }
+.separate-box-col1 .ev-card-image-area .ev-count-minitext, .separate-box-col2 .ev-card-image-area .ev-count-minitext, .separate-box-col3 .ev-card-image-area .ev-count-minitext { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-minitext { width: 58px; }
+
+p.vitality span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #7e6200; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.growth span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #001228; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.relations span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #400; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.boxed-area span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #461c3c; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.ev-btn-areaselect, .ev-btn-quest, .ev-btn-ranking-reward, .ev-btn-ranking { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; }
+
+.ev-btn-raid-ap0, .ev-btn-raid-ap1, .ev-btn-raid-ap2, .ev-btn-raid-ap3, .ev-btn-raid-ap4, .ev-btn-raid-ap5, .ev-btn-raid-ap6 { position: absolute; top: 0; left: 0; width: 140px; height: 74px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; z-index: 200; }
+
+.ev-btn-areaselect a, .ev-btn-quest a, .ev-btn-ranking-reward a, .ev-btn-ranking a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; }
+
+.ev-btn-raid-ap0 a, .ev-btn-raid-ap1 a, .ev-btn-raid-ap2 a, .ev-btn-raid-ap3 a, .ev-btn-raid-ap4 a, .ev-btn-raid-ap5 a, .ev-btn-raid-ap6 a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; width: 140px; height: 74px; }
+
+.ev-btn-areaselect { width: 140px; height: 74px; background-position: 0 0; }
+.ev-btn-areaselect a { width: 140px; height: 74px; }
+
+.ev-btn-quest { width: 140px; height: 74px; background-position: -269px 0; }
+.ev-btn-quest a { width: 140px; height: 74px; }
+
+.ev-btn-raid-ap0 { background-position: -411px 0; }
+
+.ev-btn-raid-ap1 { background-position: -553px 0; }
+
+.ev-btn-raid-ap2 { background-position: -695px 0; }
+
+.ev-btn-raid-ap3 { background-position: -837px 0; }
+
+.ev-btn-raid-ap4 { background-position: -979px 0; }
+
+.ev-btn-raid-ap5 { background-position: -1121px 0; }
+
+.ev-btn-raid-ap6 { background-position: -1263px 0; }
+
+.ev-btn-ranking-reward { width: 140px; height: 50px; background-position: -1405px 0; }
+.ev-btn-ranking-reward a { width: 140px; height: 50px; }
+
+.ev-btn-ranking { width: 140px; height: 50px; background-position: -1547px 0; }
+.ev-btn-ranking a { width: 140px; height: 50px; }
+
+.ev-mercenary-nonactive, .ev-mercenary-active { position: relative; display: block; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after, .ev-mercenary-active:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after { background-color: rgba(0, 0, 0, 0.7); }
+
+.ev-reward-image-area { position: relative; width: 80px; height: 80px; z-index: 100; }
+.ev-reward-image-area.ev-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 80px; height: 80px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-reward-image-area.ev-reward-layer-area:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-daily-reward-image-area { position: relative; width: 70px; height: 70px; z-index: 100; }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 70px; height: 70px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-quest-clear-stamp-image-area { position: relative; width: 280px; height: 114px; z-index: 100; }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 280px; height: 114px; background-color: rgba(0, 0, 0, 0); }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100px; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_071%2Fchart%2Fclear_icon.png) no-repeat; -webkit-background-size: 100px 30px; background-size: 100px 30px; z-index: 200; }
+
+.ev-image-info-lgcard { position: relative; width: 320px; height: 240px; }
+.ev-image-info-lgcard .animation-area { display: block; position: absolute; top: 0; left: 0; width: 320px; height: 240px; z-index: 100; overflow: hidden; }
+.ev-image-info-lgcard img { position: absolute; right: 0; top: 0; display: block; width: 320px; height: 240px; z-index: 100; }
+
+.select-grow-area { position: relative; width: 320px; height: 189px; }
+.select-grow-area .btn-left-area { position: absolute; bottom: 25px; left: 25px; width: 122px; height: 23px; }
+.select-grow-area .btn-right-area { position: absolute; bottom: 25px; right: 27px; width: 122px; height: 23px; }
+
+.ev-top-btn-area { width: 320px; height: 50px; position: relative; }
+
+.ev-btn-exchange-mini { width: 147px; height: 42px; position: absolute; left: 13px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-btn-reward-mini { width: 147px; height: 42px; position: absolute; right: 9px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-fever-area { width: 164px; height: 32px; position: absolute; right: 15px; bottom: 70px; -webkit-background-size: 164px 32px; background-size: 164px 32px; z-index: 750; }
+.ev-fever-area .ev-fever-area-text { position: absolute; width: 140px; bottom: 5px; left: 40px; text-align: center; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; z-index: 1; }
+
+.ev-btn-boss { width: 80px; height: 80px; position: absolute; left: 157px; bottom: 20px; -webkit-background-size: 80px 80px; background-size: 80px 80px; z-index: 650; }
+
+.ev-tab-reward-alert { width: 25px; height: 25px; position: absolute; right: 0; top: -5px; display: block; }
+
+.ev-tab-boss-alert { width: 25px; height: 25px; position: absolute; right: 5px; top: -5px; display: block; }
+
+.ev-reward-image-area-mini { position: relative; width: 60px; height: 60px; z-index: 100; }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 80px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 80px 50px; background-size: 80px 50px; z-index: 200; }
+
+.ev-daily-reward-image-area-mini { position: relative; width: 50px; height: 50px; z-index: 100; }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 50px; height: 50px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 80px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 80px 50px; background-size: 80px 50px; z-index: 200; }
+
+.ev-globalmission-reward-image-area-mini { position: relative; width: 100px; height: 70px; z-index: 100; }
+
+.ev-globalmission-reward-image-area-mini.ev-globalmission-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 70px; height: 70px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-globalmission-reward-image-area-mini.ev-globalmission-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-pop-chat-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 2000; }
+
+.ev-pop-chat-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+.ev-pop-howto-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 2000; }
+
+.ev-pop-howto-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+.ev-result-btn-alert { position: absolute; top: 10px; left: 130px; z-index: 100; }
+
+.ev-top-area .ev-btn-mana-count-base { position: absolute; top: 178px; left: 190px; height: 16px; z-index: 1200; }
+
+.ev-top-area .ev-btn-mana-count { margin-top: 5px; position: absolute; z-index: 1300; font-size: 1.5rem; right: -44px; }
+
+.ev-top-area .ev-btn-mana-count-image { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fmana_base_1.png) no-repeat; width: 150px; height: 35px; position: absolute; z-index: 1250; }
+
+.ev-deck_manastone_skill_top .ev-title-area { padding: 2px 0 0 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Ficon-condition-s19f78a1c89.png) no-repeat; -webkit-background-size: 660px 40px; background-size: 660px 40px; width: 100px; height: 16px; background-position: -516px 0; }
+
+.ev-deck_manastone_skill_top .ev-skillcard-area { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Ficon-condition-s19f78a1c89.png) no-repeat; -webkit-background-size: 660px 40px; background-size: 660px 40px; width: 250px; background-position: 0 20px; }
+
+.ev-deck_manastone_skill_top .ev-skilltext-area .text-skill-area { display: inline-block; margin: 2px 2px 0 0; padding: 3px 5px; border: 1px solid #754e00; background-color: #200303; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper .ev-motif-gauge-bar { -webkit-transition-duration: 500ms; -moz-transition-duration: 500ms; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-base-short { position: relative; width: 260px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area:after { display: block; content: ""; position: absolute; top: 17px; left: 95.5px; width: 69px; height: 18px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -84px 0; z-index: 100; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 42px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-trance { position: relative; width: 260px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area { position: absolute; top: 0; left: 0; padding: 10px 22px 0 22px; width: 216px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -315px 0; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area:after { display: block; content: ""; position: absolute; top: 17px; left: 89px; width: 82px; height: 18px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Faction-gauge-s21f7109da2.png) no-repeat; -webkit-background-size: 1203px 25px; background-size: 1203px 25px; background-position: -1119px 0; z-index: 100; }
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-short-fever .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #331608), color-stop(30%, #fff043), color-stop(52%, #79641c), color-stop(67%, #100c04), color-stop(81%, #110d04), color-stop(97%, #97750f)); background-image: -webkit-linear-gradient(top, #331608, #fff043 30%, #79641c 52%, #100c04 67%, #110d04 81%, #97750f 97%); background-image: linear-gradient(top, #331608, #fff043 30%, #79641c 52%, #100c04 67%, #110d04 81%, #97750f 97%); }
+
+.ev-motif-gauge-short-trance .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #060617), color-stop(12%, #7431a9), color-stop(25%, #edd9fa), color-stop(47%, #6c4297), color-stop(55%, #160a23), color-stop(74%, #160a23), color-stop(90%, #8349b4), color-stop(100%, #2b183b)); background-image: -webkit-linear-gradient(top, #060617, #7431a9 12%, #edd9fa 25%, #6c4297 47%, #160a23 55%, #160a23 74%, #8349b4 90%, #2b183b); background-image: linear-gradient(top, #060617, #7431a9 12%, #edd9fa 25%, #6c4297 47%, #160a23 55%, #160a23 74%, #8349b4 90%, #2b183b); }
+
+.ev-motif-gauge-base-short .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #060617), color-stop(12%, #7431a9), color-stop(25%, #edd9fa), color-stop(47%, #6c4297), color-stop(55%, #160a23), color-stop(74%, #160a23), color-stop(90%, #8349b4), color-stop(100%, #2b183b)); background-image: -webkit-linear-gradient(top, #060617, #7431a9 12%, #edd9fa 25%, #6c4297 47%, #160a23 55%, #160a23 74%, #8349b4 90%, #2b183b); background-image: linear-gradient(top, #060617, #7431a9 12%, #edd9fa 25%, #6c4297 47%, #160a23 55%, #160a23 74%, #8349b4 90%, #2b183b); }
+
+.ev-btn-gauge-growth { position: relative; width: 180px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_gauge_boss_base.png) left 0 no-repeat; -webkit-background-size: 180px 15px; background-size: 180px 15px; }
+.ev-btn-gauge-growth .ev-gauge-area { position: absolute; bottom: 4px; left: 8px; z-index: 130; width: 163px; height: 5px; padding: 1px; -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; background-color: #222222; }
+.ev-btn-gauge-growth .ev-gauge-area .ev-gauge-bar { height: 5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a0c1cb), color-stop(30%, #74aee9), color-stop(100%, #0046d4)); background-image: -webkit-linear-gradient(top, #a0c1cb 0%, #74aee9 30%, #0046d4 100%); background-image: linear-gradient(top, #a0c1cb 0%, #74aee9 30%, #0046d4 100%); z-index: 140; }
+.ev-btn-gauge-growth .ev-max-image { position: absolute; bottom: nonepx; left: 8px; margin: 0 auto; width: 159px; z-index: 200; }
+
+.ev-btn-gauge-relations { position: relative; width: 180px; height: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_gauge_boss_base.png) left 0 no-repeat; -webkit-background-size: 180px 15px; background-size: 180px 15px; }
+.ev-btn-gauge-relations .ev-gauge-area { position: absolute; bottom: 4px; left: 8px; z-index: 130; width: 163px; height: 5px; padding: 1px; -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; background-color: #222222; }
+.ev-btn-gauge-relations .ev-gauge-area .ev-gauge-bar { height: 5px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ecaca8), color-stop(30%, #d96663), color-stop(100%, #ad141a)); background-image: -webkit-linear-gradient(top, #ecaca8 0%, #d96663 30%, #ad141a 100%); background-image: linear-gradient(top, #ecaca8 0%, #d96663 30%, #ad141a 100%); z-index: 140; }
+.ev-btn-gauge-relations .ev-max-image { position: absolute; bottom: nonepx; left: 8px; margin: 0 auto; width: 159px; z-index: 200; }
+
+.ev-motif-gauge-boost .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e3d029), color-stop(10%, #e7d655), color-stop(21%, #f6e880), color-stop(31%, #c3b123), color-stop(44%, #948300), color-stop(67%, #5e5300), color-stop(79%, #716628), color-stop(100%, #5d5337)); background-image: -webkit-linear-gradient(top, #e3d029, #e7d655 10%, #f6e880 21%, #c3b123 31%, #948300 44%, #5e5300 67%, #716628 79%, #5d5337 100%); background-image: linear-gradient(top, #e3d029, #e7d655 10%, #f6e880 21%, #c3b123 31%, #948300 44%, #5e5300 67%, #716628 79%, #5d5337 100%); }
+
+.ev-motif-gauge-boss-hp .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b0356), color-stop(7%, #410f90), color-stop(23%, #a034f2), color-stop(25%, #a034f2), color-stop(27%, #d262f7), color-stop(32%, #e693f7), color-stop(40%, #e693f7), color-stop(47%, #aa5bb7), color-stop(53%, #6e338e), color-stop(66%, #410d4e), color-stop(91%, #43016e), color-stop(96%, #6e338e), color-stop(100%, #6e338e)); background-image: -webkit-linear-gradient(top, #3b0356, #410f90 7%, #a034f2 23%, #a034f2 25%, #d262f7 27%, #e693f7 32%, #e693f7 40%, #aa5bb7 47%, #6e338e 53%, #410d4e 66%, #43016e 91%, #6e338e 96%, #6e338e 100%); background-image: linear-gradient(top, #3b0356, #410f90 7%, #a034f2 23%, #a034f2 25%, #d262f7 27%, #e693f7 32%, #e693f7 40%, #aa5bb7 47%, #6e338e 53%, #410d4e 66%, #43016e 91%, #6e338e 96%, #6e338e 100%); }
+
+.ev-motif-gauge-boss-hp-mini .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b0356), color-stop(7%, #410f90), color-stop(23%, #a034f2), color-stop(25%, #a034f2), color-stop(27%, #d262f7), color-stop(32%, #e693f7), color-stop(40%, #e693f7), color-stop(47%, #aa5bb7), color-stop(53%, #6e338e), color-stop(66%, #410d4e), color-stop(91%, #43016e), color-stop(96%, #6e338e), color-stop(100%, #6e338e)); background-image: -webkit-linear-gradient(top, #3b0356, #410f90 7%, #a034f2 23%, #a034f2 25%, #d262f7 27%, #e693f7 32%, #e693f7 40%, #aa5bb7 47%, #6e338e 53%, #410d4e 66%, #43016e 91%, #6e338e 96%, #6e338e 100%); background-image: linear-gradient(top, #3b0356, #410f90 7%, #a034f2 23%, #a034f2 25%, #d262f7 27%, #e693f7 32%, #e693f7 40%, #aa5bb7 47%, #6e338e 53%, #410d4e 66%, #43016e 91%, #6e338e 96%, #6e338e 100%); }
+
+.ev-motif-gauge-break .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8d0c0c), color-stop(8%, #f05110), color-stop(16%, #f4a228), color-stop(30%, #f4c472), color-stop(40%, #ba6c21), color-stop(54%, #8e1f17), color-stop(71%, #491717), color-stop(82%, #a81717), color-stop(94%, #de4017), color-stop(100%, #de4017)); background-image: -webkit-linear-gradient(top, #8d0c0c, #f05110 8%, #f4a228 16%, #f4c472 30%, #ba6c21 40%, #8e1f17 54%, #491717 71%, #a81717 82%, #de4017 94%, #de4017 100%); background-image: linear-gradient(top, #8d0c0c, #f05110 8%, #f4a228 16%, #f4c472 30%, #ba6c21 40%, #8e1f17 54%, #491717 71%, #a81717 82%, #de4017 94%, #de4017 100%); }
+
+.ev-motif-gauge-firstbreak .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8d0c0c), color-stop(8%, #f05110), color-stop(16%, #f4a228), color-stop(30%, #f4c472), color-stop(40%, #ba6c21), color-stop(54%, #8e1f17), color-stop(71%, #491717), color-stop(82%, #a81717), color-stop(94%, #de4017), color-stop(100%, #de4017)); background-image: -webkit-linear-gradient(top, #8d0c0c, #f05110 8%, #f4a228 16%, #f4c472 30%, #ba6c21 40%, #8e1f17 54%, #491717 71%, #a81717 82%, #de4017 94%, #de4017 100%); background-image: linear-gradient(top, #8d0c0c, #f05110 8%, #f4a228 16%, #f4c472 30%, #ba6c21 40%, #8e1f17 54%, #491717 71%, #a81717 82%, #de4017 94%, #de4017 100%); }
+
+.ev-motif-gauge-hp .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dc3937), color-stop(25%, #fb9595), color-stop(30%, #d74a49), color-stop(50%, #a20100), color-stop(100%, #590100)); background-image: -webkit-linear-gradient(top, #dc3937 0%, #fb9595 25%, #d74a49 30%, #a20100 50%, #590100 100%); background-image: linear-gradient(top, #dc3937 0%, #fb9595 25%, #d74a49 30%, #a20100 50%, #590100 100%); -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; }
+
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #984874), color-stop(8%, #cf4f8e), color-stop(17%, #f9bfdb), color-stop(25%, #f9d1e6), color-stop(33%, #dfa1c3), color-stop(42%, #bb6193), color-stop(50%, #7b2c5a), color-stop(58%, #321525), color-stop(75%, #321525), color-stop(83%, #481e35), color-stop(92%, #84325e), color-stop(100%, #b4467f)); background-image: -webkit-linear-gradient(top, #984874 0%, #cf4f8e 8%, #f9bfdb 17%, #f9d1e6 25%, #dfa1c3 33%, #bb6193 42%, #7b2c5a 50%, #321525 58%, #321525 75%, #481e35 83%, #84325e 92%, #b4467f 100%); background-image: linear-gradient(top, #984874 0%, #cf4f8e 8%, #f9bfdb 17%, #f9d1e6 25%, #dfa1c3 33%, #bb6193 42%, #7b2c5a 50%, #321525 58%, #321525 75%, #481e35 83%, #84325e 92%, #b4467f 100%); }
+
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper .ev-motif-gauge-bar-diff { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b5919d), color-stop(8%, #ecb9d2), color-stop(17%, #fde5f1), color-stop(25%, #fdedf5), color-stop(33%, #f2d9e7), color-stop(42%, #e4c0d4), color-stop(50%, #caabbd), color-stop(58%, #ada1a8), color-stop(75%, #ada1a8), color-stop(83%, #b6a5ae), color-stop(92%, #ceadbf), color-stop(100%, #e1b5cc)); background-image: -webkit-linear-gradient(top, #b5919d 0%, #ecb9d2 8%, #fde5f1 17%, #fdedf5 25%, #f2d9e7 33%, #e4c0d4 42%, #caabbd 50%, #ada1a8 58%, #ada1a8 75%, #b6a5ae 83%, #ceadbf 92%, #e1b5cc 100%); background-image: linear-gradient(top, #b5919d 0%, #ecb9d2 8%, #fde5f1 17%, #fdedf5 25%, #f2d9e7 33%, #e4c0d4 42%, #caabbd 50%, #ada1a8 58%, #ada1a8 75%, #b6a5ae 83%, #ceadbf 92%, #e1b5cc 100%); }
+
+.ev-motif-gauge-boost { position: relative; width: 245px; border-bottom: 13px solid transparent; }
+.ev-motif-gauge-boost .ev-motif-gauge-area { position: absolute; bottom: -13px; left: 0; padding: 3px 8px 0 8px; width: 229px; height: 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: -821px 0px; z-index: 100; }
+.ev-motif-gauge-boost .ev-motif-gauge-area .ev-motif-gauge-bar { height: 6px; z-index: 150; }
+
+.ev-motif-gauge-boss-hp { position: relative; width: 300px; border-bottom: 25px solid transparent; }
+.ev-motif-gauge-boss-hp .ev-motif-gauge-area { position: absolute; bottom: -25px; left: 0; padding: 8px 12px 0 12px; width: 276px; height: 17px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: -518px 0px; z-index: 100; }
+.ev-motif-gauge-boss-hp .ev-motif-gauge-area .ev-motif-gauge-bar { height: 11px; z-index: 150; }
+
+.ev-motif-gauge-boss-hp-mini { position: relative; width: 212px; border-bottom: 18px solid transparent; }
+.ev-motif-gauge-boss-hp-mini .ev-motif-gauge-area { position: absolute; bottom: -18px; left: 0; padding: 6px 9px 0 9px; width: 194px; height: 12px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: -303px 0px; z-index: 100; }
+.ev-motif-gauge-boss-hp-mini .ev-motif-gauge-area .ev-motif-gauge-bar { height: 7px; z-index: 150; }
+
+.ev-motif-gauge-break { position: relative; width: 300px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-break .ev-motif-gauge-area { position: absolute; bottom: -35px; left: 0; padding: 10px 24px 0 26px; width: 250px; height: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: 0px 0px; z-index: 100; }
+.ev-motif-gauge-break .ev-motif-gauge-area .ev-motif-gauge-bar { height: 6px; z-index: 150; }
+
+.ev-motif-gauge-firstbreak { position: relative; width: 300px; border-bottom: 35px solid transparent; }
+.ev-motif-gauge-firstbreak .ev-motif-gauge-area { position: absolute; bottom: -35px; left: 0; padding: 10px 24px 0 26px; width: 250px; height: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: 0px 0px; z-index: 100; }
+.ev-motif-gauge-firstbreak .ev-motif-gauge-area .ev-motif-gauge-bar { height: 6px; z-index: 150; }
+
+.ev-motif-gauge-hp { position: relative; width: 142px; border-bottom: 15px solid transparent; }
+.ev-motif-gauge-hp .ev-motif-gauge-area { position: absolute; bottom: -15px; left: 0; padding: 5px 21px 0 24px; width: 97px; height: 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: -1066px 0px; z-index: 100; }
+.ev-motif-gauge-hp .ev-motif-gauge-area .ev-motif-gauge-bar { height: 5px; z-index: 150; }
+
+.ev-motif-gauge-fever .ev-motif-gauge-text, .ev-motif-gauge-boost .ev-motif-gauge-text { position: absolute; bottom: -20px; left: 0; width: 245px; color: #ffdc62; text-shadow: 0px 0px 3px #070002 0px 0px 3px #070002 0px 0px 3px #070002 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002; text-shadow: 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002, 0px 0px 3px #070002; z-index: 200; }
+
+.ev-boss-hp-area { position: absolute; top: 12px; left: 0; right: 0; margin: 0 auto; font-size: 1.2rem; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; text-align: center; z-index: 200; }
+.ev-boss-hp-area .ev-boss-hp-count { color: #f00; font-size: 1.6rem; }
+
+.ev-boss-hp-mini-area { width: 212px; position: absolute; top: 10px; left: 0; font-size: 1.1rem; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; text-align: center; z-index: 200; }
+.ev-boss-hp-mini-area .ev-boss-hp-count { color: #f00; font-size: 1.3rem; }
+
+.ev-motif-gauge-hp { position: relative; bottom: 0px; left: 0; width: 142px; border-bottom: 15px solid transparent; z-index: 700; }
+.ev-motif-gauge-hp .ev-motif-gauge-area { position: absolute; top: 0px; left: 3px; padding: 5px 21px 0 24px; width: 97px; height: 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_motif-gauge-s4f92d64f82.png) no-repeat; -webkit-background-size: 1212px 35px; background-size: 1212px 35px; background-position: -1066px 0px; z-index: 100; }
+.ev-motif-gauge-hp .ev-motif-gauge-area .ev-motif-gauge-bar { height: 5px; z-index: 150; -webkit-border-radius: 3px; border-radius: 3px; }
+.ev-motif-gauge-hp .ev-motif-gauge-area .ev-motif-gauge-bar { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dc3937), color-stop(25%, #fb9595), color-stop(30%, #d74a49), color-stop(50%, #a20100), color-stop(100%, #590100)); background-image: -webkit-linear-gradient(top, #dc3937 0%, #fb9595 25%, #d74a49 30%, #a20100 50%, #590100 100%); background-image: linear-gradient(top, #dc3937 0%, #fb9595 25%, #d74a49 30%, #a20100 50%, #590100 100%); -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px rgba(0, 0, 0, 0.4) inset; }
+.ev-motif-gauge-hp .ev-hp-btn-count { position: absolute; width: 140px; top: 11px; left: 4px; text-align: center; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; z-index: 200; }
+
+.ev-motif-gauge-firstbreak .ev-firstbreak-info-area { position: absolute; top: 13px; left: 75px; width: 156px; height: 17px; z-index: 200; }
+
+.ev-motif-gauge-vitality .ev-vitality-area, .ev-motif-gauge-vitality .ev-relations-area, .ev-motif-gauge-relations .ev-vitality-area, .ev-motif-gauge-relations .ev-relations-area { position: absolute; top: -4px; left: 0; width: 180px; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; font-size: 1.2rem; z-index: 200; }
+
+.ev-motif-gauge-growth .ev-growth-area { position: absolute; top: -2px; left: 12px; width: 190px; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; font-size: 1.2rem; z-index: 200; }
+
+.ev-motif-gauge-human-attribute .ev-attribute-area, .ev-motif-gauge-god-attribute .ev-attribute-area, .ev-motif-gauge-devil-attribute .ev-attribute-area { position: absolute; top: 0; left: 25px; width: 50px; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; font-size: 1.2rem; z-index: 200; }
+.ev-motif-gauge-human-attribute .ev-attribute-shadow, .ev-motif-gauge-god-attribute .ev-attribute-shadow, .ev-motif-gauge-devil-attribute .ev-attribute-shadow { width: 80px; height: 6px; position: absolute; top: 7px; left: 6px; background-color: rgba(255, 255, 255, 0.45); -webkit-box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 2px 0px 5px #fff, 2px 0px 10px #fff; box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 2px 0px 5px #fff, 2px 0px 10px #fff; z-index: 1; }
+.ev-motif-gauge-human-attribute .ev-attribute-shadow:before, .ev-motif-gauge-god-attribute .ev-attribute-shadow:before, .ev-motif-gauge-devil-attribute .ev-attribute-shadow:before { content: ""; display: block; width: 14px; height: 14px; position: absolute; top: -4px; left: -5px; background-color: rgba(255, 255, 255, 0.45); -webkit-box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff; box-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff; -webkit-border-radius: 14px; border-radius: 14px; z-index: 1; }
+
+.ev-motif-gauge-growth-type { position: relative; }
+.ev-motif-gauge-growth-type .ev-growth-atk-area { position: absolute; top: 2px; left: 30px; width: 110px; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; font-size: 1.2rem; z-index: 200; }
+.ev-motif-gauge-growth-type .ev-growth-def-area { position: absolute; top: 2px; right: 30px; width: 110px; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; font-size: 1.2rem; z-index: 200; }
+
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area { position: relative; bottom: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent_ex%2Fcommon%2Faction-gauge-s4aa9043836.png) no-repeat; -webkit-background-size: 1417px 25px; background-size: 1417px 25px; background-position: -155px 0; width: 212px; height: 17px; z-index: 100; }
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper { position: absolute; top: 6px; left: 17px; width: 178px; height: 6px; }
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper .ev-motif-gauge-bar-diff { position: absolute; top: 0; left: 0; height: 6px; z-index: 160; }
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-motif-multi-gauge-area-wrapper .ev-motif-gauge-bar { position: absolute; top: 0; left: 0; height: 6px; z-index: 170; }
+.ev-motif-gauge-trust-pt .ev-motif-gauge-area .ev-gauge-text-area { position: relative; top: 6px; left: 17px; width: 178px; height: 17px; font-size: 1.1rem; text-align: center; z-index: 500; }
+
+.ev-btn-exchange-mini-off, .ev-btn-exchange-mini-on, .ev-btn-limit-open-mini-off, .ev-btn-limit-open-mini-on, .ev-btn-quest-off, .ev-btn-quest-on, .ev-btn-raid-limit-close, .ev-btn-raid-limit-off, .ev-btn-raid-limit-on, .ev-btn-reward-mini-off, .ev-btn-reward-mini-on { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fevent-top-button-s27ab3e66fd.png) no-repeat; -webkit-background-size: 1199px 105px; background-size: 1199px 105px; }
+
+.ev-btn-exchange-mini-off { width: 62px; height: 37px; background-position: 0 0; }
+.ev-btn-exchange-mini-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-exchange-mini-on { width: 62px; height: 37px; background-position: -64px 0; }
+.ev-btn-exchange-mini-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-limit-open-mini-off { width: 62px; height: 37px; background-position: -128px 0; }
+.ev-btn-limit-open-mini-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-limit-open-mini-on { width: 62px; height: 37px; background-position: -192px 0; }
+.ev-btn-limit-open-mini-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-quest-off { width: 110px; height: 105px; background-position: -256px 0; }
+.ev-btn-quest-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 110px; height: 105px; }
+
+.ev-btn-quest-on { width: 110px; height: 105px; background-position: -368px 0; }
+.ev-btn-quest-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 110px; height: 105px; }
+
+.ev-btn-raid-limit-close { width: 195px; height: 42px; background-position: -480px 0; }
+.ev-btn-raid-limit-close a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 195px; height: 42px; }
+
+.ev-btn-raid-limit-off { width: 195px; height: 42px; background-position: -677px 0; }
+.ev-btn-raid-limit-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 195px; height: 42px; }
+
+.ev-btn-raid-limit-on { width: 195px; height: 42px; background-position: -874px 0; }
+.ev-btn-raid-limit-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 195px; height: 42px; }
+
+.ev-btn-reward-mini-off { width: 62px; height: 37px; background-position: -1071px 0; }
+.ev-btn-reward-mini-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-reward-mini-on { width: 62px; height: 37px; background-position: -1135px 0; }
+.ev-btn-reward-mini-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-raidbtn-area { width: 147px; height: 63px; position: relative; bottom: 55px; left: 0; z-index: 700; }
+.ev-raidbtn-area .ev-shadow-area { width: 100px; height: 55px; position: absolute; top: 9px; left: 22px; background-color: rgba(255, 255, 255, 0.45); -webkit-box-shadow: -2px 2px 70px #fff; box-shadow: -2px 2px 70px #fff; -webkit-border-radius: 35px; border-radius: 35px; z-index: 1; }
+
+.ev-raidbtn-area_1 { width: 105px; height: 24px; position: relative; bottom: 3px; left: 40px; z-index: 700; }
+.ev-raidbtn-area_1 .ev-ap-count { position: absolute; width: 140px; top: 18px; left: -8px; text-align: center; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; z-index: 200; }
+
+.ev-top-area { position: relative; height: 300px; z-index: 0; }
+.ev-top-area .ev-info-area { margin: 0; padding: 3px 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_mask.png) left top no-repeat; background-size: 200px 30px; position: absolute; top: 185px; left: 0; width: 180px; height: 20px; z-index: 1000; }
+.ev-top-area #ev-top-btn-area { position: absolute; top: 217px; left: 8px; width: 200px; height: 90px; z-index: 1000; }
+.ev-top-area #ev-top-btn-area #ev-btn-raid-limit { margin: 0 0 5px; padding: 0; width: 195px; height: 42px; }
+.ev-top-area #ev-top-btn-area #ev-btn-raid-limit a.ev-btn-raid-limit-time, .ev-top-area #ev-top-btn-area #ev-btn-raid-limit span.ev-btn-raid-limit-time { position: absolute; top: 0; left: 0; padding: 26px 0 0 60px; width: 135px; height: 16px; text-align: left; text-decoration: none; z-index: 1000; }
+.ev-top-area #ev-top-btn-area #ev-btn-raid-limit a.ev-btn-raid-limit-time { color: #fff; }
+.ev-top-area #ev-top-btn-area #ev-btn-raid-limit span.ev-btn-raid-limit-time { color: #aaa; }
+.ev-top-area #ev-top-btn-area #ev-btn-raid-limit .ev-btn-raid-limit-close span { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 195px; height: 42px; }
+.ev-top-area #ev-top-btn-area #ev-btn-exchange-mini { width: 63px; height: 38px; float: left; }
+.ev-top-area #ev-top-btn-area #ev-btn-reward-mini { position: relative; margin-left: 3px; width: 63px; height: 38px; float: left; }
+.ev-top-area #ev-top-btn-area #ev-btn-play-mini, .ev-top-area #ev-top-btn-area #ev-btn-limit-open-mini { margin-left: 3px; width: 63px; height: 38px; float: left; }
+.ev-top-area #ev-btn-quest { position: absolute; top: 203px; left: 210px; width: 107px; height: 102px; text-indent: 100%; overflow: hidden; white-space: nowrap; z-index: 1000; }
+.ev-top-area #ev-btn-quest a { cursor: pointer; }
+.ev-top-area .ev-btn-fever { position: absolute; top: 145px; left: 252px; height: 45px; z-index: 1200; }
+.ev-top-area .ev-btn-fever .img-fever { width: 60px; height: 31px; }
+.ev-top-area .ev-btn-boss-appear { position: absolute; top: 148px; left: 252px; width: 55px; height: 55px; z-index: 1000; }
+
+.bg-mask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: none; z-index: 1000; }
+
+.ev-pop-skill-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 1000; }
+.ev-pop-skill-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+.three-way-standoff { position: absolute; top: 227px; left: 15px; width: 33px; height: 33px; z-index: 500; }
+
+.ev_deck-leadercard-frame { padding: 3px; border: 1px solid #3a3; background-color: #242; }
+
+.ev_versus-currenttitle { position: relative; width: 320px; height: auto; padding: 5px 0 7px; background-color: #333333; text-align: center; font-weight: bold; font-size: 1.6rem; line-height: 2.0rem; }
+.ev_versus-currenttitle:after { position: absolute; bottom: 0; left: 0; display: block; width: 320px; height: 2px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+
+.ev_versus-pointarea { position: relative; width: 320px; height: 110px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_background_battle.jpg) center top no-repeat; -webkit-background-size: 320px 110px; background-size: 320px 110px; }
+.ev_versus-pointarea:after { content: ""; display: block; width: 320px; height: 2px; position: absolute; bottom: -2px; left: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+.ev_versus-pointarea .myteam-pointarea { position: absolute; top: 3px; left: 5px; }
+.ev_versus-pointarea .rivalteam-pointarea { position: absolute; bottom: 3px; right: 5px; }
+.ev_versus-pointarea .ev_mydata-area { position: absolute; top: 8px; left: 0; width: 150px; }
+.ev_versus-pointarea .ev_rival-area { position: absolute; top: 8px; right: 0; width: 150px; }
+
+.ev_timecount-area { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_count-area-gradorange { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_questbtn-area { width: 160px; }
+
+.ev-imageinfo-area { position: relative; min-height: 40px; }
+.ev-imageinfo-area .ev-image-area { position: absolute; top: 0; left: 0; text-align: center; width: 320px; min-height: 40px; z-index: 100; }
+.ev-imageinfo-area .ev-text-area { position: relative; border-top: 26px solid transparent; line-height: 1.4rem; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; z-index: 200; }
+
+.ev-phantom-area { position: relative; }
+.ev-phantom-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-teamfever-area { position: relative; }
+.ev-teamfever-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-card-image-area .ev-count-text, .ev-card-image-area .ev-count-minitext { font-size: 1.2rem; margin: 0 auto; padding: 5px 0; background-color: #262626; -webkit-border-radius: 7px 7px 0 0; border-radius: 7px 7px 0 0; border-top: 1px solid #7f7f7f; border-left: 1px solid #7f7f7f; border-right: 1px solid #7f7f7f; }
+.separate-box-col1 .ev-card-image-area .ev-count-text { width: 148px; }
+.separate-box-col2 .ev-card-image-area .ev-count-text { width: 108px; }
+.separate-box-col3 .ev-card-image-area .ev-count-text { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-text { width: 58px; }
+.separate-box-col1 .ev-card-image-area .ev-count-minitext, .separate-box-col2 .ev-card-image-area .ev-count-minitext, .separate-box-col3 .ev-card-image-area .ev-count-minitext { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-minitext { width: 58px; }
+
+p.vitality span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #7e6200; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.growth span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #001228; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.relations span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #400; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.boxed-area span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #461c3c; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.ev-btn-areaselect, .ev-btn-quest, .ev-btn-ranking-reward, .ev-btn-ranking { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; }
+
+.ev-btn-raid-ap0, .ev-btn-raid-ap1, .ev-btn-raid-ap2, .ev-btn-raid-ap3, .ev-btn-raid-ap4, .ev-btn-raid-ap5, .ev-btn-raid-ap6 { position: absolute; top: 0; left: 0; width: 140px; height: 74px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; z-index: 200; }
+
+.ev-btn-areaselect a, .ev-btn-quest a, .ev-btn-ranking-reward a, .ev-btn-ranking a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; }
+
+.ev-btn-raid-ap0 a, .ev-btn-raid-ap1 a, .ev-btn-raid-ap2 a, .ev-btn-raid-ap3 a, .ev-btn-raid-ap4 a, .ev-btn-raid-ap5 a, .ev-btn-raid-ap6 a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; width: 140px; height: 74px; }
+
+.ev-btn-areaselect { width: 140px; height: 74px; background-position: 0 0; }
+.ev-btn-areaselect a { width: 140px; height: 74px; }
+
+.ev-btn-quest { width: 140px; height: 74px; background-position: -269px 0; }
+.ev-btn-quest a { width: 140px; height: 74px; }
+
+.ev-btn-raid-ap0 { background-position: -411px 0; }
+
+.ev-btn-raid-ap1 { background-position: -553px 0; }
+
+.ev-btn-raid-ap2 { background-position: -695px 0; }
+
+.ev-btn-raid-ap3 { background-position: -837px 0; }
+
+.ev-btn-raid-ap4 { background-position: -979px 0; }
+
+.ev-btn-raid-ap5 { background-position: -1121px 0; }
+
+.ev-btn-raid-ap6 { background-position: -1263px 0; }
+
+.ev-btn-ranking-reward { width: 140px; height: 50px; background-position: -1405px 0; }
+.ev-btn-ranking-reward a { width: 140px; height: 50px; }
+
+.ev-btn-ranking { width: 140px; height: 50px; background-position: -1547px 0; }
+.ev-btn-ranking a { width: 140px; height: 50px; }
+
+.ev-mercenary-nonactive, .ev-mercenary-active { position: relative; display: block; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after, .ev-mercenary-active:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after { background-color: rgba(0, 0, 0, 0.7); }
+
+.ev-reward-image-area { position: relative; width: 80px; height: 80px; z-index: 100; }
+.ev-reward-image-area.ev-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 80px; height: 80px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-reward-image-area.ev-reward-layer-area:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-daily-reward-image-area { position: relative; width: 70px; height: 70px; z-index: 100; }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 70px; height: 70px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-quest-clear-stamp-image-area { position: relative; width: 280px; height: 114px; z-index: 100; }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 280px; height: 114px; background-color: rgba(0, 0, 0, 0); }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100px; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_071%2Fchart%2Fclear_icon.png) no-repeat; -webkit-background-size: 100px 30px; background-size: 100px 30px; z-index: 200; }
+
+.ev-image-info-lgcard { position: relative; width: 320px; height: 240px; }
+.ev-image-info-lgcard .animation-area { display: block; position: absolute; top: 0; left: 0; width: 320px; height: 240px; z-index: 100; overflow: hidden; }
+.ev-image-info-lgcard img { position: absolute; right: 0; top: 0; display: block; width: 320px; height: 240px; z-index: 100; }
+
+.ev-btn-exchange-mini { width: 147px; height: 42px; position: absolute; left: 13px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-btn-reward-mini { width: 147px; height: 42px; position: absolute; right: 9px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-fever-area { width: 164px; height: 32px; position: absolute; right: 0; top: 30px; -webkit-background-size: 164px 32px; background-size: 164px 32px; z-index: 750; }
+.ev-fever-area .ev-fever-area-text { position: absolute; width: 140px; bottom: 5px; left: 40px; text-align: center; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; z-index: 1; }
+
+.ev-btn-boss { width: 80px; height: 80px; position: absolute; left: 157px; bottom: 20px; -webkit-background-size: 80px 80px; background-size: 80px 80px; z-index: 650; }
+
+.ev-tab-reward-alert { width: 25px; height: 25px; position: absolute; right: 0; top: -5px; display: block; }
+
+.ev-result-reward-alert { width: 25px; height: 25px; position: absolute; left: 130px; top: 65px; display: block; }
+
+.ev-tab-boss-alert { width: 25px; height: 25px; position: absolute; right: 5px; top: -5px; display: block; }
+
+.ev-reward-image-area-mini { position: relative; width: 60px; height: 60px; z-index: 100; }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 80px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 80px 50px; background-size: 80px 50px; z-index: 200; }
+
+.ev-daily-reward-image-area-mini { position: relative; width: 50px; height: 50px; z-index: 100; }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 50px; height: 50px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 0px; left: -10px; width: 70px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 70px 50px; background-size: 70px 50px; z-index: 200; }
+
+.ev-top-area { position: relative; height: 300px; z-index: 0; }
+
+#user-parameters { position: absolute; top: 5px; left: 0; z-index: 1000; }
+
+#user-parameters .ap-information { margin-left: 140px; width: 170px; height: 20px; }
+
+#ev-top-btn-area { position: absolute; bottom: -10px; left: 8px; width: 200px; height: 40px; z-index: 1000; }
+
+.ev-btn-exchange-mini-off { width: 62px; height: 37px; background-position: 0 0; }
+
+.ev-btn-exchange-mini-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-exchange-mini-on { width: 62px; height: 37px; background-position: -64px 0; }
+
+.ev-btn-exchange-mini-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-play-mini-off { width: 62px; height: 37px; background-position: -128px 0; }
+
+.ev-btn-play-mini-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-play-mini-on { width: 62px; height: 37px; background-position: -192px 0; }
+
+.ev-btn-play-mini-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 62px; height: 37px; }
+
+.ev-btn-quest-off { width: 110px; height: 105px; background-position: -256px 0; }
+
+.ev-btn-quest-off a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 110px; height: 105px; }
+
+.ev-btn-quest-on { width: 110px; height: 105px; background-position: -368px 0; }
+
+.ev-btn-quest-on a { display: block; overflow: hidden; text-indent: 100%; white-space: nowrap; width: 110px; height: 105px; }
+
+.ev-btn-fever { position: absolute; top: 93px; left: 252px; height: 45px; z-index: 1000; }
+
+.ev-btn-boss-appear { position: absolute; bottom: 32px; left: 140px; z-index: 1000; }
+
+#ev-btn-quest-area { position: absolute; bottom: 55px; right: 5px; width: 110px; height: 40px; z-index: 1000; }
+
+#ev-recovery { padding-top: 8px; }
+
+.ev-schedule-area { position: absolute; bottom: 37px; left: 5px; z-index: 1000; }
+
+.right-large-balloon_1 { width: 320px; height: 300px; position: relative; }
+.right-large-balloon_1 .voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 20px; top: 94px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon_1 .voice-stop-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 20px; top: 94px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fvoice_icon_stop_2.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon_1 .no-voice-area { text-indent: 100%; white-space: nowrap; overflow: hidden; width: 40px; height: 40px; position: absolute; right: 20px; top: 94px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fnext_icon.png) right center no-repeat; -webkit-background-size: 40px 40px; background-size: 40px 40px; z-index: 150; }
+.right-large-balloon_1 .chara-area { width: 100px; position: absolute; left: 0; top: 20px; z-index: 10; }
+.right-large-balloon_1 .text-area { width: 125px; height: 90px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 10px 20px 30px; position: absolute; top: 50px; right: 15px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fsp_navi_baloon_top.png) left top no-repeat; -webkit-background-size: 168px 120px; background-size: 168px 120px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon_1 .text-area .chara-talk { width: 165px; height: 90px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 20px 50px 20px 30px; position: absolute; top: 50px; left: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fsp_navi_baloon_top.png) left top no-repeat; -webkit-background-size: 168px 120px; background-size: 168px 120px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon_1 .text-area-mini { width: 177px; height: 65px; font-size: 1.3rem; line-height: 1.4rem; text-align: left; padding: 10px; position: absolute; top: 48px; right: 10px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fnavi%2Fui_event_000_navi_balloon_top.png) left top no-repeat; -webkit-background-size: 197px 65px; background-size: 197px 65px; color: #1d1d1d; font-weight: bold; text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff; z-index: 100; }
+.right-large-balloon_1 .ev-mask-buttom { position: absolute; bottom: 0px; left: 0; width: 320px; height: 100px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fraid_battle_stay_mask_3.png) no-repeat; -webkit-background-size: 320px 100px; background-size: 320px 100px; z-index: 200; }
+.right-large-balloon_1 .ev-mask-top { content: ""; display: block; position: absolute; top: 0; left: 0; width: 320px; height: 80px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fraid_battle_stay_mask_2.png) no-repeat; -webkit-background-size: 320px 90px; background-size: 320px 80px; z-index: 0; }
+
+p.vitality span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #7e6200; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.growth span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #001228; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.relations span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #400; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.boxed-area span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #461c3c; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.select-grow-area { position: relative; width: 320px; height: 189px; }
+.select-grow-area .btn-left-area { position: absolute; bottom: 25px; left: 25px; width: 122px; height: 23px; }
+.select-grow-area .btn-right-area { position: absolute; bottom: 25px; right: 27px; width: 122px; height: 23px; }
+
+input.btn-grow-skillchange { position: relative; display: block; width: 250px; height: 52px; margin: 0 auto; border: none; padding: 0 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_grow_valid.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; overflow: hidden; text-indent: 100%; white-space: nowrap; }
+input.btn-grow-skillchange:active { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_grow_valid_active.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; }
+input.btn-grow-skillchange.nonactive { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_grow_valid_off.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; }
+
+input.btn-grow-skillchange-ext { position: relative; display: block; width: 250px; height: 52px; margin: 0 auto; border: none; padding: 0 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_ext_grow_valid.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; overflow: hidden; text-indent: 100%; white-space: nowrap; }
+input.btn-grow-skillchange-ext:active { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_ext_grow_valid_active.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; }
+input.btn-grow-skillchange-ext.nonactive { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_218%2Fimage_ui_1%2Fbtn_ext_grow_valid_off.png) top left no-repeat; -webkit-background-size: 250px 52px; background-size: 250px 52px; }
+
+.ev_deck-leadercard-frame { padding: 3px; border: 1px solid #3a3; background-color: #242; }
+
+.ev_versus-currenttitle { position: relative; width: 320px; height: auto; padding: 5px 0 7px; background-color: #333333; text-align: center; font-weight: bold; font-size: 1.6rem; line-height: 2.0rem; }
+.ev_versus-currenttitle:after { position: absolute; bottom: 0; left: 0; display: block; width: 320px; height: 2px; content: ""; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) 0 -129px no-repeat #111110; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+
+.ev_versus-pointarea { position: relative; width: 320px; height: 110px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_background_battle.jpg) center top no-repeat; -webkit-background-size: 320px 110px; background-size: 320px 110px; }
+.ev_versus-pointarea:after { content: ""; display: block; width: 320px; height: 2px; position: absolute; bottom: -2px; left: 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fui%2Fline-s8916ead80a.png) center -124px no-repeat; -webkit-background-size: 320px 131px; background-size: 320px 131px; }
+.ev_versus-pointarea .myteam-pointarea { position: absolute; top: 3px; left: 5px; }
+.ev_versus-pointarea .rivalteam-pointarea { position: absolute; bottom: 3px; right: 5px; }
+.ev_versus-pointarea .ev_mydata-area { position: absolute; top: 8px; left: 0; width: 150px; }
+.ev_versus-pointarea .ev_rival-area { position: absolute; top: 8px; right: 0; width: 150px; }
+
+.ev_timecount-area { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_count-area-gradorange { padding: 5px; background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(200, 46, 8, 0)), color-stop(25%, rgba(200, 46, 8, 0.8)), color-stop(50%, rgba(200, 46, 8, 0.8)), color-stop(75%, rgba(200, 46, 8, 0.8)), color-stop(100%, rgba(200, 46, 8, 0))); background-image: -webkit-linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); background-image: linear-gradient(left, rgba(200, 46, 8, 0) 0%, rgba(200, 46, 8, 0.8) 25%, rgba(200, 46, 8, 0.8) 50%, rgba(200, 46, 8, 0.8) 75%, rgba(200, 46, 8, 0) 100%); }
+
+.ev_questbtn-area { width: 160px; }
+
+.ev-imageinfo-area { position: relative; min-height: 40px; }
+.ev-imageinfo-area .ev-image-area { position: absolute; top: 0; left: 0; text-align: center; width: 320px; min-height: 40px; z-index: 100; }
+.ev-imageinfo-area .ev-text-area { position: relative; border-top: 26px solid transparent; line-height: 1.4rem; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; z-index: 200; }
+
+.ev-phantom-area { position: relative; }
+.ev-phantom-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-teamfever-area { position: relative; }
+.ev-teamfever-area p { position: absolute; top: 25px; left: 0; width: 100%; text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000; }
+
+.ev-card-image-area .ev-count-text, .ev-card-image-area .ev-count-minitext { font-size: 1.2rem; margin: 0 auto; padding: 5px 0; background-color: #262626; -webkit-border-radius: 7px 7px 0 0; border-radius: 7px 7px 0 0; border-top: 1px solid #7f7f7f; border-left: 1px solid #7f7f7f; border-right: 1px solid #7f7f7f; }
+.separate-box-col1 .ev-card-image-area .ev-count-text { width: 148px; }
+.separate-box-col2 .ev-card-image-area .ev-count-text { width: 108px; }
+.separate-box-col3 .ev-card-image-area .ev-count-text { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-text { width: 58px; }
+.separate-box-col1 .ev-card-image-area .ev-count-minitext, .separate-box-col2 .ev-card-image-area .ev-count-minitext, .separate-box-col3 .ev-card-image-area .ev-count-minitext { width: 76px; }
+.separate-box-col4 .ev-card-image-area .ev-count-minitext { width: 58px; }
+
+p.vitality span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #7e6200; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.growth span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #001228; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.relations span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #400; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+p.boxed-area span.text-area { display: inline-block; margin-right: 5px; padding: 3px 5px; border: 1px solid #754e00; background-color: #461c3c; text-align: center; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.ev-btn-areaselect, .ev-btn-quest, .ev-btn-ranking-reward, .ev-btn-ranking { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; }
+
+.ev-btn-raid-ap0, .ev-btn-raid-ap1, .ev-btn-raid-ap2, .ev-btn-raid-ap3, .ev-btn-raid-ap4, .ev-btn-raid-ap5, .ev-btn-raid-ap6 { position: absolute; top: 0; left: 0; width: 140px; height: 74px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev-btn-main-sf58fb0a8e3.png) no-repeat; -webkit-background-size: 1689px 74px; background-size: 1689px 74px; z-index: 200; }
+
+.ev-btn-areaselect a, .ev-btn-quest a, .ev-btn-ranking-reward a, .ev-btn-ranking a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; }
+
+.ev-btn-raid-ap0 a, .ev-btn-raid-ap1 a, .ev-btn-raid-ap2 a, .ev-btn-raid-ap3 a, .ev-btn-raid-ap4 a, .ev-btn-raid-ap5 a, .ev-btn-raid-ap6 a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; width: 140px; height: 74px; }
+
+.ev-btn-areaselect { width: 140px; height: 74px; background-position: 0 0; }
+.ev-btn-areaselect a { width: 140px; height: 74px; }
+
+.ev-btn-quest { width: 140px; height: 74px; background-position: -269px 0; }
+.ev-btn-quest a { width: 140px; height: 74px; }
+
+.ev-btn-raid-ap0 { background-position: -411px 0; }
+
+.ev-btn-raid-ap1 { background-position: -553px 0; }
+
+.ev-btn-raid-ap2 { background-position: -695px 0; }
+
+.ev-btn-raid-ap3 { background-position: -837px 0; }
+
+.ev-btn-raid-ap4 { background-position: -979px 0; }
+
+.ev-btn-raid-ap5 { background-position: -1121px 0; }
+
+.ev-btn-raid-ap6 { background-position: -1263px 0; }
+
+.ev-btn-ranking-reward { width: 140px; height: 50px; background-position: -1405px 0; }
+.ev-btn-ranking-reward a { width: 140px; height: 50px; }
+
+.ev-btn-ranking { width: 140px; height: 50px; background-position: -1547px 0; }
+.ev-btn-ranking a { width: 140px; height: 50px; }
+
+.ev-mercenary-nonactive, .ev-mercenary-active { position: relative; display: block; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after, .ev-mercenary-active:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 304px; height: 63px; }
+
+.ev-mercenary-nonactive:after { background-color: rgba(0, 0, 0, 0.7); }
+
+.ev-reward-image-area { position: relative; width: 80px; height: 80px; z-index: 100; }
+.ev-reward-image-area.ev-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 80px; height: 80px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-reward-image-area.ev-reward-layer-area:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-daily-reward-image-area { position: relative; width: 70px; height: 70px; z-index: 100; }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 70px; height: 70px; background-color: rgba(0, 0, 0, 0.4); }
+.ev-daily-reward-image-area.ev-daily-reward-layer-area:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-quest-clear-stamp-image-area { position: relative; width: 280px; height: 114px; z-index: 100; }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 280px; height: 114px; background-color: rgba(0, 0, 0, 0); }
+.ev-quest-clear-stamp-image-area.ev-quest-clear-stamp-layer-area:after { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100px; height: 30px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fevent_071%2Fchart%2Fclear_icon.png) no-repeat; -webkit-background-size: 100px 30px; background-size: 100px 30px; z-index: 200; }
+
+.ev-image-info-lgcard { position: relative; width: 320px; height: 240px; }
+.ev-image-info-lgcard .animation-area { display: block; position: absolute; top: 0; left: 0; width: 320px; height: 240px; z-index: 100; overflow: hidden; }
+.ev-image-info-lgcard img { position: absolute; right: 0; top: 0; display: block; width: 320px; height: 240px; z-index: 100; }
+
+.select-grow-area { position: relative; width: 320px; height: 189px; }
+.select-grow-area .btn-left-area { position: absolute; bottom: 25px; left: 25px; width: 122px; height: 23px; }
+.select-grow-area .btn-right-area { position: absolute; bottom: 25px; right: 27px; width: 122px; height: 23px; }
+
+.ev-top-btn-area { width: 320px; height: 50px; position: relative; }
+
+.ev-btn-exchange-mini { width: 147px; height: 42px; position: absolute; left: 13px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-btn-reward-mini { width: 147px; height: 42px; position: absolute; right: 9px; bottom: 0; -webkit-background-size: 147px 42px; background-size: 147px 42px; z-index: 750; }
+
+.ev-fever-area { width: 164px; height: 32px; position: absolute; right: 15px; bottom: 70px; -webkit-background-size: 164px 32px; background-size: 164px 32px; z-index: 750; }
+.ev-fever-area .ev-fever-area-text { position: absolute; width: 140px; bottom: 5px; left: 40px; text-align: center; text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000; z-index: 1; }
+
+.ev-btn-boss { width: 80px; height: 80px; position: absolute; left: 157px; bottom: 20px; -webkit-background-size: 80px 80px; background-size: 80px 80px; z-index: 650; }
+
+.ev-tab-reward-alert { width: 25px; height: 25px; position: absolute; right: 0; top: -5px; display: block; }
+
+.ev-tab-boss-alert { width: 25px; height: 25px; position: absolute; right: 5px; top: -5px; display: block; }
+
+.ev-reward-image-area-mini { position: relative; width: 60px; height: 60px; z-index: 100; }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 60px; height: 60px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-reward-image-area-mini.ev-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 5px; left: -10px; width: 80px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 80px 50px; background-size: 80px 50px; z-index: 200; }
+
+.ev-daily-reward-image-area-mini { position: relative; width: 50px; height: 50px; z-index: 100; }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 50px; height: 50px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-daily-reward-image-area-mini.ev-daily-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 80px; height: 50px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 80px 50px; background-size: 80px 50px; z-index: 200; }
+
+.ev-globalmission-reward-image-area-mini { position: relative; width: 100px; height: 70px; z-index: 100; }
+
+.ev-globalmission-reward-image-area-mini.ev-globalmission-reward-layer-area-mini:before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 70px; height: 70px; background-color: rgba(0, 0, 0, 0.4); }
+
+.ev-globalmission-reward-image-area-mini.ev-globalmission-reward-layer-area-mini:after { content: ""; display: block; position: absolute; top: 0px; left: -15px; width: 100px; height: 70px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fbingo_stamp.png) no-repeat; -webkit-background-size: 100px 70px; background-size: 100px 70px; z-index: 200; }
+
+.ev-pop-chat-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 2000; }
+
+.ev-pop-chat-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+.ev-pop-howto-area { position: absolute; display: none; top: 10px; left: 10px; width: 298px; z-index: 2000; }
+
+.ev-pop-howto-area .btn-close { position: absolute; top: -15px; right: -10px; width: 30px; height: 30px; }
+
+.ev-result-btn-alert { position: absolute; top: 10px; left: 130px; z-index: 100; }
+
+.ev-top-area .ev-btn-mana-count-base { position: absolute; top: 178px; left: 190px; height: 16px; z-index: 1200; }
+
+.ev-top-area .ev-btn-mana-count { margin-top: 5px; position: absolute; z-index: 1300; font-size: 1.5rem; right: -44px; }
+
+.ev-top-area .ev-btn-mana-count-image { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fmana_base_1.png) no-repeat; width: 150px; height: 35px; position: absolute; z-index: 1250; }
+
+.ev-deck_manastone_skill_top .ev-title-area { padding: 2px 0 0 0; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Ficon-condition-s19f78a1c89.png) no-repeat; -webkit-background-size: 660px 40px; background-size: 660px 40px; width: 100px; height: 16px; background-position: -516px 0; }
+
+.ev-deck_manastone_skill_top .ev-skillcard-area { background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Ficon-condition-s19f78a1c89.png) no-repeat; -webkit-background-size: 660px 40px; background-size: 660px 40px; width: 250px; background-position: 0 20px; }
+
+.ev-deck_manastone_skill_top .ev-skilltext-area .text-skill-area { display: inline-block; margin: 2px 2px 0 0; padding: 3px 5px; border: 1px solid #754e00; background-color: #200303; -webkit-border-radius: 3px; border-radius: 3px; }
+
+.icon-alert-area { position: relative; }
+
+.icon-alert-area .alert-icon { position: absolute; top: -8px; right: -7px; width: 25px; height: 25px; background: url(http://sp.pf-img-a.mbga.jp/12007160?url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Fimage_sp%2Fevent%2Fcommon%2Fev_icon_attention.png) right center no-repeat; -webkit-background-size: 25px 25px; background-size: 25px 25px; overflow: hidden; text-indent: 100%; white-space: nowrap; }
+
+.icon-alert-area .alert-icon.mid-right { top: -8px; right: 3px; }
