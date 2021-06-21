@@ -1,0 +1,2137 @@
+<!doctype html>
+<html lang="ja" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <title>신격의 바하무트</title>
+    <link rel="stylesheet" type="text/css" href="12008305/css/rich/new_mypage_common.css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="12008305/image_sp/ui/icon_bookmark.png">
+    <script type="text/javascript">
+        if (window.localStorage) {
+            var displaySet = localStorage.getItem('DisplayPositionSet');
+            if (displaySet == 1) {
+                if (navigator.userAgent.indexOf('Android') > 0) {
+                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
+                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                } else {
+                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
+                }
+                window.addEventListener('resize', function() {
+                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                });
+            } else {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+        }
+    </script>
+    <script src="12008305/js/jquery-2.2.2.min.js"></script>
+    <script>
+        (function() {
+            window.viewer_id = 139087231;
+            var _url = "http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fgame_error%2Freport_js_error%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D281496550";
+            var _path = location.href;
+            var _spec_obj;
+            var _spec = 'none';
+            var version = 1;
+            // access方法検出
+            _spec_obj = {
+                'isNative': false,
+                'isAndApp': false,
+                'isShellApp': false,
+                'isIosApp': false,
+                'isChromeApp': false
+            };
+            window._spec = _spec_obj;
+            if (_spec.isAndApp) {
+                _spec = 'andapp'
+            } else if (_spec.isIosApp) {
+                _spec = 'iosApp';
+            } else if (_spec.isShellApp) {
+                _spec = 'shellapp';
+            } else {
+                _spec = 'browser?';
+            }
+            var _ua = window.navigator.userAgent.toLowerCase();
+            window.onerror = function(msg, file, line, col, error) {
+                $.ajax({
+                    url: _url,
+                    type: 'post',
+                    data: {
+                        'ua': _ua,
+                        'viewer_id': window.viewer_id,
+                        'path': _path,
+                        'line': line,
+                        'column': col,
+                        'error': error,
+                        'spec': _spec,
+                        'spec_obj': _spec_obj,
+                        'version': version
+                    }
+                })
+            };
+        })();
+    </script>
+    <script src="12008305/js/underscore-min.js"></script>
+    <script src="12008305/js/require.js"></script>
+    <script src="12008305/js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                easeljs: "12008305/js/easeljs-0.8.2.min",
+                easeljs_0_7_1: "12008305/js/easeljs-0.7.1.min", //スプライトを読むためのバージョン
+                tweenjs: "12008305/js/tweenjs-0.6.2.min",
+                movieclipjs: "12008305/js/movieclip-0.7.1.min",
+                createjs: "12008305/js/createjs-2015.11.26.min",
+            }
+        })
+    </script>
+    <script src="12008305/js/common.js"></script>
+    <script src="12008305/js/common_new.js"></script>
+    <script>
+        $(function() {
+            window.$ibox = $('.ibox').ibox();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/dad249d2193e48fede1efb6b86ce152f');
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0,
+            bgm_flg = 0,
+            chrome_app_flg = 0,
+            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
+    </script>
+    <script type='text/javascript' src='12008305/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+</head>
+
+<body id="idol_gallery" class="idol_detail">
+    <div id="top" class="page_container jsOnBtn">
+        <nav class="area_menu_header">
+            <div class="area_menu_header_6btn">
+                <h1 id="JtextLimit">신격의 바하무트</h1>
+                <ul>
+                    <li><a class="head_menu_01" href="">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_02" href="">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_03" href="">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_04" href="">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_05" href="">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                            <div></div>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <input id="delay" type="hidden" value="0">
+        <link rel="stylesheet" type="text/css" href="12008305/css/rich/idol_gallery.css" media="all">
+        <style>
+            .idolProfile {
+                margin-bottom: 0;
+            }
+        </style>
+        <div id="idol-base-content" class="m-Btm10">
+        </div>
+        <div class="idolList" style="height:66px;overflow:hidden;position:relative;top:-5px;">
+            <ul class="slides">
+                <li style="width: 318px;padding-left: 2px">
+                    <div class="displayBox">
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/8a396ef037b3590f2db5f043d69e1513.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="0">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="1">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/9ad4e9559c43751754afcafa35e97ad1.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="2">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="3">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/c5141accaac30f778de886d022ee4d07.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="4">
+                        </div>
+                    </div>
+                </li>
+                <li style="width: 318px;padding-left: 2px">
+                    <div class="displayBox">
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="5">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/84b4f889f3f9513fd551da25df0b021c.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="6">
+                        </div>
+                        <div class="idol" style="background:url(bahamut/image_sp/card/xs/.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="7">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ol class="icon_navi" style="position:relative;margin-bottom: -1px;margin-top: -7px;">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+        </ol>
+        <div id="tab-content" style="position:relative;z-index:1">
+        </div>
+        <div class="area_tab_1">
+            <div id="profile-content">
+            </div><!--
+            <div class="displayBox" style="-webkit-box-pack:center;width:300px;">
+                <div style="width:50%">
+                    <a class="btn_3rd_anniversary js_submit_check_idol_comment_3rd m-Top10 t-Cnt jsOnDesignBtn"></a>
+                    <form method="post" action='http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fcampaign%2Fcheck_idol_comment%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D725481991' class="form_check_idol_comment_3rd" style="display:none;">
+                        <input type="hidden" name="character_id" value="26">
+                        <input type="hidden" name="select_card_hash" value="">
+                    </form>
+                </div>
+                <div style="width:50%">
+                    <a class="btn_5th_anniversary js_submit_check_idol_comment_5th m-Top10 t-Cnt jsOnDesignBtn"></a>
+                    <form method="post" action='http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fcampaign_present%2Fredirect_flash_idol_comment_replay%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D29114223' class="form_check_idol_comment_5th" style="display:none;">
+                        <input type="hidden" name="card_hash" value="">
+                        <input type="hidden" name="redirect_url" value="">
+                        <input type="hidden" name="campaign_id" value="114">
+                        <input type="hidden" name="chapter_id" value="1">
+                    </form>
+                </div>
+            </div>-->
+        </div>
+        <div class="area_tab_2">
+            <div id="comment-content">
+            </div>
+        </div>
+        <div class="area_tab_3">
+<!--이벤트에피소드추가-->
+                <div id="story-content" class="jsOnDesignBtn-wrap">
+                </div>
+
+        </div>
+        <div class="area_tab_4">
+            <div id="parameter-content" class="jsOnBtn-wrap">
+            </div>
+        </div>
+        <style type="text/css">
+            <!--
+            .checkForm {
+                width: 260px;
+                height: 32px;
+                position: relative;
+                margin: 5px 10px;
+                text-align: center;
+                line-height: 34px;
+                float: left;
+                padding-left: 28px;
+            }
+
+            .ep_on {
+                background: url('http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Frich%2Ficon%2Ficon_checkbox_on.png%3Fv%3D20170222083846') no-repeat 35px 5px;
+                background-size: 21px;
+            }
+
+            .ep_off {
+                background: url('http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Frich%2Ficon%2Ficon_checkbox_off.png%3Fv%3D20170222083846') no-repeat 35px 5px;
+                background-size: 21px;
+            }
+            -->
+        </style>
+        
+        
+        <script type="text/template" id="tab-4-template">
+            <div id="contents_tab" class="tab_common-large m-Top4 m-Btm8" style="font-size:11px">
+<a name="tab_1" href="#" class="tab_line_4 tab_text selected" style="font-size:11px;">프로필</a>
+<a name="tab_2" href="#" class="tab_line_4 tab_text js_tab_comment_list" style="font-size:11px;">대사 일람</a>
+<a name="tab_3" href="#" class="tab_line_4 tab_text" style="font-size:11px;">에피소드</a>
+<a name="tab_4" href="#" class="tab_line_4 tab_text" style="font-size:11px;">아이돌 정보</a>
+</div>
+</script>
+        <script type="text/template" id="tab-3-template">
+            <div id="contents_tab" class="tab_common-large m-Top4 m-Btm8">
+<a name="tab_1" class="tab_line_3 tab_text" href="#">프로필</a>
+<a name="tab_2" class="tab_line_3 tab_text js_tab_comment_list" href="#">대사 일람</a>
+<a name="tab_3" href="#" style='display:none;'>에피소드</a>
+<a name="tab_4" class="tab_line_3 tab_text" href="#">아이돌 정보</a>
+</div>
+</script>
+        <script type="text/template" id="idol-base-template">
+            <div style="position:relative;top:-20px;padding-top:24px;height:312px;margin-bottom:-143px;">
+<div style="background-image:url(<%- idol_image_bg_attribute[idol_detail.data.rarity][idol_detail.data.attribute.substr(0, 2)] %>);background-size:320px;position:absolute;top:0;width:100%;height:100%;"></div>
+<% if(idol_detail.data.rarity <= 2) { %>
+<% opacity = 0.5 %>
+<% } else if (idol_detail.data.rarity <= 4) { %>
+<% opacity = 0.6 %>
+<% } else { %>
+<% opacity = 0 %>
+<% } %>
+<div style="background:white;width:100%;height:100%;opacity:<%- opacity %>;position:absolute;top:0;"></div>
+<div class="displayBox m-Top5 t-Lft" style="width:304px;position:relative;">
+<div class="t-Lft" style="width:50%">
+<% if(idol_detail.is_exist_archive) { %>
+<a class="js_btn_expansion"><img src='<%- idol_image %>' style="width:148px;height:185px;box-shadow: 2px 2px 2px #555555;" /></a>
+<% } else { %>
+<img src='http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fblank_l.jpg%3Fv%3D20170222083833' style="width:148px;height:185px;box-shadow: 2px 2px 2px #555555;" />
+<% } %>
+</div>
+<div class="t-Rft" style="width:50%">
+<div class="detail_idol_name_plate_<%- idol_detail.data.attribute %>">
+<div class="detail_idol_alias_name"><%- idol_detail.data.alias_name %></div>
+<div class="detail_idol_real_name" <% if(idol_detail.data.alias_name == "") { %>style="top:19px;"<% } %>><%- idol_detail.data.real_name %></div>
+</div>
+<div class="detail_idol_num_<%- idol_detail.data.attribute %>">
+<div class="detail_idol_register_num"><span class="yellow">18</span> / 18</div>
+<div class="detail_idol_love_num"><span class="yellow">18</span> / 18</div>
+</div>
+<% if(birthday_flag) { %>
+<div class="icon_birthday"></div>
+<% } %>
+<% if(+idol_detail.archive.premium && +idol_detail.archive.normal) { %>
+<% if(idol_detail.show_card_type == "l_premium") { %>
+<a id="btn_normal_sign" class="js_btn_change_card_type"></a>
+<% } else { %>
+<a id="btn_premium_sign" class="js_btn_change_card_type"></a>
+<% } %>
+<% } %>
+</div>
+</div>
+</div>
+</script>
+        <script type="text/template" id="profile-template">
+            <section class="idolProfile deck m-Btm5">
+<div class="profile_top"></div>
+<div class="profile_content">
+<div class="profile_box detail_<%- data.attribute %>">
+<div class="data_list">
+<div class="title kana"></div><div class="pr"><%- profile.card_kana %></div>
+</div>
+<div class="data_list">
+<div class="blk">
+<div class="title hgt"></div><div class="pr"><%- profile.card_height %>cm</div>
+</div>
+<div class="blk">
+<div class="title age"></div><div class="pr"><%- profile.card_age %>세</div>
+</div>
+</div>
+<div class="data_list">
+<div class="blk">
+<div class="title wgt"></div>
+<div class="pr wgt">
+<%- profile.card_weight %>
+<% if ( /[0-9.]/.test(profile.card_weight) ) { %>
+kg
+<% } %>
+</div>
+</div>
+<div class="blk">
+<div class="title size"></div><div class="pr size"><%- profile.card_bust %>/<%- profile.card_waist %>/<%- profile.card_hip %></div>
+</div>
+</div>
+<div class="data_list">
+<div class="blk">
+<div class="title bd"></div><div class="pr"><%- profile.card_birthday %></div>
+</div>
+<div class="blk">
+<div class="title cns"></div><div class="pr cns"><%- profile.card_constellation %></div>
+</div>
+</div>
+<div class="data_list">
+<div class="blk">
+<div class="title bld"></div><div class="pr"><%- profile.card_blood %>형</div>
+</div>
+<div class="blk">
+<div class="title arm"></div><div class="pr"><%- profile.card_arm %></div>
+</div>
+</div>
+<div class="data_list">
+<div class="title from"></div><div class="pr"><%- profile.card_from %></div>
+</div>
+<div class="data_list">
+<div class="title hby"></div><div class="pr hby"><%- profile.card_hobby %></div>
+</div>
+<% if (profile.card_cv) { %> 
+<div class="data_list">
+<div class="title cv"></div><div class="pr"><%- profile.card_cv %></div>
+</div>
+<% } %>
+</div>
+</div>
+<div class="profile_bottom"></div>
+</section>
+</script>
+        <script type="text/template" id="comment-template">
+            <div class="selectArea type_02 m-Btm8">
+<% Object.keys(filtered_comments).forEach(function (key) { %>
+<div class="selectArea_accordion">
+<div class="selectArea_accordion_title"><div><%- category_names[key] %></div></div>
+<div class="selectArea_accordion_body t-Lft">
+<div class="selectArea_accordion_body_inner">
+<% Object.keys(filtered_comments[key]).forEach(function (key4) { %>
+<div class="comment_title_<%- data.attribute %>"><%- type_names[key4] %></div>
+<div class="comment_frame_wrapper_<%- data.attribute %> m-Btm8">
+<% Object.keys(filtered_comments[key][key4]).forEach(function (key2) { %>
+<% var attribute = data.attribute %>
+<% if(voice[key2]) { %>
+<div class="comment_frame<% if(comments[key2] == "???") { %> _disable<% } %>">
+<div><%- filtered_comments[key][key4][key2] %></div>
+<% if(voice_enable) { %>
+<a class="btn_idol_voice se_000 attribute_<%- attribute.match(/^../) %>_voice_mark_02" id="jsBtnIdolVoice<%= key2 %>"  data-voice-key="<%- key2 %>"><div></div></a>
+<% } else { %>
+<div class="btn_idol_voice se_000 attribute_<%- attribute.match(/^../) %>_voice_mark_03">
+</div>
+<% } %>
+</div>
+<% } else { %>
+<div class="comment_frame<% if(comments[key2] == "???") { %> _disable<% } %>">
+<div><%- filtered_comments[key][key4][key2] %></div>
+<% if(comments[key2] != "???") { %>
+<div class="star_<%- attribute %>"></div>
+<% } %>
+</div>
+<% } %>
+<% }); %>
+</div>
+<% }); %>
+</div>
+</div>
+</div>
+<% }); %>
+</div>
+</script>
+        <script type="text/template" id="story-template">
+            <% for(var i = paging_info.current_page * paging_info.contents_num; i < paging_info.current_page * (paging_info.contents_num) + paging_info.contents_num ; i++) { %>
+<% val = idol_story_list[i] %>
+<% if(val == undefined) { %>
+<% continue; %>
+<% } %>
+<div class="area-frame_common _hd_blue _bd_black m-Btm10">
+    <div class="area-frame_wrap">
+        <h3 class="area-frame_header">
+            <div class="area-frame_title" style="font-size:14px;"><%- val.story_title %></div>
+        </h3>
+<div style="width:280px; margin:0 auto; padding:10px 0 0; overflow:hidden;">
+<ul class="displayBox t-Cnt">
+<% Object.keys(val.icon).forEach(function (key2) { %>
+<% total = Object.keys(val.icon).length; %>
+<% val2 = val.icon[key2] %>
+<% if (+val.open_flag[key2]) { %>
+<li style="<% if (total == 2) { %>width:50%;<% } else if(total == 3) { %> width:33%; <% } else { %>margin:0 5px;<% } %>">
+<form method="post" action="<%- val.flash_path[key2].replace('__hash_card_id__', idol_detail.data.hash_card_id) %>" style="height:90px;">
+<input type="image" src="<%- val2 %>" height="75" class="jsOnDesignBtn"><br>
+<% if (+val.voice_enable[key2]) { %>
+<input class="movie_name jsOnDesignBtn" type="image" src="<%- val.movie_name_voice[key2] %>" width="77" style="width:77px;position:relative;top:-15px;"><br>
+<% } else { %>
+<input type="image" src="<%- val.movie_name[key2] %>" width="77" style="width:77px;position:relative;top:-15px;"><br>
+<% } %>
+<% if (val.story_id > 0 && +val.voice_enable[key2]) { %><input type="hidden" name="voice" value="0"><% } %>
+</form>
+<% if (+val.voice_enable[key2]) { %>
+<% if (!val.voice_attention || !+val.voice_attention[key2]) { %>
+<a href='<%- val.voice_url[key2].replace('__hash_card_id__', idol_detail.data.hash_card_id) %>' class="jsOnDesignBtn">
+<div style="text-align:center; height:45px; margin:10px 0 5px;">
+<img src="http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_voicepage.jpg%3Fv%3D20170222083838" width="84"><br>
+</div>
+</a>
+<% } %>
+<% } %>
+</li>
+<% } else { %>
+<li style="<% if (total == 2) { %> width:50%; <% } else if (total == 3) { %> width:33%;<% } else { %>margin:0 5px;<% } %>">
+<div style="height:90px;">
+<img src="<%- val2 %>" height="75"><br>
+<% if (+val.voice_enable[key2]) { %>
+<input class="movie_name" type="image" src="<%- val.movie_name_voice[key2] %>" width="77" style="width:77px;position:relative;top:-15px;"><br>
+<% } else { %>
+<input type="image" src="<%- val.movie_name[key2] %>" width="77" style="width:77px;position:relative;top:-15px;"><br>
+<% } %>
+</div>
+<% if (+val.voice_enable[key2]) { %>
+<% if (!val.voice_attention || !+val.voice_attention[key2]) { %>
+<div style="text-align:center; height:45px; margin:10px 0 5px;">
+<img src="http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_voicepage_gray.jpg%3Fv%3D20170222083838" width="84"><br>
+</div>
+<% } %>
+<% } %>
+</li>
+<% } %>
+<% last = key2; %>
+<% }); %>
+</ul>
+<% if (!ios_app_flg || !apple_review) { %>
+<% if (val.story_id > 0 && +val.voice_enable[last]) { %>
+<div class="checkForm ep_off" style="margin-top:0;margin-bottom:0">
+에피소드에서 보이스를 재생
+</div>
+<% } %>
+<% } %>
+</div>
+        <div class="area-frame_bg_image"></div>
+    </div>
+</div>
+<% } %>
+<% if (paging_info.max_page_num > 0) { %>
+<div class="pager_area" style="height:auto;">
+<div class="pager_panel_area">
+<% if (paging_info.current_page != 0) { %>
+<input type="submit" class="btn_pager_first">
+<% } else { %>
+<div class="btn_pager_first _disabled"></div>
+<% } %>
+<% if (paging_info.current_page > 0) { %>
+<input type="submit" class="btn_pager_back">
+<% } else { %>
+<div class="btn_pager_back _disabled"></div>
+<% } %>
+<% if (paging_info.current_page != paging_info.max_page_num) { %>
+<input type="submit" class="btn_pager_next">
+<% } else { %>
+<div class="btn_pager_next _disabled"></div>
+<% } %>
+<% if (paging_info.current_page != paging_info.max_page_num) { %>
+<input type="submit" class="btn_pager_last">
+<% } else { %>
+<div class="btn_pager_last _disabled"></div>
+<% } %>
+<%- paging_info.current_page+1 %> / <%- paging_info.max_page_num+1 %>
+</div>
+</div>
+<% } %>
+</script>
+        <script type="text/template" id="parameter-template">
+            <section class="idolStatus deck m-Btm10">
+<div class="data_list">
+<div class="wrap">
+<div class="title cost"></div><div class="pr" style="width: 42px;"><%- data.cost %></div>
+</div>
+<div class="wrap" style="margin-left:4px;">
+<div class="title att"></div><div class="pr" style="width: 42px;"><%- data.default_attack %></div>
+</div>
+<div class="wrap" style="margin-left:4px;">
+<div class="title def"></div><div class="pr" style="width: 42px;"><%- data.default_defense %></div>
+</div>
+</div>
+<% if (data.skill_effect) { %>
+<div class="data_list line">
+<div class="wrap">
+<div class="title skl"></div><div class="pr"><%- data.skill_name %></div>
+</div>
+</div>
+<%if (!data.grow_idol_flag) { %>
+<div class="data_list line">
+<div class="wrap">
+<div class="title skl_ef"></div><div class="pr"><%- data.skill_effect %></div>
+</div>
+</div>
+<%if ( ! $.isEmptyObject(data.skill_effect_2)) { %>
+<div class="data_list line">
+<div class="wrap">
+<div class="title skl_ef"></div><div class="pr"><%- data.skill_effect_2 %></div>
+</div>
+</div>
+<% } %>
+<% } %>
+<% } %>
+</section>
+<% if(trade_prohibition.is_trade_limit) { %>
+<div class="t-Cnt red <% if(is_exist_archive) { %>m-Btm8<% } %>">
+이 아이돌은 트레이드, 프리 트레이드, 선물을 할 수 없습니다.
+</div>
+<% } %>
+<div class="area-btn-common _base-width">
+<% if(!trade_prohibition.is_trade_limit) { %>
+<a href='<%- url_trade.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(!is_exist_archive) { %>m-Cnt<% } %>" style="font-size:12px">프리 트레이드 검색</a>
+<% } %>
+<% if(is_exist_archive) { %>
+<a href="https://starlight.kirara.ca/char/126" class="btn_normal_line_2" style="font-size:12px">앨범</a>
+<% } %>
+</div>
+<% if (event) { %>
+<h3 class="title_hanyo m-Top8 m-Btm8">
+<div>등장 이벤트</div>
+</h3>
+<% Object.keys(event).forEach(function (key) { %>
+<div class="t-Cnt m-Btm5">
+<% if (event[key].event_name.indexOf("<br />") != -1) { %>
+<%- event[key].event_name.slice(0,event[key].event_name.indexOf("<br />")) %><br>
+<%- event[key].event_name.slice(event[key].event_name.indexOf("<br />")+6) %>
+<% } else if (key == 1908) { %>
+<span style="font-size:11px;"><%- event[key].event_name %>(リメイク版)</span>
+<% } else { %>
+<%- event[key].event_name %>
+<% } %>
+</div>
+<div class="area-btn-common _base-width m-Btm8">
+<a href='<%- url_event_memory.replace("__event_id__", event[key].event_id).replace("__category_id__", event[key].category_id) %>' class="btn_normal_line_2 _line_2">イベントメモリー<br>を見る</a>
+<a href='<%- url_other_event.replace("__category_id__", event[key].category_id).replace("__event_id__", event[key].event_id) %>' class="btn_normal_line_2 _line_2">他のイベント登場<br>アイドルを検索する</a>
+</div>
+<% }); %>
+<% } %>
+</script>
+        <script type="text/template" id="popup-expansion-template">
+            <div class="js_card_rotate" style="position:relative;z-index:1;margin-bottom:12px;height:380px;">
+    <div class="js_current rotate_img" <% if(idol_image_mask_l_p || idol_image_mask_l) { %>twinkle="1"<% } %> style="width:100%">
+    <img id="expansion_idol_image" class="js_replace_premium " src='<%- idol_image %>' style="width:100%;" />
+    </div>
+    <% if(idol_image_nosign) { %>
+    <img id="expansion_idol_image_nosign" class="rotate_img" src='<%- idol_image_nosign %>' style="width:100%;" />
+    <% } %>
+       <% if(idol_image_noframe) { %>
+    <img id="expansion_idol_image_noframe" class="rotate_img" src='<%- idol_image_noframe %>' style="width:100%;" />
+    <% } %>
+        <div class="mask01 cardFrame01">
+            <div class="mask02 cardFrame02"></div>
+        </div>
+    </div>
+</script>
+        <style type='text/css'>
+            .rotate_appear {
+                -webkit-animation-name: anime1b;
+                -webkit-animation-duration: 200ms;
+                -webkit-animation-timing-function: ease-out;
+                -webkit-animation-fill-mode: forwards;
+            }
+
+            .rotate_disappear {
+                -webkit-animation-name: anime1;
+                -webkit-animation-duration: 200ms;
+                -webkit-animation-timing-function: ease-out;
+                -webkit-animation-fill-mode: forwards;
+            }
+
+            @-webkit-keyframes anime1 {
+                from {
+                    -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+                }
+
+                50% {
+                    -webkit-transform: scale(0.5, 1);
+                    transform: scale(0.5, 1);
+                }
+
+                to {
+                    -webkit-transform: scale(0, 1);
+                    transform: scale(0, 1);
+                }
+            }
+
+            @-webkit-keyframes anime1b {
+                from {
+                    -webkit-transform: scale(0, 1);
+                    transform: scale(0, 1);
+                }
+
+                50% {
+                    -webkit-transform: scale(0.5, 1);
+                    transform: scale(0.5, 1);
+                }
+
+                to {
+                    -webkit-transform: scale(1, 1);
+                    transform: scale(1, 1);
+                }
+            }
+
+            .card_rotate {
+                -webkit-user-select: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
+
+            .card_img {
+                position: absolute;
+            }
+        </style>
+        <style type="text/css">
+            .cardSize_l {
+                width: 320px;
+                height: 400px;
+            }
+
+            .cardSize_l .card_img {
+                position: absolute;
+            }
+
+            .mask01 {
+                -webkit-mask-size: 304px 380px;
+            }
+
+            .mask02 {
+                -webkit-mask-size: 304px 380px;
+                -webkit-transition: background-position 0.1s linear;
+            }
+
+            .cardFrame01 {
+                width: 304px;
+                height: 380px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                background-size: 304px 380px;
+            }
+
+            .cardFrame02 {
+                width: 304px;
+                height: 380px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                background: url('http://125.6.169.35/idolmaster/image_sp/ui/rich/effect/card_effect_01.png') center center;
+                background-size: 608px 506px;
+            }
+        </style>
+        <script type="text/javascript">
+            (function() {
+                var idol = {};
+                idol.detail_list = [{
+                    "data": {
+                        "card_name": "이치노세 시키",
+                        "rarity": "1",
+                        "cost": "1229",
+                        "attribute": "cute",
+                        "skill_name": "\uff77\uff6d\uff70\uff83\uff68\uff71\uff78\uff84",
+                        "skill_effect": "",
+                        "grow_idol_flag": "",
+                        "default_attack": "1240",
+                        "default_defense": "1301",
+                        "hash_card_id": "dad249d2193e48fede1efb6b86ce152f",
+                        "alias_name": "",
+                        "real_name": "이치노세 시키"
+                    },
+                    "profile": {
+                        "card_id": "1002901",
+                        "card_name": "이치노세 시키",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "이치노세 시키+",
+                        "rarity": "2",
+                        "cost": "1492",
+                        "attribute": "cute",
+                        "skill_name": "\uff77\uff6d\uff70\uff83\uff68\uff71\uff78\uff84",
+                        "skill_effect": "",
+                        "grow_idol_flag": "",
+                        "default_attack": "1507",
+                        "default_defense": "1581",
+                        "hash_card_id": "b9e2f6db7e3b84a0319b31c875323c03",
+                        "alias_name": "",
+                        "real_name": "이치노세 시키+"
+                    },
+                    "profile": {
+                        "card_id": "1102902",
+                        "card_name": "이치노세 시키+",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[퍼퓸트리퍼] 이치노세 시키",
+                        "rarity": "3",
+                        "cost": "1526",
+                        "attribute": "cute",
+                        "skill_name": "큐트 스텝/눈을 뜬 향기",
+                        "skill_effect": "큐트 아이돌의 댄스 어필치 60%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "2361",
+                        "default_defense": "1255",
+                        "skill_effect_2": "6초마다 중확률로 근소한 시간동안, PERFECT스코어 15%업",
+                        "hash_card_id": "749918764164a20ffd9548b6e3329cb7",
+                        "alias_name": "퍼퓸트리퍼",
+                        "real_name": "이치노세 시키"
+                    },
+                    "profile": {
+                        "card_id": "1216501",
+                        "card_name": "[퍼퓸트리퍼] 이치노세 시키",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[퍼퓸트리퍼] 이치노세 시키+",
+                        "rarity": "4",
+                        "cost": "1967",
+                        "attribute": "cute",
+                        "skill_name": "큐트 스텝/눈을 뜬 향기",
+                        "skill_effect": "큐트 아이돌의 댄스 어필치 60%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "3042",
+                        "default_defense": "1618",
+                        "skill_effect_2": "6초마다 중확률로 근소한 시간동안, PERFECT스코어 15%업",
+                        "hash_card_id": "06e634647cb9db3a1ae3cd4f0f8c1fdc",
+                        "alias_name": "퍼퓸트리퍼",
+                        "real_name": "이치노세 시키+"
+                    },
+                    "profile": {
+                        "card_id": "1316502",
+                        "card_name": "[퍼퓸트리퍼] 이치노세 시키+",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[꽃봉오리] 이치노세 시키",
+                        "rarity": "3",
+                        "cost": "1594",
+                        "attribute": "cute",
+                        "skill_name": "큐트 브릴리언스/꿈의 꽃",
+                        "skill_effect": "큐트 아이돌의 모든 어필치 30%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "1314",
+                        "default_defense": "2454",
+                        "skill_effect_2": "11초마다 고확률로 잠깐 동안, COMBO보너스 14%업",
+                        "hash_card_id": "87b9ce294ee324ef107117cd775e3e41",
+                        "alias_name": "꽃봉오리",
+                        "real_name": "이치노세 시키"
+                    },
+                    "profile": {
+                        "card_id": "1228101",
+                        "card_name": "[꽃봉오리] 이치노세 시키",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[꽃봉오리] 이치노세 시키+",
+                        "rarity": "4",
+                        "cost": "2055",
+                        "attribute": "cute",
+                        "skill_name": "큐트 브릴리언스/꿈의 꽃",
+                        "skill_effect": "큐트 아이돌의 모든 어필치 30%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "1694",
+                        "default_defense": "3162",
+                        "skill_effect_2": "11초마다 고확률로 잠깐 동안, COMBO보너스 14%업",
+                        "hash_card_id": "8bd62d14e7ae5a19612cb4f63e7bc910",
+                        "alias_name": "꽃봉오리",
+                        "real_name": "이치노세 시키+"
+                    },
+                    "profile": {
+                        "card_id": "1328102",
+                        "card_name": "[꽃봉오리] 이치노세 시키+",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[크레이지 크레이지] 이치노세 시키",
+                        "rarity": "3",
+                        "cost": "1848",
+                        "attribute": "cute",
+                        "skill_name": "큐트 브릴리언스/이상해져버려",
+                        "skill_effect": "큐트 아이돌의 모든 어필치 30%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "1702",
+                        "default_defense": "1672",
+                        "skill_effect_2": "13초마다 고확률로 상당한 시간동안, PERFECT판정시간이 줄어들고, PERFECT스코어 19%업",
+                        "hash_card_id": "46b8c7e64644fefca3f9c7836f2c8f40",
+                        "alias_name": "크레이지 크레이지",
+                        "real_name": "이치노세 시키"
+                    },
+                    "profile": {
+                        "card_id": "1228201",
+                        "card_name": "[크레이지 크레이지] 이치노세 시키",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }, {
+                    "data": {
+                        "card_name": "[크레이지 크레이지] 이치노세 시키+",
+                        "rarity": "4",
+                        "cost": "2381",
+                        "attribute": "cute",
+                        "skill_name": "큐트 브릴리언스/이상해져버려",
+                        "skill_effect": "큐트 아이돌의 모든 어필치 30%업",
+                        "grow_idol_flag": "",
+                        "default_attack": "2194",
+                        "default_defense": "2155",
+                        "skill_effect_2": "13초마다 고확률로 상당한 시간동안, PERFECT판정시간이 줄어들고, PERFECT스코어 19%업",
+                        "hash_card_id": "ae2a65d68ad26995c036e4a212c15f18",
+                        "alias_name": "크레이지 크레이지",
+                        "real_name": "이치노세 시키+"
+                    },
+                    "profile": {
+                        "card_id": "1328202",
+                        "card_name": "[크레이지 크레이지] 이치노세 시키+",
+                        "card_kana": "이치노세 시키",
+                        "card_age": "18",
+                        "card_from": "이와테",
+                        "card_height": "161",
+                        "card_weight": "43",
+                        "card_bust": "83",
+                        "card_waist": "57",
+                        "card_hip": "82",
+                        "card_birthday": "5월 30일",
+                        "card_constellation": "쌍둥이자리",
+                        "card_blood": "O",
+                        "card_arm": "오른손잡이",
+                        "card_hobby": "관찰·수상한 과학실험·실종",
+                        "card_cv": "아이하라 코토미"
+                    },
+                    "comments": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "voice": {
+                        "comment_1": "",
+                        "comment_2": "",
+                        "comment_3": "",
+                        "comment_4": "",
+                        "home_1": "",
+                        "home_2": "",
+                        "home_3": "",
+                        "home_4": "",
+                        "login": "",
+                        "area_5_1": "",
+                        "area_5_2": "",
+                        "area_10_1": "",
+                        "area_10_2": "",
+                        "area_15_1": "",
+                        "area_15_2": "",
+                        "area_20_1": "",
+                        "area_20_2": "",
+                        "area_25_1": "",
+                        "area_25_2": "",
+                        "area_30_1": "",
+                        "area_30_2": "",
+                        "area_35_1": "",
+                        "area_35_2": "",
+                        "area_40_1": "",
+                        "area_40_2": "",
+                        "area_45_1": "",
+                        "area_45_2": "",
+                        "area_50_1": "",
+                        "area_50_2": "",
+                        "area_55_1": "",
+                        "area_55_2": "",
+                        "area_mugen_1": "",
+                        "area_mugen_2": "",
+                        "area_mugen_3": "",
+                        "live_battle": ""
+                    },
+                    "event": null,
+                    "release": "",
+                    "trade_prohibition": {
+                        "is_trade_limit": false
+                    },
+                    "idol_search_param": "keyword=%E3%81%84%E3%81%A1%E3%81%AE%E3%81%9B%E3%81%97%E3%81%8D",
+                    "archive": {
+                        "normal": "1",
+                        "premium": "0"
+                    },
+                    "is_exist_archive": true,
+                    "is_max_love": true
+                }];
+                idol.idol_story_list = [{
+                    "story_id": "351",
+                    "story_title": "\u82b1\u821e\u3046\u30c8\u30dd\u30ed\u30b8\u30fc",
+                    "voice_enable": ["1", "1"],
+                    "flash_path": ["http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F351%2F1%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D151455574", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F351%2F2%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D589503051"],
+                    "voice_url": ["http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F351%2F1%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D319404007", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F351%2F2%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D641626577"],
+                    "open_flag": ["1", "1"],
+                    "icon": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fbase%2F026.jpg%3Fv%3D20170522145110", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_351_2.jpg%3Fv%3D20190524145750"],
+                    "movie_name_voice": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"]
+                }, {
+                    "story_id": "317",
+                    "story_title": "\u5fc3\u307b\u3063\u3053\u308a\u266a\u7d05\u8449\u8272\u3065\u304f\u6e29\u6cc9",
+                    "voice_enable": {
+                        "1": "1",
+                        "4": "1"
+                    },
+                    "flash_path": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F317%2F2%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D735611842",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F317%2F5%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D138981620"
+                    },
+                    "voice_url": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F317%2F2%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D103955489",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F317%2F5%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D209071097"
+                    },
+                    "open_flag": {
+                        "1": "1",
+                        "4": "1"
+                    },
+                    "icon": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fbase%2F026.jpg%3Fv%3D20170522145110",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_317_5.jpg%3Fv%3D20190524145750"
+                    },
+                    "movie_name_voice": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"
+                    }
+                }, {
+                    "story_id": "288",
+                    "story_title": "\u3057\u3042\u308f\u305b\u8a93\u3046\u266a\u30c8\u30ad\u30e1\u30ad\u30d6\u30e9\u30a4\u30c0\u30eb",
+                    "voice_enable": {
+                        "0": "1",
+                        "3": "1"
+                    },
+                    "flash_path": {
+                        "0": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F288%2F1%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D685777334",
+                        "3": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F288%2F4%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D978943083"
+                    },
+                    "voice_url": {
+                        "0": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F288%2F1%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D980005638",
+                        "3": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F288%2F4%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D390596666"
+                    },
+                    "open_flag": {
+                        "0": "1",
+                        "3": "1"
+                    },
+                    "icon": {
+                        "0": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fbase%2F026.jpg%3Fv%3D20170522145110",
+                        "3": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_288_4.jpg%3Fv%3D20190524145750"
+                    },
+                    "movie_name_voice": {
+                        "0": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837",
+                        "3": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"
+                    }
+                }, {
+                    "story_id": "204",
+                    "story_title": "\u3075\u305f\u308a\u3067\u30a2\u30a4\u30c9\u30eb\u30c1\u30e3\u30ec\u30f3\u30b8 \u76ee\u6307\u305b\u30af\u30fc\u30eb\u306a\u30df\u30e5\u30fc\u30b8\u30c3\u30af\u30d3\u30c7\u30aa \u30ec\u30a4\u30b8\u30fc\u30fb\u30ec\u30a4\u30b8\u30fc",
+                    "voice_enable": ["0", "0", "0"],
+                    "flash_path": ["http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F204%2F1%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D698238692", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F204%2F2%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D748116065", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F204%2F3%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D23606230"],
+                    "voice_url": ["http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F204%2F1%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D234821771", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F204%2F2%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D888549977", "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F204%2F3%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D799496795"],
+                    "open_flag": ["1", "1", "1"],
+                    "icon": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_204_1.jpg%3Fv%3D20170324144756", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_204_2.jpg%3Fv%3D20170324144756", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_204_3.jpg%3Fv%3D20170324144756"],
+                    "movie_name": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_novelette.png%3Fv%3D20170222083837", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"]
+                }, {
+                    "story_id": "189",
+                    "story_title": "\u65b0\u6625\u2606\u958b\u904b\u62db\u798f",
+                    "voice_enable": {
+                        "1": "1",
+                        "4": "1"
+                    },
+                    "flash_path": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F189%2F2%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D853992374",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F189%2F5%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D694341125"
+                    },
+                    "voice_url": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F189%2F2%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D316441887",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F189%2F5%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D216954320"
+                    },
+                    "open_flag": {
+                        "1": "1",
+                        "4": "1"
+                    },
+                    "icon": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_idol_026.jpg%3Fv%3D20170222083834",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_189_5.jpg%3Fv%3D20170222083837"
+                    },
+                    "movie_name_voice": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"
+                    }
+                }, {
+                    "story_id": "76",
+                    "story_title": "\u685c\u821e\u3046\u2606\u30cf\u30a4\u30ab\u30e9\u30ed\u30de\u30f3",
+                    "voice_enable": {
+                        "1": "0",
+                        "4": "0"
+                    },
+                    "flash_path": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F76%2F2%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D745319563",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F76%2F5%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D16670500"
+                    },
+                    "voice_url": {
+                        "1": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F76%2F2%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D696361203",
+                        "4": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F76%2F5%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D164806038"
+                    },
+                    "open_flag": {
+                        "1": "1",
+                        "4": "1"
+                    },
+                    "icon": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_076_2.jpg%3Fv%3D20170222083835",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_076_5.jpg%3Fv%3D20170222083835"
+                    },
+                    "movie_name": {
+                        "1": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837",
+                        "4": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"
+                    }
+                }, {
+                    "story_id": "43",
+                    "story_title": "\u590f\u672c\u756a!! \u30d3\u30fc\u30c1\u30d0\u30ab\u30f3\u30b9",
+                    "voice_enable": {
+                        "2": "0",
+                        "5": "0"
+                    },
+                    "flash_path": {
+                        "2": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F43%2F3%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D675837278",
+                        "5": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fmovie_play%2F43%2F6%2Fidol_gallery--idol_detail--__hash_card_id__--2%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D123436167"
+                    },
+                    "voice_url": {
+                        "2": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F43%2F3%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D800848835",
+                        "5": "http:\/\/sp.pf.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_story%2Fsound_play%2F43%2F6%2Fidol_gallery%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D989741475"
+                    },
+                    "open_flag": {
+                        "2": "1",
+                        "5": "1"
+                    },
+                    "icon": {
+                        "2": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_043_3.jpg%3Fv%3D20170222083835",
+                        "5": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_movie_043_6.jpg%3Fv%3D20170222083835"
+                    },
+                    "movie_name": {
+                        "2": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_early.png%3Fv%3D20170222083837",
+                        "5": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fepisode%2Fepi_button_moviename_cute_late.png%3Fv%3D20170222083837"
+                    }
+                }];
+                idol.images = {
+                    "bg": {
+                        "1": {
+                            "cu": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_1_cu.jpg",
+                            "co": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_1_co.jpg",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_1_pa.jpg%3Fv%3D20170222083844",
+                            "tr": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_f_pa.jpg%3Fv%3D20170222083844"
+                        },
+                        "2": {
+                            "cu": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_2_cu.jpg",
+                            "co": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_2_co.jpg",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_2_pa.jpg%3Fv%3D20170222083844"
+                        },
+                        "3": {
+                            "cu": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_3_cu.jpg",
+                            "co": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_3_co.jpg",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_3_pa.jpg%3Fv%3D20170222083844",
+                            "tr": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_f2_pa.jpg%3Fv%3D20170222083844"
+                        },
+                        "4": {
+                            "cu": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_4_cu.jpg",
+                            "co": "12008305/image_sp/ui/mypage_new/bg/bg_idol_reality_4_co.jpg",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fmypage_new%2Fbg%2Fbg_idol_reality_4_pa.jpg%3Fv%3D20170222083844"
+                        },
+                        "5": {
+                            "cu": "12008305/image_sp/ui/gallery/bg_sr_cute.jpg",
+                            "co": "12008305/image_sp/ui/gallery/bg_sr_cool.jpg",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fgallery%2Fbg_sr_passion.jpg%3Fv%3D20170222083842",
+                            "tr": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fgallery%2Fbg_sr_trainer.jpg%3Fv%3D20170222083842"
+                        },
+                        "6": {
+                            "cu": "12008305/image_sp/ui/gallery/bg_sr_cute.jpg",
+                            "co": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fgallery%2Fbg_sr_cool.jpg%3Fv%3D20170222083842",
+                            "pa": "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fgallery%2Fbg_sr_passion.jpg%3Fv%3D20170222083842"
+                        }
+                    },
+                    "l": ["bahamut/image_sp/card/l/8a396ef037b3590f2db5f043d69e1513.jpg", "bahamut/image_sp/card/l/.jpg", "bahamut/image_sp/card/l/9ad4e9559c43751754afcafa35e97ad1.jpg", "bahamut/image_sp/card/l/.jpg", "bahamut/image_sp/card/l/c5141accaac30f778de886d022ee4d07.jpg", "bahamut/image_sp/card/l/.jpg", "bahamut/image_sp/card/l/84b4f889f3f9513fd551da25df0b021c.jpg", "bahamut/image_sp/card/l/.jpg"],
+                    "l_premium": {
+                    },
+                    "l_nosign": ["bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", ""],
+                    "l_nosign_p": {
+                    },
+                    "l_noframe": ["bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", "", "bahamut/image_sp/card/l/.jpg", ""],
+                    "mask_l": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                    "mask_l2": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+                    "mask_l_p": [],
+                    "mask_l2_p": [],
+                    "xs": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fdad249d2193e48fede1efb6b86ce152f.jpg%3Fv%3D20170222083223", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fb9e2f6db7e3b84a0319b31c875323c03.jpg%3Fv%3D20170222083223", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F749918764164a20ffd9548b6e3329cb7.jpg%3Fv%3D20170222083224", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F06e634647cb9db3a1ae3cd4f0f8c1fdc.jpg%3Fv%3D20170222083225", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F87b9ce294ee324ef107117cd775e3e41.jpg%3Fv%3D20170222083224", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F8bd62d14e7ae5a19612cb4f63e7bc910.jpg%3Fv%3D20170222083225", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F46b8c7e64644fefca3f9c7836f2c8f40.jpg%3Fv%3D20170222083224", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fae2a65d68ad26995c036e4a212c15f18.jpg%3Fv%3D20170222083225", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fdf09853dd69726803c595f8a99e084fb.jpg%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F27fa9a5d9820c3587dfed43d52d01d93.jpg%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F3055dffe2520e6a28427482ae61582e9.jpg%3Fv%3D20170222083226", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F5f3a262bdcb15fd59261d1d67eed56e3.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F403297028737ce2c944bfc812dba6c94.jpg%3Fv%3D20170222083226", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fbe20e1ce2d5b116f0b9fecbecf298a48.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Faf0f233de4c2dfbac1e5a8bf1768dcf6.jpg%3Fv%3D20170222083226", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fc827cb0a7ab82a4395250ab254d6fbcf.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Ffdf5b5e967d72bb2b7acf1b43953dbd2.jpg%3Fv%3D20170222083227", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Faa3d9312403ed3e40e7f92b771676ea9.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Ff4add4b54fc6ff462caf154441e049cf.jpg%3Fv%3D20170222083227", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fabe06fbcf68900a285b0f2244403214e.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F44b0359478c5fbc5a8dcb0d7d91a3776.jpg%3Fv%3D20170222083227", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fbb156a253fc247462a87b20eee8770f5.jpg%3Fv%3D20170222083228", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F0c124be126082f0e4dce8d404eb538dd.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F3f7c71119ba2d2a52eea91026bf64741.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fdee9c4ef7a73af8209eb2f5e4024e0f2.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F2002e5edd75e141a883e9d93c4c5de5f.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F1622bfbb2378494857c6fca81bac6d63.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2F924ba34f567420135c3dce1cec0bee40.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Fb693bd0e54ba93faec0ea887d456197f.jpg%3Fv%3D20190524145641", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fxs%2Ff1def983dbaa47b2c3017643a48ca207.jpg%3Fv%3D20190524145641"],
+                    "m2": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fdad249d2193e48fede1efb6b86ce152f.jpg%3Fv%3D20170222082926", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fb9e2f6db7e3b84a0319b31c875323c03.jpg%3Fv%3D20170222082926", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F749918764164a20ffd9548b6e3329cb7.jpg%3Fv%3D20190524145601", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F06e634647cb9db3a1ae3cd4f0f8c1fdc.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F87b9ce294ee324ef107117cd775e3e41.jpg%3Fv%3D20190524145601", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F8bd62d14e7ae5a19612cb4f63e7bc910.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F46b8c7e64644fefca3f9c7836f2c8f40.jpg%3Fv%3D20190524145601", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fae2a65d68ad26995c036e4a212c15f18.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fdf09853dd69726803c595f8a99e084fb.jpg%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F27fa9a5d9820c3587dfed43d52d01d93.jpg%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F3055dffe2520e6a28427482ae61582e9.jpg%3Fv%3D20170222082929", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F5f3a262bdcb15fd59261d1d67eed56e3.jpg%3Fv%3D20170222082931", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F403297028737ce2c944bfc812dba6c94.jpg%3Fv%3D20170222082929", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fbe20e1ce2d5b116f0b9fecbecf298a48.jpg%3Fv%3D20170222082931", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Faf0f233de4c2dfbac1e5a8bf1768dcf6.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fc827cb0a7ab82a4395250ab254d6fbcf.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Ffdf5b5e967d72bb2b7acf1b43953dbd2.jpg%3Fv%3D20170222082930", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Faa3d9312403ed3e40e7f92b771676ea9.jpg%3Fv%3D20170222082931", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Ff4add4b54fc6ff462caf154441e049cf.jpg%3Fv%3D20170222082930", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fabe06fbcf68900a285b0f2244403214e.jpg%3Fv%3D20170222082931", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F44b0359478c5fbc5a8dcb0d7d91a3776.jpg%3Fv%3D20170222082930", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fbb156a253fc247462a87b20eee8770f5.jpg%3Fv%3D20170222082932", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F0c124be126082f0e4dce8d404eb538dd.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F3f7c71119ba2d2a52eea91026bf64741.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fdee9c4ef7a73af8209eb2f5e4024e0f2.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F2002e5edd75e141a883e9d93c4c5de5f.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F1622bfbb2378494857c6fca81bac6d63.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2F924ba34f567420135c3dce1cec0bee40.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Fb693bd0e54ba93faec0ea887d456197f.jpg%3Fv%3D20190524145602", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fm2%2Ff1def983dbaa47b2c3017643a48ca207.jpg%3Fv%3D20190524145602"],
+                    "quest": ["http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fdad249d2193e48fede1efb6b86ce152f.png%3Fv%3D20190524145609", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fb9e2f6db7e3b84a0319b31c875323c03.png%3Fv%3D20170222083010", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F749918764164a20ffd9548b6e3329cb7.png%3Fv%3D20170222083010", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F06e634647cb9db3a1ae3cd4f0f8c1fdc.png%3Fv%3D20170222083012", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F87b9ce294ee324ef107117cd775e3e41.png%3Fv%3D20170222083011", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F8bd62d14e7ae5a19612cb4f63e7bc910.png%3Fv%3D20170222083012", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F46b8c7e64644fefca3f9c7836f2c8f40.png%3Fv%3D20170222083011", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fae2a65d68ad26995c036e4a212c15f18.png%3Fv%3D20170222083012", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fdf09853dd69726803c595f8a99e084fb.png%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F27fa9a5d9820c3587dfed43d52d01d93.png%3Fv%3D20190524185624", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F3055dffe2520e6a28427482ae61582e9.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F5f3a262bdcb15fd59261d1d67eed56e3.jpg%3Fv%3D20170222083014", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F403297028737ce2c944bfc812dba6c94.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fbe20e1ce2d5b116f0b9fecbecf298a48.jpg%3Fv%3D20170222083014", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Faf0f233de4c2dfbac1e5a8bf1768dcf6.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fc827cb0a7ab82a4395250ab254d6fbcf.jpg%3Fv%3D20170222083014", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Ffdf5b5e967d72bb2b7acf1b43953dbd2.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Faa3d9312403ed3e40e7f92b771676ea9.jpg%3Fv%3D20170222083014", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Ff4add4b54fc6ff462caf154441e049cf.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fabe06fbcf68900a285b0f2244403214e.jpg%3Fv%3D20170222083014", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F44b0359478c5fbc5a8dcb0d7d91a3776.jpg%3Fv%3D20170222083013", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fbb156a253fc247462a87b20eee8770f5.jpg%3Fv%3D20170222083015", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F0c124be126082f0e4dce8d404eb538dd.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F3f7c71119ba2d2a52eea91026bf64741.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fdee9c4ef7a73af8209eb2f5e4024e0f2.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F2002e5edd75e141a883e9d93c4c5de5f.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F1622bfbb2378494857c6fca81bac6d63.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2F924ba34f567420135c3dce1cec0bee40.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fb693bd0e54ba93faec0ea887d456197f.jpg%3Fv%3D20190524145610", "http:\/\/sp.pf-img-a.mbga.jp\/12008305\/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Ff1def983dbaa47b2c3017643a48ca207.jpg%3Fv%3D20190524145610"]
+                };
+                idol.ios_app_flg = false;
+                idol.apple_review = null;
+                window.idol = idol;
+            })();
+            var birthday_flag = false;
+            var select_card_index = "0";
+            var selected_num = null;
+            var url_trade = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fauction%2Fsearch_top%2F0%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D724096941';
+            var url_album = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Farchive%2Fview%2F__hash_card_id__%2F0%2F0%2F0%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D120609137';
+            var url_event_memory = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fmemory%2Fdetail%2F__event_id__%2F__category_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D382349840';
+            var url_other_event = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_gallery%2Findex%2F0%2F0%2F2%2F0%3Fis_search%3D1%26event_category%3D__category_id__%26event_id%3D__event_id__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D793460736';
+            var url_cartoon = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fcartoon%2Fsearch%3F__idol_search_param__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D396320908';
+            var url_comment_5th_redirect = "idol_gallery/idol_detail/__hash_card_id__";
+            var slider_pos = 0;
+            var select_tab = 0;
+            var comments_info = {
+                "comment_1": {
+                    "category": "home",
+                    "type": "idol",
+                    "conditions": "none"
+                },
+                "comment_2": {
+                    "category": "home",
+                    "type": "idol",
+                    "conditions": "none"
+                },
+                "comment_3": {
+                    "category": "home",
+                    "type": "idol",
+                    "conditions": "none"
+                },
+                "comment_4": {
+                    "category": "home",
+                    "type": "idol",
+                    "conditions": "none"
+                },
+                "home_1": {
+                    "category": "main",
+                    "type": "home",
+                    "conditions": "none"
+                },
+                "home_2": {
+                    "category": "main",
+                    "type": "home",
+                    "conditions": "none"
+                },
+                "home_3": {
+                    "category": "main",
+                    "type": "home",
+                    "conditions": "none"
+                },
+                "home_4": {
+                    "category": "main",
+                    "type": "home",
+                    "conditions": "none"
+                },
+                "login": {
+                    "category": "main",
+                    "type": "login",
+                    "conditions": "none"
+                },
+                "area_5_1": {
+                    "category": "area",
+                    "type": "area_5",
+                    "conditions": "none"
+                },
+                "area_5_2": {
+                    "category": "area",
+                    "type": "area_5",
+                    "conditions": "none"
+                },
+                "area_10_1": {
+                    "category": "area",
+                    "type": "area_10",
+                    "conditions": "none"
+                },
+                "area_10_2": {
+                    "category": "area",
+                    "type": "area_10",
+                    "conditions": "none"
+                },
+                "area_15_1": {
+                    "category": "area",
+                    "type": "area_15",
+                    "conditions": "none"
+                },
+                "area_15_2": {
+                    "category": "area",
+                    "type": "area_15",
+                    "conditions": "none"
+                },
+                "area_20_1": {
+                    "category": "area",
+                    "type": "area_20",
+                    "conditions": "none"
+                },
+                "area_20_2": {
+                    "category": "area",
+                    "type": "area_20",
+                    "conditions": "none"
+                },
+                "area_25_1": {
+                    "category": "area",
+                    "type": "area_25",
+                    "conditions": "none"
+                },
+                "area_25_2": {
+                    "category": "area",
+                    "type": "area_25",
+                    "conditions": "none"
+                },
+                "area_30_1": {
+                    "category": "area",
+                    "type": "area_30",
+                    "conditions": "none"
+                },
+                "area_30_2": {
+                    "category": "area",
+                    "type": "area_30",
+                    "conditions": "none"
+                },
+                "area_35_1": {
+                    "category": "area",
+                    "type": "area_35",
+                    "conditions": "none"
+                },
+                "area_35_2": {
+                    "category": "area",
+                    "type": "area_35",
+                    "conditions": "none"
+                },
+                "area_40_1": {
+                    "category": "area",
+                    "type": "area_40",
+                    "conditions": "none"
+                },
+                "area_40_2": {
+                    "category": "area",
+                    "type": "area_40",
+                    "conditions": "none"
+                },
+                "area_45_1": {
+                    "category": "area",
+                    "type": "area_45",
+                    "conditions": "none"
+                },
+                "area_45_2": {
+                    "category": "area",
+                    "type": "area_45",
+                    "conditions": "none"
+                },
+                "area_50_1": {
+                    "category": "area",
+                    "type": "area_50",
+                    "conditions": "none"
+                },
+                "area_50_2": {
+                    "category": "area",
+                    "type": "area_50",
+                    "conditions": "none"
+                },
+                "area_55_1": {
+                    "category": "area",
+                    "type": "area_55",
+                    "conditions": "none"
+                },
+                "area_55_2": {
+                    "category": "area",
+                    "type": "area_55",
+                    "conditions": "none"
+                },
+                "area_mugen_1": {
+                    "category": "area",
+                    "type": "area_mugen",
+                    "conditions": "none"
+                },
+                "area_mugen_2": {
+                    "category": "area",
+                    "type": "area_mugen",
+                    "conditions": "none"
+                },
+                "area_mugen_3": {
+                    "category": "area",
+                    "type": "area_mugen",
+                    "conditions": "none"
+                },
+                "live_battle": {
+                    "category": "area",
+                    "type": "live_battle",
+                    "conditions": "none"
+                }
+            };
+            var type_names = {
+                "idol": "프로필 코멘트",
+                "home": "메인",
+                "login": "로그인 보너스",
+                "area_5": "에리어 1~5",
+                "area_10": "에리어 6~10",
+                "area_15": "에리어 11~15",
+                "area_20": "에리어 1~5",
+                "area_25": "에리어 21~25",
+                "area_30": "에리어 1~5",
+                "area_35": "에리어 31~35",
+                "area_40": "에리어 1~5",
+                "area_45": "에리어 41~45",
+                "area_50": "에리어 1~5",
+                "area_55": "에리어 51~55",
+                "area_mugen": "에리어 ∞",
+                "live_battle": "몬스터 격파"
+            };
+            var category_names = {
+                "home": "홈",
+                "main": "메인",
+                "area": "에리어"
+            };
+            var conditions_names = {
+                "none": "조건 없음",
+                "get_idol": "아이돌이 소속되면 열람할 수 있습니다",
+                "love_max": "친애도MAX가 되면 열람할 수 있습니다"
+            };
+            var comment_tab_start = null;
+            var show_premium = false;
+        </script>
+        <script src="12008305/js/underscore-min.js"></script>
+        <script src="12008305/js/backbone-min.js"></script>
+        <script src="12008305/js/ilibrary.js" type="text/javascript"></script>
+        <script src="12008305/js/islider.js" type="text/javascript"></script>
+        <script src="12008305/js/boombox.min.js" type="text/javascript"></script>
+        <script src="12008305/js/min/gallery.min.js" type="text/javascript"></script>
+        <script src="12008305/js/min/bb_loader.min.js" type="text/javascript"></script>
+        <div class="m-Top8 m-Btm8">
+            <img src="12008305/image_sp/ui/line_hoshi.jpg" width="100%">
+        </div>
+        <a id="search_cartoon" href='#' class="btn_normal_line_2 m-Cnt m-Btm12">극장에서 검색</a>
+        <footer>
+            <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
+                <div></div>
+            </a>
+            <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
+        </footer>
+    </div>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+    <div id="mbga-pf-footer">
+        <script type="text/javascript" charset="UTF-8">
+            (function() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    var list = document.getElementsByClassName('mbga-pf-footer-li');
+                    var i = 0,
+                        l = list.length;
+                    for (; i < l; i++) {
+                        var elem = list[i];
+                        elem.addEventListener('touchstart', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/$/, ' mbga-pf-tapped');
+                        });
+                        elem.addEventListener('touchend', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/ mbga-pf-tapped/, '');
+                        });
+                        elem.addEventListener('touchmove', function(e) {});
+                    }
+                });
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
