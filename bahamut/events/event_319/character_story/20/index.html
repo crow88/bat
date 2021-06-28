@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1, initial-scale=1" />
+    <title>신격의 바하무트 </title>
+    <style type="text/css">
+        .a_link {
+            color: #F8EC02;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../../../../bahamut/css/game/flash.css" media="all">
+    <script type="text/javascript" name="js_error_capture">
+        var previousReportTimeStamp = 0;
+        var JSErrorCapture = {
+            // エラー送信先URL
+            URL_ERROR: ""
+                // エラーを再報告するまでのインターバル(ミリ秒)
+                ,
+            REPORT_INTERVAL_TIME: 1000,
+            init: function(url, time) {
+                JSErrorCapture.setUrlError(url);
+                JSErrorCapture.REPORT_INTERVAL_TIME = time || 1000;
+            },
+            setUrlError: function(url) {
+                JSErrorCapture.URL_ERROR = url || "";
+                return;
+            },
+            getUrlError: function() {
+                    return JSErrorCapture.URL_ERROR;
+                }
+                /**
+                 * エラーログをajax送信
+                 * @param msg      エラーメッセージ
+                 * @param url      エラーを起こしたURL
+                 * @param line     エラー発生行位置
+                 * @param col      エラー発生文字位置
+                 * @param error    エラーオブジェクト
+                 * @param callback 報告後に発火する関数
+                 */
+                ,
+            reportError: function(msg, url, line, col, error, callback) {
+                    if (msg && error) {
+                        var errorJSON = JSON.stringify(error, JSErrorCapture.replaceErrors);
+                        var text = JSErrorCapture.generateErrorMessage(errorJSON, url, line);
+                        JSErrorCapture.sendErrorOnHttpRequest(text);
+                    }
+                }
+                /*
+                 * メッセージを生成
+                 * @param msg    エラーメッセージ
+                 * @param url    発火したURL
+                 * @param line   行番号
+                 * 
+                 * @return text    テキスト "url:line:msg"
+                 */
+                ,
+            generateErrorMessage: function(msg, url, line) {
+                    var text = "[JS_ERROR] ";
+                    text += url;
+                    text += " : " + line;
+                    text += " : " + msg;
+                    return text;
+                }
+                /**
+                 * HTMLフォームの形式にデータを変換する
+                 * @param data XMLHttpRequestにPOSTで送信したいデータ
+                 */
+                ,
+            encodeHTMLForm: function(data) {
+                    var params = [];
+                    for (var name in data) {
+                        var value = data[name];
+                        var param = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+                        params.push(param);
+                    }
+                    return params.join('&').replace(/%20/g, '+');
+                }
+                /*
+                 * エラーを発火する
+                 * @param xhr         ajaxエラーの第一引数 XMLHttpRequest
+                 * @param textStatus  ajaxエラーの第二引数 textStatus
+                 * @param errorThrown ajaxエラーの第三引数 errorThrown
+                 * @param isReturnMsg エラーメッセージをthrowせずに取得だけしたい場合true
+                 */
+                ,
+            throwAjaxErrorMessage: function(xhr, textStatus, errorThrown, isReturnMsg) {
+                    var msg = "XMLHttpRequest : " + xhr.status +
+                        " \n| " + "textStatus : " + textStatus +
+                        " \n| " + "errorThrown : " + errorThrown.message;
+                    if (isReturnMsg) {
+                        return msg;
+                    } else {
+                        throw new Error(msg);
+                    }
+                }
+                /**
+                 * メッセージを送信
+                 * @param msg      送信するメッセージ
+                 * @param callback 送信後に実行する関数
+                 */
+                ,
+            sendErrorOnHttpRequest: function(msg, callback) {
+                    var currentTime = new Date().getTime();
+                    // 負荷対策。一定間隔を空けないと再度送信されない
+                    if ((currentTime - previousReportTimeStamp) < this.REPORT_INTERVAL_TIME) return;
+                    previousReportTimeStamp = currentTime;
+                    var reportUrl = JSErrorCapture.getUrlError() + '&timestamp=' + currentTime;
+                    // エラー内容送信
+                    try {
+                        var http = new XMLHttpRequest();
+                        http.onreadystatechange = function() {
+                            if (http.readyState === XMLHttpRequest.prototype.DONE ||
+                                http.readyState === XMLHttpRequest.prototype.UNSENT) {
+                                if (callback) {
+                                    callback(http);
+                                }
+                            }
+                        };
+                        http.open('POST', reportUrl);
+                        http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        var _sendData = {
+                            'msg': msg
+                        }
+                        http.send(JSErrorCapture.encodeHTMLForm(_sendData));
+                    } catch (e) {
+                        console.error(e);
+                    }
+                }
+                /**
+                 * ErrorをJSON.stringifyできるよう、定義を追加
+                 * @param  key
+                 * @param  value
+                 * @return 定義追加したObject
+                 */
+                ,
+            replaceErrors: function(key, value) {
+                if (value instanceof Error) {
+                    var error = {};
+                    Object.getOwnPropertyNames(value).forEach(function(key) {
+                        error[key] = value[key];
+                    });
+                    return error;
+                }
+                return value;
+            }
+        };
+        /**
+         * エラーハンドリング
+         * @param msg    エラーメッセージ
+         * @param url    エラーが起きたファイルのパス
+         * @param line   エラーが起きた行
+         * @param col    エラーが起きた列
+         * @param error  エラーオブジェクト
+         */
+        window.onerror = function(msg, url, line, col, error) {
+            // console.log("onerror:",msg, url, line, col, error);
+            var URL_ERROR = "http://sp.pf.mbga.jp/12007160/?guid=ON&amp;url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Ferror_report%2Fjs_error_log%3Frnd%3D208010511";
+            JSErrorCapture.init(URL_ERROR);
+            JSErrorCapture.reportError(msg, url, line, col, error);
+            return false;
+        };
+    </script>
+    <script type="text/javascript">
+        console.assert = console.error = console.log = console.time = console.timeEnd = console.warn = function() {};
+    </script>
+    <script type="text/javascript" src="../../../../../bahamut/js/cjs/libs/externaltext.js"></script>
+    <script type="text/javascript" src="../../../../../bahamut/js/cjs/libs/LoadManager.js"></script>
+    <script type="text/javascript" src="../../../../../bahamut/js/audio_play.js"></script>
+    <script type="text/javascript">
+        var manager = new LoadManager();
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/arrow.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_01.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_02.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_03.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_04.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_05.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_06.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_07.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_08.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_09.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_10.jpg");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_01.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_02.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_03.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_04.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_05.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_06.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_07.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_08.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_09.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_10.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_11.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_12.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_13.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_14.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_15.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_16.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_17.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_18.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_19.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_20.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_21.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_22.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_23.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_24.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_25.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_26.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_27.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_28.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_29.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_30.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_01.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_02.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_03.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_04.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_05.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_06.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_07.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_08.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_09.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_10.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/explosion_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/explosion_2.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_2.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_3.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_energy.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_pillar.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/hit_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/hit_2.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ice_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_01.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_02.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_03.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_04.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_05.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_06.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_07.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_08.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_09.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_10.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/kira.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/magic_ring_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/magic_square_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/shockwave_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/slash_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/spear_1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_off.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_skip.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_skip_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_none.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_off.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_off_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_on.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_on_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_auto.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_auto_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_frame.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_log.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_log_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_off.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_off_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_on.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_on_active.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_bubble.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_close.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_header_frame.png");
+        manager.add("../../../../../bahamut/js/cjs/event/event_000_speak_2/images/vortex_1.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_4.jpg");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_7_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_1_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_6_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_4_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_l.png");
+        manager.add("../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_2_l.png");
+        manager.onProgress = function(event) {
+
+            if (document.getElementById("percentBar") !== null) {
+                $("#percentBar").html("Loading : " + Math.floor(manager.getPercent() * 100) + "%");
+            }
+        };
+
+        manager.start();
+        charVoiceAdmitSwitch = 0;
+        voiceBtnChkFlg = 0;
+        isSoundPlaying = 0;
+        isAutoMode = 0;
+        has_voice = true;
+        // ウェブストレージに対応している
+        if (window.localStorage) {
+            // ------------------------------------------------------------
+            // ローカルストレージオブジェクトを取得する
+            // ------------------------------------------------------------
+            var local_storage = window.localStorage.getItem('charVoiceAdmitSwitch');
+            if (local_storage == 'OFF') {
+
+                charVoiceAdmitSwitch = 0;
+            } else {
+
+                charVoiceAdmitSwitch = 1;
+            }
+        } else {
+
+
+        }
+    </script>
+    <script type="text/javascript">
+        var base_scale_flg = 1;
+        if (window.localStorage && localStorage.getItem('cjsBaseScale') > 0) {
+            base_scale_flg = localStorage.getItem('cjsBaseScale');
+        };
+        initExternalText();
+
+        if (base_scale_flg == 2) {
+            var base_scale = 0.8;
+            var cjsFps = 12;
+        } else if (base_scale_flg == 3) {
+            var base_scale = 1.5;
+            var cjsFps = 12;
+        } else if (base_scale_flg == 4) {
+            var base_scale = 1.5;
+            var cjsFps = 24;
+        } else {
+            var base_scale = 1;
+            var cjsFps = 12;
+        }
+        if (base_scale == 0) {
+            base_scale = 1;
+        }
+        cjsFps -= 0;
+        if (cjsFps < 12 || cjsFps > 60) {
+            cjsFps = 12;
+        }
+
+        var yoko = 240;
+        var tate = 320;
+        var adjust_scale = 1;
+        var aas_f = 0;
+        if (65 > 0) {
+
+            var url = "https://crow88.github.io/bat/";
+            var url_skip = "https://crow88.github.io/bat/";
+            var select_scene = "0";
+            var all_scene_cnt_yes = "0";
+            var all_scene_cnt_no = "0";
+            var txt_yes = "";
+            var txt_no = "";
+            var h_tate = "320";
+            var w_yoko = "240";
+            var scene_status1 = "0010000000|0010000000|0000000000|01000000|0000000|0000000|af0000|000000|000000|000000|0";
+            var chara_name1 = "";
+            var talk1 = "――――。<br />――――。<br /><br />";
+            var scene_status2 = "011a000000|0010000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name2 = "이치노세 시키";
+            var talk2 = "엣, 그럼 카나데쨩은 이곳에 왔을 때, <br />혼자서, 그것도 사막 한가운데에 <br />내던져진거야? <br />우와-! 큰일이었네!";
+            var scene_status3 = "0120000000|021f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name3 = "하야미 카나데";
+            var talk3 = "불운인지 행운인지는, <br />뭐, 반반일까. <br />그 후에 바로 기사님과 만났으니까.";
+            var scene_status4 = "031f000000|0210000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name4 = "이치노세 시키";
+            var talk4 = "그 재밌는 냄새가 나는 사람 말이지-! <br />나는 연금술 연구소 근처에서 <br />눈을 떴는데-, 그 후에 바로 드워프들과 <br />함께 있던 미나미쨩을 만났지-.";
+            var scene_status5 = "0320000000|021f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name5 = "하야미 카나데";
+            var talk5 = "그러고보니, 드워프들과 여러가지 <br />이야기를 했다고 하던데…<br />너희도, 프레쨩처럼 드워프들의 <br />말을 알아듣는거야?";
+            var scene_status6 = "031f000000|0210000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name6 = "이치노세 시키";
+            var talk6 = "그 이상한 울음소리? 아니~, 전혀! <br />문자라면 해독할 수도 있는데… <br />뭐랄까, 마술서 계통은 읽을 수 있었지만…<br />";
+            var scene_status7 = "041f000000|0210000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name7 = "이치노세 시키";
+            var talk7 = "그 애들의 말은 역시 <br />알아들을 수가 없어. <br />후레쨩 제법이네~!<br />";
+            var scene_status8 = "0420000000|051f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name8 = "하야미 카나데";
+            var talk8 = "왠지 모르게 전해진다는 레벨인것 <br />같지만…어쨌든 프레데리카라면 <br />납득이 되는거지. <br />";
+            var scene_status9 = "0410000000|061f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name9 = "하야미 카나데";
+            var talk9 = "…그런데, 말을 알아듣지 못한다면, <br />지금까지 그 아이들과 어떻게 <br />커뮤니케이션을 하고 있었어?<br />";
+            var scene_status10 = "031f000000|0610000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name10 = "이치노세 시키";
+            var talk10 = "그건 대체적으로 미나미쨩이 <br />어떻게든 했어! <br />제스처를 쓰거나-, <br />그림을 그려서 보여준다거나-…";
+            var scene_status11 = "041a000000|0610000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name11 = "이치노세 시키";
+            var talk11 = "미나미쨩은 끈기가 있지-! <br />나라면 순식간에 질렸을걸!<br /><br />";
+            var scene_status12 = "0420000000|021f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name12 = "하야미 카나데";
+            var talk12 = "과연…미나미의 말 잘 듣고 <br />잘 돌보는 성격이, <br />여기서 도움이 되었다는 거구나.<br />";
+            var scene_status13 = "031a000000|0210000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name13 = "이치노세 시키";
+            var talk13 = "그래그래, 같이 있으면 좋지~<br />미나미쨩은! <br />내 연구도 엄청 도와줬는걸. <br />";
+            var scene_status14 = "041f000000|0210000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name14 = "이치노세 시키";
+            var talk14 = "드워프들이랑 친해져서~, <br />선물같은거 잔뜩 가져다 줬고! <br />여러모로 편하더라~.<br />";
+            var scene_status15 = "0420000000|071f000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name15 = "하야미 카나데";
+            var talk15 = "뭐어. 미나미에겐, 시키의 응석을 <br />너무 받아주기만 하면 안된다고 <br />먼저 말하는게 좋았을까?<br />";
+            var scene_status16 = "081f000000|0710000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name16 = "이치노세 시키";
+            var talk16 = "에에…일단, <br />의지하고만 있었던건 아닌데-? <br />나도 해야할 일은 하고 있었다구-…?<br />";
+            var scene_status17 = "0820000000|091e000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name17 = "하야미 카나데";
+            var talk17 = "후훗…그러네, <br />그렇지 않았다면 신작 마법약같은건 <br />완성되지 않았을테니까. <br />수고했어, 시키.<br />";
+            var scene_status18 = "041a000000|0910000000|0000000000|01000000|0000000|0000000|000000|000000|000000|000000|0";
+            var chara_name18 = "이치노세 시키";
+            var talk18 = "냐하하-! 고마워~, 카나데쨩.<br /><br /><br />";
+            var all_scene_cnt = "18";
+            var has_voice = "1";
+            if (w_yoko != 0 || h_tate != 0) {
+                yoko = Math.round(w_yoko);
+                tate = Math.round(h_tate);
+                yoko *= base_scale;
+                tate *= base_scale;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="../../../../../bahamut/js/cjs/libs/manifestmin_voice.js"></script>
+    <script type="text/javascript" src="../../../../../bahamut/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../../../../../bahamut/js/cjs/event/event_000_speak_5/event_000_speak_2.js"></script>
+
+    <script type="text/javascript">
+        function hideURLbar() {
+            if (window.pageYOffset === 0)
+                window.scrollTo(0, 1);
+        };
+        window.onunload = function() {};
+        window.onload = function() {};
+
+        function appendUpperSpace(space) {
+            var imgEle = document.createElement("img");
+            imgEle.setAttribute("src", "http://ava-a.mbga.jp/i/dot.gif");
+            imgEle.setAttribute("height", space);
+            document.getElementById("upperSpace").appendChild(imgEle);
+        };
+        var canvas, stage, exportRoot, key_flag;
+        var canvas2, stage2, exportRoot2;
+
+        function init() {
+
+            preparationExternalText();
+
+            createjs.MotionGuidePlugin.install();
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+            stage = new createjs.Stage(canvas);
+            if (!is_Android5OrClearTerminal()) {
+                stage.autoClear = false;
+            }
+
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+            stage = new createjs.Stage("canvas");
+            stage.autoClear = false;
+
+            if (createjs.Touch.isSupported()) {
+                cjsEvent = 1;
+            } else {
+                cjsEvent = 0;
+            }
+            oldw = innerWidth;
+            oldh = innerHeight;
+            createjs.Ticker.setFPS(cjsFps);
+            createjs.Ticker.addEventListener("tick", stage);
+            canvas.style.visibility = "hidden";
+            MenuScroll();
+            auto_adjust_Size();
+            images = images || {};
+            var manifest = [{
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/arrow.png",
+                    id: "arrow",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_01.jpg",
+                    id: "bg_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_02.jpg",
+                    id: "bg_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_03.jpg",
+                    id: "bg_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_04.jpg",
+                    id: "bg_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_05.jpg",
+                    id: "bg_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_06.jpg",
+                    id: "bg_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_07.jpg",
+                    id: "bg_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_08.jpg",
+                    id: "bg_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_09.jpg",
+                    id: "bg_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/bg_10.jpg",
+                    id: "bg_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_01.png",
+                    id: "ch_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_02.png",
+                    id: "ch_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_03.png",
+                    id: "ch_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_04.png",
+                    id: "ch_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_05.png",
+                    id: "ch_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_06.png",
+                    id: "ch_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_07.png",
+                    id: "ch_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_08.png",
+                    id: "ch_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_09.png",
+                    id: "ch_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_10.png",
+                    id: "ch_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_11.png",
+                    id: "ch_11",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_12.png",
+                    id: "ch_12",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_13.png",
+                    id: "ch_13",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_14.png",
+                    id: "ch_14",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_15.png",
+                    id: "ch_15",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_16.png",
+                    id: "ch_16",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_17.png",
+                    id: "ch_17",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_18.png",
+                    id: "ch_18",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_19.png",
+                    id: "ch_19",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_20.png",
+                    id: "ch_20",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_21.png",
+                    id: "ch_21",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_22.png",
+                    id: "ch_22",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_23.png",
+                    id: "ch_23",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_24.png",
+                    id: "ch_24",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_25.png",
+                    id: "ch_25",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_26.png",
+                    id: "ch_26",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_27.png",
+                    id: "ch_27",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_28.png",
+                    id: "ch_28",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_29.png",
+                    id: "ch_29",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_30.png",
+                    id: "ch_30",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_01.png",
+                    id: "ch_c_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_02.png",
+                    id: "ch_c_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_03.png",
+                    id: "ch_c_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_04.png",
+                    id: "ch_c_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_05.png",
+                    id: "ch_c_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_06.png",
+                    id: "ch_c_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_07.png",
+                    id: "ch_c_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_08.png",
+                    id: "ch_c_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_09.png",
+                    id: "ch_c_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ch_c_10.png",
+                    id: "ch_c_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/explosion_1.png",
+                    id: "explosion_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/explosion_2.png",
+                    id: "explosion_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_1.png",
+                    id: "fire_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_2.png",
+                    id: "fire_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_3.png",
+                    id: "fire_3",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_energy.png",
+                    id: "fire_energy",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/fire_pillar.png",
+                    id: "fire_pillar",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/hit_1.png",
+                    id: "hit_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/hit_2.png",
+                    id: "hit_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ice_1.png",
+                    id: "ice_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_01.png",
+                    id: "image_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_02.png",
+                    id: "image_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_03.png",
+                    id: "image_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_04.png",
+                    id: "image_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_05.png",
+                    id: "image_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_06.png",
+                    id: "image_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_07.png",
+                    id: "image_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_08.png",
+                    id: "image_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_09.png",
+                    id: "image_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/image_10.png",
+                    id: "image_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/kira.png",
+                    id: "kira",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/magic_ring_1.png",
+                    id: "magic_ring_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/magic_square_1.png",
+                    id: "magic_square_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/shockwave_1.png",
+                    id: "shockwave_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/slash_1.png",
+                    id: "slash_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/spear_1.png",
+                    id: "spear_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1.png",
+                    id: "ui_btn1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_active.png",
+                    id: "ui_btn1_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_off.png",
+                    id: "ui_btn1_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_skip.png",
+                    id: "ui_btn1_skip",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_skip_active.png",
+                    id: "ui_btn1_skip_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_none.png",
+                    id: "ui_btn1_voice_none",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_off.png",
+                    id: "ui_btn1_voice_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_off_active.png",
+                    id: "ui_btn1_voice_off_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_on.png",
+                    id: "ui_btn1_voice_on",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn1_voice_on_active.png",
+                    id: "ui_btn1_voice_on_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_auto.png",
+                    id: "ui_btn2_auto",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_auto_active.png",
+                    id: "ui_btn2_auto_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_frame.png",
+                    id: "ui_btn2_frame",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_log.png",
+                    id: "ui_btn2_log",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_log_active.png",
+                    id: "ui_btn2_log_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_off.png",
+                    id: "ui_btn2_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_off_active.png",
+                    id: "ui_btn2_off_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_on.png",
+                    id: "ui_btn2_on",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_btn2_on_active.png",
+                    id: "ui_btn2_on_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_bubble.png",
+                    id: "ui_bubble",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_close.png",
+                    id: "ui_close",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/ui_header_frame.png",
+                    id: "ui_header_frame",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/js/cjs/event/event_000_speak_2/images/vortex_1.png",
+                    id: "vortex_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_4.jpg",
+                    id: "bg_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_7_l.png",
+                    id: "ch_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_l.png",
+                    id: "ch_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_1_l.png",
+                    id: "ch_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_l.png",
+                    id: "ch_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_6_l.png",
+                    id: "ch_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_4_l.png",
+                    id: "ch_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_l.png",
+                    id: "ch_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_l.png",
+                    id: "ch_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_2_l.png",
+                    id: "ch_09",
+                    type: "image"
+                },
+            ];
+            sounds = [{
+                    src: "voice_id1",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_674afe2ccfa22519937ff8f2a57ba03d.mp4",
+                    id: "sound_voice_id2"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_5c1a0391fbbaef954f0f2a48ca9b232e.mp4",
+                    id: "sound_voice_id3"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_84f0ed3093ae0b563ac65d47b2adac8a.mp4",
+                    id: "sound_voice_id4"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_be2432b5799be4292d5f7739321715bd.mp4",
+                    id: "sound_voice_id5"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_45e2f411d3df0ecb0c90542c15bcd029.mp4",
+                    id: "sound_voice_id6"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_b8d17573b177a00277adc4ea7b58cef3.mp4",
+                    id: "sound_voice_id7"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_8fbb0ac196debdd59376be18426966ab.mp4",
+                    id: "sound_voice_id8"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_23ee7203e60157305870d6c1d1a7f8f9.mp4",
+                    id: "sound_voice_id9"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_38bab97d02d7b5323c7277b3d9615e51.mp4",
+                    id: "sound_voice_id10"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_470a300584167abb3bf79d4c7671ddaa.mp4",
+                    id: "sound_voice_id11"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_3341c645c044ea9abe8a5cbde9fbb5a6.mp4",
+                    id: "sound_voice_id12"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_8b6a63573c7601e7f969a00772e1c51a.mp4",
+                    id: "sound_voice_id13"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_abcb3b146905595fe1a4eb1d3676754d.mp4",
+                    id: "sound_voice_id14"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_405c8a6c06b6738fb864c41338aa053f.mp4",
+                    id: "sound_voice_id15"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_45fd364d5a17529938eed88bca26acfe.mp4",
+                    id: "sound_voice_id16"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_8ac3347d98ffac2b6731aa38c1a9435e.mp4",
+                    id: "sound_voice_id17"
+                },
+                {
+                    src: "../../../../../bahamut/sound/3190000/speakstory0143_c5e39d56ffc6a4eb168e08414ae7a2e2.mp4",
+                    id: "sound_voice_id18"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+            ];
+
+            var loader = new createjs.LoadQueue(false);
+            loader.on("fileload", handleFileLoad);
+            loader.on("complete", handleComplete);
+            loader.setMaxConnections(6);
+            loader.loadManifest(manifest);
+        };
+        $(window).on('load resize', function() {
+            if (aas_f == 1) {
+                if (oldw + oldh != innerWidth + innerHeight) {
+
+                    allhideText();
+                    window.scrollTo(0, 1);
+                    setTimeout("auto_adjust_Size()", 50);
+                    oldw = innerWidth;
+                    oldh = innerHeight;
+                }
+            }
+        });
+
+        function handleFileLoad(o) {
+            if (o.item.type == "image") {
+                images[o.item.id] = o.result;
+            }
+        };
+
+        function MenuScroll() {
+            window.scrollTo(0, 1);
+        };
+
+        function handleComplete() {
+            if (!canvas.style.visibility) {
+                canvas.style.visibility = "hidden";
+            }
+            exportRoot = new lib.event_000_speak_2();
+            if (createjs.Touch.isSupported()) {
+
+                cjsEvent = 1;
+            } else {
+                cjsEvent = 0;
+            }
+            stage.update();
+            stage.addChild(exportRoot);
+            exportRoot.scaleX = exportRoot.scaleY = adjust_scale;
+            aas_f = 1;
+            document.getElementById("percentBar").style.display = 'none';
+        };
+
+        function tick() {
+            if (!is_exception_Terminal()) {
+                context.clearRect(0, 0, canvas.width + 1, canvas.height + 1);
+            }
+            stage.update();
+        };
+
+        function auto_adjust_Size() {
+            var iw, w;
+            var ih, h;
+            cjsScale = 1;
+            inwc = innerWidth + innerHeight;
+            iw = innerWidth * cjsScale / base_scale;
+            ih = innerHeight * cjsScale / base_scale;
+            if (ih > (iw * (tate / yoko))) {
+                adjust_scale = (iw / yoko) * (base_scale);
+            } else {
+                adjust_scale = (ih / tate) * (base_scale);
+            }
+            w = Math.round(yoko * adjust_scale) / base_scale;
+            h = Math.round(tate * adjust_scale) / base_scale;
+            canvas.style.width = w + "px";
+            canvas.style.height = h + "px";
+            canvas.width = w;
+            canvas.height = h;
+            canvas.zIndex = "1";
+
+            ww = (iw - w) / 2 * base_scale;
+            hh = (ih - h) / 2 * base_scale;
+
+            if (aas_f == 1) {
+                exportRoot.scaleX = exportRoot.scaleY = adjust_scale;
+
+                setTimeout("redrawText()", 50);
+            }
+            cvdv.style.marginLeft = ww + "px";
+            cvdv.style.marginTop = hh + "px";
+            canvas.setAttribute('style', 'zoom:' + base_scale);
+            if (canvas.style.visibility != "visible") {
+                canvas.style.visibility = "visible";
+            }
+            if (is_canvasFault()) {
+
+                if (canvas.width < 256 && canvas.height < 256) {
+
+                    if (ih < iw) {
+                        canvas.width = 257;
+                        canvas.style.width = canvas.width + "px";
+                    } else {
+                        canvas.height = 257;
+                        canvas.style.height = canvas.height + "px";
+                    }
+                }
+            }
+            canvas.style.position = 'absolute';
+        };
+
+        function is_apple() {
+            var media = [
+                'iPhone',
+                'iPad'
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+
+        function is_smartPhone() {
+            var media = [
+                'iPhone',
+                'iPad',
+                'dream', // Pre 1.5 Android
+                'CUPCAKE', // 1.5+ Android
+                'Android' // Android
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+
+        function is_canvasFault() {
+
+            var media = [
+                'SonySO-04E',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+
+        function is_Android5OrClearTerminal() {
+
+            var media = [
+                'Android 5.',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+
+        function is_exception_Terminal() {
+            var media = [
+                'exception_Terminal',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+        setCharVoiceMode = function() {
+            var local_storage = '';
+            if (charVoiceAdmitSwitch == 0) {
+                local_storage = 'ON';
+                charVoiceAdmitSwitch = 1;
+            } else {
+                local_storage = 'OFF';
+                charVoiceAdmitSwitch = 0;
+                createjs.Sound.stop();
+            }
+            window.localStorage.setItem("charVoiceAdmitSwitch", local_storage);
+        };
+        cjsFontSize = "10";
+        cjsFontFamily = " Hiragino Kaku Gothic Pro";
+    </script>
+    <script type="text/javascript">
+        var cjsBgmVolume = 1;
+        var cjsVoiceVolume = 1;
+        $(function() {
+            if (window.localStorage) {
+                if (localStorage.getItem("cjsBgmVolume")) {
+                    cjsBgmVolume = localStorage.getItem("cjsBgmVolume");
+                }
+                if (localStorage.getItem("cjsVoiceVolume")) {
+                    cjsVoiceVolume = localStorage.getItem("cjsVoiceVolume");
+                }
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0;
+        var bgm_flg = 0;
+    </script>
+    <script type='text/javascript' src='../../../../../bahamut/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="../../../../../css/base.css" />
+</head>
+
+<body id="cvdv" onload="init();" style="margin-left: auto; margin-right: auto;overflow:hidden;" ontouchmove="event.preventDefault()">
+    <p id="percentBar">Loading 0%</p>
+    <canvas id="canvas" style="position: absolute;visibility:hidden;z-index: 100;"></canvas>
+    <br />
+    <p style="margin-bottom:1500px;"><img src="http://ava-a.mbga.jp/i/dot.gif" height="1" width="1" alt="dot" /></p><br />
+
+    <div id="mbga-pf-footer">
+        <script type="text/javascript" charset="UTF-8">
+            (function() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    var list = document.getElementsByClassName('mbga-pf-footer-li');
+                    var i = 0,
+                        l = list.length;
+                    for (; i < l; i++) {
+                        var elem = list[i];
+                        elem.addEventListener('touchstart', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/$/, ' mbga-pf-tapped');
+                        });
+                        elem.addEventListener('touchend', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/ mbga-pf-tapped/, '');
+                        });
+                        elem.addEventListener('touchmove', function(e) {});
+                    }
+                });
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
