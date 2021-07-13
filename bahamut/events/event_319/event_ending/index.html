@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="authoring-tool" content="Adobe_Animate_CC">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1, initial-scale=1" />
+    <title>신격의 바하무트 </title>
+    <style type="text/css">
+        .a_link {
+            color: #F8EC02;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../../../bahamut/css/game/flash.css" media="all">
+    <script type="text/javascript" name="js_error_capture">
+        var previousReportTimeStamp = 0;
+        var JSErrorCapture = {
+            // エラー送信先URL
+            URL_ERROR: ""
+                // エラーを再報告するまでのインターバル(ミリ秒)
+                ,
+            REPORT_INTERVAL_TIME: 1000,
+            init: function(url, time) {
+                JSErrorCapture.setUrlError(url);
+                JSErrorCapture.REPORT_INTERVAL_TIME = time || 1000;
+            },
+            setUrlError: function(url) {
+                JSErrorCapture.URL_ERROR = url || "";
+                return;
+            },
+            getUrlError: function() {
+                    return JSErrorCapture.URL_ERROR;
+                }
+                /**
+                 * エラーログをajax送信
+                 * @param msg      エラーメッセージ
+                 * @param url      エラーを起こしたURL
+                 * @param line     エラー発生行位置
+                 * @param col      エラー発生文字位置
+                 * @param error    エラーオブジェクト
+                 * @param callback 報告後に発火する関数
+                 */
+                ,
+            reportError: function(msg, url, line, col, error, callback) {
+                    if (msg && error) {
+                        var errorJSON = JSON.stringify(error, JSErrorCapture.replaceErrors);
+                        var text = JSErrorCapture.generateErrorMessage(errorJSON, url, line);
+                        JSErrorCapture.sendErrorOnHttpRequest(text);
+                    }
+                }
+                /*
+                 * メッセージを生成
+                 * @param msg    エラーメッセージ
+                 * @param url    発火したURL
+                 * @param line   行番号
+                 * 
+                 * @return text    テキスト "url:line:msg"
+                 */
+                ,
+            generateErrorMessage: function(msg, url, line) {
+                    var text = "[JS_ERROR] ";
+                    text += url;
+                    text += " : " + line;
+                    text += " : " + msg;
+                    return text;
+                }
+                /**
+                 * HTMLフォームの形式にデータを変換する
+                 * @param data XMLHttpRequestにPOSTで送信したいデータ
+                 */
+                ,
+            encodeHTMLForm: function(data) {
+                    var params = [];
+                    for (var name in data) {
+                        var value = data[name];
+                        var param = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+                        params.push(param);
+                    }
+                    return params.join('&').replace(/%20/g, '+');
+                }
+                /*
+                 * エラーを発火する
+                 * @param xhr         ajaxエラーの第一引数 XMLHttpRequest
+                 * @param textStatus  ajaxエラーの第二引数 textStatus
+                 * @param errorThrown ajaxエラーの第三引数 errorThrown
+                 * @param isReturnMsg エラーメッセージをthrowせずに取得だけしたい場合true
+                 */
+                ,
+            throwAjaxErrorMessage: function(xhr, textStatus, errorThrown, isReturnMsg) {
+                    var msg = "XMLHttpRequest : " + xhr.status +
+                        " \n| " + "textStatus : " + textStatus +
+                        " \n| " + "errorThrown : " + errorThrown.message;
+                    if (isReturnMsg) {
+                        return msg;
+                    } else {
+                        throw new Error(msg);
+                    }
+                }
+                /**
+                 * メッセージを送信
+                 * @param msg      送信するメッセージ
+                 * @param callback 送信後に実行する関数
+                 */
+                ,
+            sendErrorOnHttpRequest: function(msg, callback) {
+                    var currentTime = new Date().getTime();
+                    // 負荷対策。一定間隔を空けないと再度送信されない
+                    if ((currentTime - previousReportTimeStamp) < this.REPORT_INTERVAL_TIME) return;
+                    previousReportTimeStamp = currentTime;
+                    var reportUrl = JSErrorCapture.getUrlError() + '&timestamp=' + currentTime;
+                    // エラー内容送信
+                    try {
+                        var http = new XMLHttpRequest();
+                        http.onreadystatechange = function() {
+                            if (http.readyState === XMLHttpRequest.prototype.DONE ||
+                                http.readyState === XMLHttpRequest.prototype.UNSENT) {
+                                if (callback) {
+                                    callback(http);
+                                }
+                            }
+                        };
+                        http.open('POST', reportUrl);
+                        http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        var _sendData = {
+                            'msg': msg
+                        }
+                        http.send(JSErrorCapture.encodeHTMLForm(_sendData));
+                    } catch (e) {
+                        console.error(e);
+                    }
+                }
+                /**
+                 * ErrorをJSON.stringifyできるよう、定義を追加
+                 * @param  key
+                 * @param  value
+                 * @return 定義追加したObject
+                 */
+                ,
+            replaceErrors: function(key, value) {
+                if (value instanceof Error) {
+                    var error = {};
+                    Object.getOwnPropertyNames(value).forEach(function(key) {
+                        error[key] = value[key];
+                    });
+                    return error;
+                }
+                return value;
+            }
+        };
+        /**
+         * エラーハンドリング
+         * @param msg    エラーメッセージ
+         * @param url    エラーが起きたファイルのパス
+         * @param line   エラーが起きた行
+         * @param col    エラーが起きた列
+         * @param error  エラーオブジェクト
+         */
+        window.onerror = function(msg, url, line, col, error) {
+            // console.log("onerror:",msg, url, line, col, error);
+            var URL_ERROR = "http://sp.pf.mbga.jp/12007160/?guid=ON&amp;url=http%3A%2F%2F203.131.198.133%2Fbahamut%2Ferror_report%2Fjs_error_log%3Frnd%3D216898368";
+            JSErrorCapture.init(URL_ERROR);
+            JSErrorCapture.reportError(msg, url, line, col, error);
+            return false;
+        };
+    </script>
+    <script type="text/javascript">
+        console.assert = console.error = console.log = console.time = console.timeEnd = console.warn = function() {};
+    </script>
+    <script type="text/javascript" src="../../../../bahamut/js/cjs/libs/externaltext.js"></script>
+    <script type="text/javascript" src="../../../../bahamut/js/cjs/libs/LoadManager.js"></script>
+    <script type="text/javascript" src="../../../../bahamut/js/audio_play.js"></script>
+    <script type="text/javascript">
+        var manager = new LoadManager();
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/arrow.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_01.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_02.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_03.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_04.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_05.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_06.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_07.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_08.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_09.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_10.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_blur2.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_2.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_3.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_4.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_01.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_02.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_03.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_04.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_05.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_06.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_07.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_08.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_09.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_10.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_11.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_12.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_13.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_14.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_15.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_16.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_17.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_18.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_19.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_20.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_21.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_22.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_23.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_24.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_25.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_26.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_27.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_28.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_29.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_30.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_31.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_32.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_33.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_34.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_35.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_36.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_37.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_38.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_39.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_40.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_41.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_42.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_43.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_44.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_45.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_46.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_47.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_48.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_49.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_50.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_01.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_02.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_03.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_04.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_05.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_06.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_07.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_08.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_09.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_10.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_11.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_12.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_13.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_14.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_15.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_16.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_17.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_18.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_19.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_20.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/colorful.jpg");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_2.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_thunder1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_thunder2.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_2.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_3.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_energy.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_pillar.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/hit_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/hit_2.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ice_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_01.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_02.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_03.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_04.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_05.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_06.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_07.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_08.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_09.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_10.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/kira.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/magic_ring_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/magic_square_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/shockwave_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/slash_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/spear_1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_off.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_skip.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_skip_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_none.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_off.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_off_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_on.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_on_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_auto.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_auto_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_frame.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_log.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_log_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_off.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_off_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_on.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_on_active.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_bubble.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_close.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_header_frame.png");
+        manager.add("../../../../bahamut/js/cjs/event/event_000_speak_7/images/vortex_1.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_4.jpg");
+        manager.add("../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_1.jpg");
+        manager.add("../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_10.jpg");
+        manager.add("../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_9.jpg");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_1_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_05_1_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_1_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_5_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_2_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_4_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_6_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_3_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_4_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_8_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_6_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_7_l.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_8_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_2_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_4_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_5_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_6_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_5_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_2_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_7_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_4_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_1_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_3_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_c.png");
+        manager.add("../../../../bahamut/image_sp/event/event_319/navi%2Fpicture%2Fev319_drama_picture_1.png");
+        manager.onProgress = function(event) {
+
+            if (document.getElementById("percentBar") !== null) {
+                $("#percentBar").html("Loading : " + Math.floor(manager.getPercent() * 100) + "%");
+            }
+        };
+        manager.start();
+        charVoiceAdmitSwitch = 0;
+        voiceBtnChkFlg = 0;
+        isSoundPlaying = 0;
+        isAutoMode = 0;
+        has_voice = true;
+        // ウェブストレージに対応している
+        if (window.localStorage) {
+            // ------------------------------------------------------------
+            // ローカルストレージオブジェクトを取得する
+            // ------------------------------------------------------------
+            var local_storage = window.localStorage.getItem('charVoiceAdmitSwitch');
+            if (local_storage == 'OFF') {
+
+                charVoiceAdmitSwitch = 0;
+            } else {
+
+                charVoiceAdmitSwitch = 1;
+            }
+        } else {
+
+
+        }
+    </script>
+    <script type="text/javascript">
+        initExternalText();
+        var base_scale = 1;
+        var cjsFps = 12;
+        if (base_scale == 0) {
+            base_scale = 1;
+        }
+        cjsFps -= 0;
+        if (cjsFps < 12 || cjsFps > 60) {
+            cjsFps = 12;
+        }
+
+        var yoko = 240;
+        var tate = 320;
+        var adjust_scale = 1;
+        var aas_f = 0;
+        if (233 > 0) {
+
+            var url = "https://crow88.github.io/bat/";
+            var url_skip = "https://crow88.github.io/bat/";
+            var select_scene = "0";
+            var all_scene_cnt_yes = "0";
+            var all_scene_cnt_no = "0";
+            var txt_yes = "";
+            var txt_no = "";
+            var h_tate = "320";
+            var w_yoko = "240";
+            var scene_status1 = "0010000000|0010000000|0000000000|01a00000|0000000|0000000|af0000|000000|000000|000000|0|0";
+            var chara_name1 = "";
+            var talk1 = "수많은 함정을 뚫고, <br />보물창고의 마나스톤을 <br />손에 넣은 기사일행.<br />";
+            var scene_status2 = "0010000000|0010000000|0000000000|01a00000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name2 = "";
+            var talk2 = "최후의 함정인 거대 암석으로부터 <br />어떻게든 도망쳐 나와, 그리고…<br /><br />";
+            var has_bgm = "1";
+            var scene_status3 = "0030000000|0020000000|010b000000|01a00000|0000000|0000000|ac2800|000000|000000|000000|0|0";
+            var chara_name3 = "닛타 미나미";
+            var talk3 = "보인다! <br />다들, 밖까지 얼마 안남았어! <br />힘내…!!<br />";
+            var scene_status4 = "011f000000|0020000000|0000000000|02000000|0000000|0000000|af0000|000000|000000|000000|0|0";
+            var chara_name4 = "이치노세 시키";
+            var talk4 = "후우~…간신히 도망쳐 나왔나-? <br />괜찮아? 내 꼬리끝 <br />찌부러지지 않았어-?<br />";
+            var scene_status5 = "0120000000|021a000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name5 = "미야모토 프레데리카";
+            var talk5 = "괜찮아 시키쨩, 탱탱하고 반지르르한, <br />귀여운 뱀 꼬리야~!<br />";
+            var scene_status6 = "0040000000|0020000000|020f000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name6 = "하야미 카나데";
+            var talk6 = "기사님도, 문제없어? <br />…그래, 다행이야. <br />전원 무사히 끝난 것 같네.<br />";
+            var scene_status7 = "0030000000|0020000000|030a000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name7 = "미야모토 프레데리카";
+            var talk7 = "해냈다~! 에헤헤, 다녀왔어 <br />드워프군들, 잘 지냈어-? <br />거기 너는 앞머리 잘랐니~?<br />";
+            var scene_status8 = "0030000000|0020000000|040a000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name8 = "미야모토 프레데리카";
+            var talk8 = "우리는 보다시피, 기운이 넘쳐~!<br /><br />";
+            var scene_status9 = "031d000000|032d000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name9 = "드워프";
+            var talk9 = "～～～♪<br /><br /><br />";
+            var scene_status10 = "041f000000|0010000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name10 = "이치노세 시키";
+            var talk10 = "그럼, 무사히 재료도 가져왔고-…<br /><br />";
+            var scene_status11 = "0420000000|051a000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name11 = "닛타 미나미";
+            var talk11 = "바로 역전마법약 제작, 이지! <br />나도 도와줄게, 시키쨩!<br /><br />";
+            var scene_status12 = "061e000000|0510000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name12 = "하야미 카나데";
+            var talk12 = "후훗…미나미, <br />완전히 시키의 조수같네.<br /><br />";
+            var scene_status13 = "0620000000|021a000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name13 = "미야모토 프레데리카";
+            var talk13 = "그럼 우리는~…<br />드워프군들이랑 신나게 춤추며 <br />기다려볼까!<br />";
+            var scene_status14 = "0610000000|071a000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name14 = "미야모토 프레데리카";
+            var talk14 = "카나데쨩도 기사님도, 가자~! <br />계속 긴장하고 있었으니까, <br />즐거운 시간도 필요하다구~! <br />";
+            var scene_status15 = "061e000000|0710000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name15 = "하야미 카나데";
+            var talk15 = "어머. <br />프레쨩, 긴장했었어?<br /><br />";
+            var scene_status16 = "0620000000|081d000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name16 = "미야모토 프레데리카";
+            var talk16 = "어? 아니, 전혀~♪ <br />뭐어, 사소한건 됐으니까 <br />다같이 춤추자~!<br />";
+            var scene_status17 = "091a000000|0810000000|0000000000|02000000|0000000|0000000|ac3500|000000|000000|000000|0|0";
+            var chara_name17 = "하야미 카나데";
+            var talk17 = "후후훗…네네, 넘어가줄게. <br />조금은 아이돌 같은 일도 해야지, 응.<br /><br />";
+            var scene_status18 = "0010000000|0010000000|0000000000|02000000|0000000|0000000|ad0000|000000|000000|000000|0|0";
+            var chara_name18 = "";
+            var talk18 = "즉시 역전마법약의 개발에 착수한 <br />시키와 미나미. 기사는 카나데의 권유로 <br />드워프들의 기운을 북돋우기 위해, <br />함께 춤춘다.";
+            var scene_status19 = "0010000000|0010000000|0000000000|02000000|0000000|0000000|af0000|000000|000000|000000|0|0";
+            var chara_name19 = "";
+            var talk19 = "흡사 연회같은 하룻밤이 지나…<br />그리고, 마침내 사막을 녹화시키는 <br />역전마법약이 완성됐다!<br />";
+            var scene_status20 = "051a000000|0010000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name20 = "닛타 미나미";
+            var talk20 = "이 반응…시키쨩! <br />이거, 완성된거지!?<br /><br />";
+            var scene_status21 = "0520000000|071a000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name21 = "미야모토 프레데리카";
+            var talk21 = "와오! 그런거야? <br />박사님 박사님, 어떤가요~!?<br /><br />";
+            var scene_status22 = "0040000000|0020000000|050a000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name22 = "이치노세 시키";
+            var talk22 = "흐음…응, 제대로 됐네. <br />거대 마나스톤을 사용한 <br />역전마법약, 완성!<br />";
+            var scene_status23 = "031d000000|032d000000|0000000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name23 = "드워프";
+            var talk23 = "～～～…！！<br /><br /><br />";
+            var scene_status24 = "0030000000|0020000000|020f000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name24 = "하야미 카나데";
+            var talk24 = "프레쨩처럼 번역은 못하지만…<br />저 아이들이 지금 기뻐하고 있다는 <br />정도는, 알겠는걸.<br />";
+            var scene_status25 = "0030000000|0020000000|060a000000|02000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name25 = "닛타 미나미";
+            var talk25 = "빨리 마법약을 사용해서, <br />이 땅에 녹색을 되찾아 주죠, 기사님!<br />";
+            var scene_status26 = "0010000000|0010000000|0000000000|02000000|0000000|0000000|cb0000|000000|000000|da0000|0|0";
+            var chara_name26 = "";
+            var talk26 = "역전마법약은, 기사의 손을 떠나 <br />황폐화된 사막의 대지에 쏟아지고…<br /><br />";
+            var scene_status27 = "0010000000|0010000000|0000000000|03000000|0000000|0000000|bf0000|000000|000000|000000|0|0";
+            var chara_name27 = "";
+            var talk27 = "눈부신 빛에 휩싸인 땅에는, <br />이윽고 새싹이 싹트고, 꽃이 피어나…<br />원래의 풍요로운 모습을 되찾았다!<br />";
+            var scene_status28 = "031d000000|031d000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name28 = "드워프";
+            var talk28 = "～～～…！！<br /><br /><br />";
+            var scene_status29 = "0030000000|0020000000|070d000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name29 = "미야모토 프레데리카";
+            var talk29 = "와아오!! 예쁘다 진짜~! <br />샹젤리제 거리에도 지지 않을 정도~!<br /><br />";
+            var scene_status30 = "0030000000|0020000000|080a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name30 = "미야모토 프레데리카";
+            var talk30 = "샹젤리제 거리, 봤는지 안봤는지 <br />기억은 잘 안나지만!<br /><br />";
+            var scene_status31 = "101a000000|0020000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name31 = "닛타 미나미";
+            var talk31 = "대단해…! 마물들도 약을 맞고 <br />모두 얌전해져서…해냈네, 시키쨩!<br />";
+            var scene_status32 = "1020000000|111f000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name32 = "이치노세 시키";
+            var talk32 = "헤? 아~응, 뭐 시키쨩은 연금술의 비밀을 <br />알고 싶었을 뿐이지만…<br />냐하하하.<br />";
+            var scene_status33 = "051a000000|1110000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name33 = "닛타 미나미";
+            var talk33 = "그래도 시키쨩의 발명이 <br />모두를 구했다는건, 사실이야!<br /><br />";
+            var scene_status34 = "0520000000|121f000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name34 = "이치노세 시키";
+            var talk34 = "에에~? 뭐어, 그로 인해 기뻐하는 아이가 <br />있다면, 그건 그거대로-.<br /><br />";
+            var scene_status35 = "0040000000|0020000000|090e000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name35 = "하야미 카나데";
+            var talk35 = "후후훗…아무튼, 이걸로 <br />하나는 마무리됐을까.<br /><br />";
+            var scene_status36 = "031d000000|031d000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name36 = "";
+            var talk36 = "풀이 우거진 토지에 기뻐하는 드워프들…<br />아이돌들도, 그 모습을 부드러운 눈빛으로 <br />바라보고 있었다.<br />";
+            var scene_status37 = "0030000000|0020000000|020f000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name37 = "하야미 카나데";
+            var talk37 = "기사님도 수고했어. <br />끝까지 함께해줬네. <br />진심으로 고마워.<br />";
+            var scene_status38 = "0030000000|0020000000|100a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name38 = "하야미 카나데";
+            var talk38 = "그렇지…키스해도 좋을 만큼, <br />당신에게는 감사하고 있어. 후후!<br /><br />";
+            var scene_status39 = "0030000000|0020000000|020f000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name39 = "하야미 카나데";
+            var talk39 = "…뭐, 우리들의 사정은 <br />그다지 정리되지 않은 것 같지만…<br />그건 그거고.<br />";
+            var scene_status40 = "0030000000|0020000000|110f000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name40 = "미야모토 프레데리카";
+            var talk40 = "으음 그렇지, <br />드워프군들의 문제는 해결됐지만…<br /><br />";
+            var scene_status41 = "0030000000|0020000000|110a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name41 = "미야모토 프레데리카";
+            var talk41 = "결국 우리들은, <br />앞으로 어떻게 해야 될까? <br />설마 계속 이대로-!?<br />";
+            var scene_status42 = "031d000000|032d000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name42 = "드워프";
+            var talk42 = "～～～…！！<br /><br /><br />";
+            var scene_status43 = "0030000000|0020000000|120e000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name43 = "하야미 카나데";
+            var talk43 = "어머? 프레쨩, 드워프들이 <br />뭔가 전하고 싶나봐.<br /><br />";
+            var scene_status44 = "0030000000|0020000000|080a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name44 = "미야모토 프레데리카";
+            var talk44 = "으응? 뭐야뭐야~? <br />후레쨩의 귀여움의 비밀을 <br />알고싶은걸까~!?<br />";
+            var scene_status45 = "031d000000|032d000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name45 = "드워프";
+            var talk45 = "～～～…！！<br /><br /><br />";
+            var scene_status46 = "021a000000|0010000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name46 = "미야모토 프레데리카";
+            var talk46 = "흠흠, 흐흐-음…그렇구나! <br />시키쨔-앙, 이 아이들은 <br />시키쨩에게 볼일이 있나봐!<br />";
+            var scene_status47 = "0220000000|131a000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name47 = "이치노세 시키";
+            var talk47 = "나한테? <br />…아, 혹시! 약속했던 <br />그거의 얘기일까~!?<br /><br />";
+            var scene_status48 = "051f000000|1310000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name48 = "닛타 미나미";
+            var talk48 = "그건…드워프들이 연구하던 <br />연금술에 대해서, 여러가지 <br />알려주겠다는 약속…이었지?<br />";
+            var scene_status49 = "0030000000|0020000000|130a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name49 = "미야모토 프레데리카";
+            var talk49 = "응! 우선은-, <br />이 아이들이 개발한 비술을 <br />보여준다고-. 으음, 뭐였더라?";
+            var scene_status50 = "0030000000|0020000000|030a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name50 = "미야모토 프레데리카";
+            var talk50 = "아, 그래! <br />대규모 공간 전이 마법, 이래~!<br /><br />";
+            var scene_status51 = "0030000000|0020000000|140f000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name51 = "이치노세 시키";
+            var talk51 = "…으응? <br />대규모 공간 전이 마법…? <br />설마….<br /><br />";
+            var scene_status52 = "031a000000|031a000000|0000000000|03000000|0000000|0000000|000000|ha0000|000000|000000|0|0";
+            var chara_name52 = "";
+            var talk52 = "답례로 비술을 보여주겠다, 며 <br />대규모 마법진을 그린 드워프들…<br /><br />";
+            var scene_status53 = "0010000000|0010000000|0000000000|03b00500|0000000|0000000|cc0000|000000|000000|000000|0|0";
+            var chara_name53 = "";
+            var talk53 = "그러자, 마법진이 돌연 강한 빛을 <br />발하기 시작했다!<br /><br />";
+            var scene_status54 = "141i000000|0010000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name54 = "닛타 미나미";
+            var talk54 = "꺅…!? <br />빠, 빨려 들어가…!<br /><br />";
+            var scene_status55 = "1420000000|151a000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name55 = "미야모토 프레데리카";
+            var talk55 = "와오! <br />이건, 혹시~…<br /><br />";
+            var scene_status56 = "0040000000|0020000000|140a000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name56 = "이치노세 시키";
+            var talk56 = "혹시가 맞을지도~? <br />어어…기사니-임! <br />너는 가까이 오지 않는게 좋아~!<br />";
+            var scene_status57 = "0030000000|0020000000|050d000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name57 = "이치노세 시키";
+            var talk57 = "아니면 같이 갈래? <br />너처럼 재미있는 냄새가 나는 <br />사람이라면 대환영이지만~, <br />냐하하하!<br />";
+            var scene_status58 = "071a000000|0020000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name58 = "미야모토 프레데리카";
+            var talk58 = "그치-, 좀 더 함께 있고 싶었지만…즐거웠어! <br />기사님, 러뷰-♪<br />";
+            var scene_status59 = "0720000000|101a000000|0000000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name59 = "닛타 미나미";
+            var talk59 = "아, 앗…! 기사님, 그, <br />신세 많이 졌어요…! <br />정말로 감사합니다!<br />";
+            var scene_status60 = "0040000000|0020000000|020f000000|03000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name60 = "하야미 카나데";
+            var talk60 = "만남이 갑작스러웠듯이 이별도 마찬가지…네. <br />이런 우리들도, 당신의 마음에 <br />조그마한 무언가를 새길 수 있었을까?<br />";
+            var scene_status61 = "0030000000|0020000000|090a000000|03000000|0000000|0000000|bc2800|000000|000000|000000|0|0";
+            var chara_name61 = "하야미 카나데";
+            var talk61 = "…그냥 해본 말이야. <br />그럼…바이바이, 기사님.<br /><br />";
+            var scene_status62 = "0010000000|0010000000|0000000000|03000000|0000000|0000000|bd0000|000000|000000|000000|0|0";
+            var chara_name62 = "";
+            var talk62 = "――――。<br />――――。<br />――――。<br />";
+            var scene_status63 = "161f000000|0010000000|0000000000|04000000|0000000|0000000|bf0000|000000|000000|000000|0|0";
+            var chara_name63 = "미야모토 프레데리카";
+            var talk63 = "으응~…으으으~음…<br />어라? 여기는~…드워프군들은~…?<br />";
+            var scene_status64 = "1620000000|131f000000|0000000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name64 = "이치노세 시키";
+            var talk64 = "오오-, 완벽히 원래 세계네-. <br />게다가…냐하하, 역시나-! <br />시간도 안 갔어.<br />";
+            var scene_status65 = "061f000000|1310000000|0000000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name65 = "하야미 카나데";
+            var talk65 = "…규정, 이라는 느낌이네. <br />꿈이었나? 어떻게? 같은 대화라도 <br />주고받는게 좋으려나?<br />";
+            var scene_status66 = "0030000000|0020000000|010a000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name66 = "닛타 미나미";
+            var talk66 = "다, 다들, 엄청난 경험을 했는데도 <br />침착하네…가 아니라! <br />아니, 이럴때가 아니지!<br />";
+            var scene_status67 = "0030000000|0020000000|010a000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name67 = "닛타 미나미";
+            var talk67 = "시간이 그대로라면, 우리는 <br />이제부터 게임 플레이를 해야해! <br />서두르지 않으면…!<br />";
+            var scene_status68 = "0030000000|0020000000|150a000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name68 = "이치노세 시키";
+            var talk68 = "에에~!? 또 일이야~!? <br />시키쨩은 이제 잘 시간인데냐~…<br />";
+            var scene_status69 = "021f000000|0020000000|0000000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name69 = "미야모토 프레데리카";
+            var talk69 = "시키쨩, 저쪽에서 열심히 했지~. <br />그래도, 앞으로 조금만 더 힘내자?<br />";
+            var scene_status70 = "0220000000|111f000000|0000000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name70 = "이치노세 시키";
+            var talk70 = "으으~…킁카킁카…하스하스…<br />후레쨩의 화려~한 냄새, <br />맡게 해주면 기운낼게~….<br />";
+            var scene_status71 = "071d000000|1110000000|0000000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name71 = "미야모토 프레데리카";
+            var talk71 = "꺄~간지러워♪ <br />시키쨩이 기운나면 그걸로 <br />됐지만~…꺄아아~! 아하하♪<br />";
+            var scene_status72 = "0030000000|0020000000|100a000000|04000000|0000000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name72 = "하야미 카나데";
+            var talk72 = "자자, 놀지 말고 가자. <br />우리는, 아이돌이니까…!<br /><br />";
+            var scene_status73 = "0010000000|0010000000|0000000000|04000000|01g0000|0000000|000000|000000|000000|000000|0|0";
+            var chara_name73 = "";
+            var talk73 = "";
+            var all_scene_cnt = "73";
+            var has_voice = "1";
+            var skip_lock = "";
+            var NEXT_SCENE_WAIT = "2000";
+            if (w_yoko != 0 || h_tate != 0) {
+                yoko = Math.round(w_yoko);
+                tate = Math.round(h_tate);
+                yoko *= base_scale;
+                tate *= base_scale;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="../../../../bahamut/js/cjs/libs/createjs-2015.11.26.min.js"></script>
+    <script type="text/javascript" src="../../../../bahamut/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../../../../bahamut/js/cjs/event/event_000_speak_7/event_000_speak_7_acc.js"></script>
+
+    <script type="text/javascript">
+        function hideURLbar() {
+            if (window.pageYOffset === 0)
+                window.scrollTo(0, 1);
+        }
+        window.onunload = function() {};
+        window.onload = function() {};
+
+        function appendUpperSpace(space) {
+            var imgEle = document.createElement("img");
+            imgEle.setAttribute("src", "http://ava-a.mbga.jp/i/dot.gif");
+            imgEle.setAttribute("height", space);
+            document.getElementById("upperSpace").appendChild(imgEle);
+        }
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation, key_flag;
+
+        function init() {
+
+            preparationExternalText();
+
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp = AdobeAn.getComposition("event_000_speak_7");
+            var lib = comp.getLibrary();
+            createjs.MotionGuidePlugin.install();
+            context = canvas.getContext("2d");
+            stage = new createjs.Stage(canvas);
+            if (!is_Android5OrClearTerminal()) {
+                stage.autoClear = false;
+            }
+            if (createjs.Touch.isSupported()) {
+                cjsEvent = 1;
+            } else {
+                cjsEvent = 0;
+            }
+            oldw = innerWidth;
+            oldh = innerHeight;
+            createjs.Ticker.setFPS(cjsFps);
+            canvas.style.visibility = "hidden";
+            setTimeout("MenuScroll()", 250);
+            auto_adjust_Size();
+            //var images = images||{};
+            var manifest = [{
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/arrow.png",
+                    id: "arrow",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_01.jpg",
+                    id: "bg_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_02.jpg",
+                    id: "bg_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_03.jpg",
+                    id: "bg_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_04.jpg",
+                    id: "bg_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_05.jpg",
+                    id: "bg_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_06.jpg",
+                    id: "bg_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_07.jpg",
+                    id: "bg_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_08.jpg",
+                    id: "bg_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_09.jpg",
+                    id: "bg_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_10.jpg",
+                    id: "bg_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bg_blur2.jpg",
+                    id: "bg_blur2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_1.png",
+                    id: "bom_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_2.png",
+                    id: "bom_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_3.png",
+                    id: "bom_3",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/bom_4.png",
+                    id: "bom_4",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_01.png",
+                    id: "ch_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_02.png",
+                    id: "ch_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_03.png",
+                    id: "ch_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_04.png",
+                    id: "ch_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_05.png",
+                    id: "ch_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_06.png",
+                    id: "ch_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_07.png",
+                    id: "ch_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_08.png",
+                    id: "ch_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_09.png",
+                    id: "ch_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_10.png",
+                    id: "ch_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_11.png",
+                    id: "ch_11",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_12.png",
+                    id: "ch_12",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_13.png",
+                    id: "ch_13",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_14.png",
+                    id: "ch_14",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_15.png",
+                    id: "ch_15",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_16.png",
+                    id: "ch_16",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_17.png",
+                    id: "ch_17",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_18.png",
+                    id: "ch_18",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_19.png",
+                    id: "ch_19",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_20.png",
+                    id: "ch_20",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_21.png",
+                    id: "ch_21",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_22.png",
+                    id: "ch_22",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_23.png",
+                    id: "ch_23",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_24.png",
+                    id: "ch_24",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_25.png",
+                    id: "ch_25",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_26.png",
+                    id: "ch_26",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_27.png",
+                    id: "ch_27",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_28.png",
+                    id: "ch_28",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_29.png",
+                    id: "ch_29",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_30.png",
+                    id: "ch_30",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_31.png",
+                    id: "ch_31",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_32.png",
+                    id: "ch_32",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_33.png",
+                    id: "ch_33",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_34.png",
+                    id: "ch_34",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_35.png",
+                    id: "ch_35",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_36.png",
+                    id: "ch_36",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_37.png",
+                    id: "ch_37",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_38.png",
+                    id: "ch_38",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_39.png",
+                    id: "ch_39",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_40.png",
+                    id: "ch_40",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_41.png",
+                    id: "ch_41",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_42.png",
+                    id: "ch_42",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_43.png",
+                    id: "ch_43",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_44.png",
+                    id: "ch_44",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_45.png",
+                    id: "ch_45",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_46.png",
+                    id: "ch_46",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_47.png",
+                    id: "ch_47",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_48.png",
+                    id: "ch_48",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_49.png",
+                    id: "ch_49",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_50.png",
+                    id: "ch_50",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_01.png",
+                    id: "ch_c_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_02.png",
+                    id: "ch_c_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_03.png",
+                    id: "ch_c_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_04.png",
+                    id: "ch_c_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_05.png",
+                    id: "ch_c_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_06.png",
+                    id: "ch_c_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_07.png",
+                    id: "ch_c_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_08.png",
+                    id: "ch_c_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_09.png",
+                    id: "ch_c_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_10.png",
+                    id: "ch_c_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_11.png",
+                    id: "ch_c_11",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_12.png",
+                    id: "ch_c_12",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_13.png",
+                    id: "ch_c_13",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_14.png",
+                    id: "ch_c_14",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_15.png",
+                    id: "ch_c_15",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_16.png",
+                    id: "ch_c_16",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_17.png",
+                    id: "ch_c_17",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_18.png",
+                    id: "ch_c_18",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_19.png",
+                    id: "ch_c_19",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ch_c_20.png",
+                    id: "ch_c_20",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/colorful.jpg",
+                    id: "colorful",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_1.png",
+                    id: "explosion_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_2.png",
+                    id: "explosion_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_thunder1.png",
+                    id: "explosion_thunder1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/explosion_thunder2.png",
+                    id: "explosion_thunder2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_1.png",
+                    id: "fire_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_2.png",
+                    id: "fire_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_3.png",
+                    id: "fire_3",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_energy.png",
+                    id: "fire_energy",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/fire_pillar.png",
+                    id: "fire_pillar",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/hit_1.png",
+                    id: "hit_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/hit_2.png",
+                    id: "hit_2",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ice_1.png",
+                    id: "ice_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_01.png",
+                    id: "image_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_02.png",
+                    id: "image_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_03.png",
+                    id: "image_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_04.png",
+                    id: "image_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_05.png",
+                    id: "image_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_06.png",
+                    id: "image_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_07.png",
+                    id: "image_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_08.png",
+                    id: "image_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_09.png",
+                    id: "image_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/image_10.png",
+                    id: "image_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/kira.png",
+                    id: "kira",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/magic_ring_1.png",
+                    id: "magic_ring_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/magic_square_1.png",
+                    id: "magic_square_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/shockwave_1.png",
+                    id: "shockwave_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/slash_1.png",
+                    id: "slash_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/spear_1.png",
+                    id: "spear_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1.png",
+                    id: "ui_btn1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_active.png",
+                    id: "ui_btn1_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_off.png",
+                    id: "ui_btn1_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_skip.png",
+                    id: "ui_btn1_skip",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_skip_active.png",
+                    id: "ui_btn1_skip_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_none.png",
+                    id: "ui_btn1_voice_none",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_off.png",
+                    id: "ui_btn1_voice_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_off_active.png",
+                    id: "ui_btn1_voice_off_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_on.png",
+                    id: "ui_btn1_voice_on",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn1_voice_on_active.png",
+                    id: "ui_btn1_voice_on_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_auto.png",
+                    id: "ui_btn2_auto",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_auto_active.png",
+                    id: "ui_btn2_auto_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_frame.png",
+                    id: "ui_btn2_frame",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_log.png",
+                    id: "ui_btn2_log",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_log_active.png",
+                    id: "ui_btn2_log_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_off.png",
+                    id: "ui_btn2_off",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_off_active.png",
+                    id: "ui_btn2_off_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_on.png",
+                    id: "ui_btn2_on",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_btn2_on_active.png",
+                    id: "ui_btn2_on_active",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_bubble.png",
+                    id: "ui_bubble",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_close.png",
+                    id: "ui_close",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/ui_header_frame.png",
+                    id: "ui_header_frame",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/js/cjs/event/event_000_speak_7/images/vortex_1.png",
+                    id: "vortex_1",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_4.jpg",
+                    id: "bg_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_1.jpg",
+                    id: "bg_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_10.jpg",
+                    id: "bg_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/image_quest_boss_1/0_9.jpg",
+                    id: "bg_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_l.png",
+                    id: "ch_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_1_l.png",
+                    id: "ch_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_05_1_l.png",
+                    id: "ch_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_1_l.png",
+                    id: "ch_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_5_l.png",
+                    id: "ch_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_l.png",
+                    id: "ch_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_2_l.png",
+                    id: "ch_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_4_l.png",
+                    id: "ch_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_l.png",
+                    id: "ch_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_6_l.png",
+                    id: "ch_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_3_l.png",
+                    id: "ch_11",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_l.png",
+                    id: "ch_12",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_4_l.png",
+                    id: "ch_13",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_8_l.png",
+                    id: "ch_14",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_6_l.png",
+                    id: "ch_15",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_7_l.png",
+                    id: "ch_16",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_8_c.png",
+                    id: "ch_c_01",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_1_c.png",
+                    id: "ch_c_02",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_2_c.png",
+                    id: "ch_c_03",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_4_c.png",
+                    id: "ch_c_04",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_2_c.png",
+                    id: "ch_c_05",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_04_5_c.png",
+                    id: "ch_c_06",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_6_c.png",
+                    id: "ch_c_07",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_5_c.png",
+                    id: "ch_c_08",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_2_c.png",
+                    id: "ch_c_09",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_7_c.png",
+                    id: "ch_c_10",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_7_c.png",
+                    id: "ch_c_11",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_01_4_c.png",
+                    id: "ch_c_12",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_02_1_c.png",
+                    id: "ch_c_13",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_3_c.png",
+                    id: "ch_c_14",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi/ui_event_319_navi_char_03_5_c.png",
+                    id: "ch_c_15",
+                    type: "image"
+                },
+                {
+                    src: "../../../../bahamut/image_sp/event/event_319/navi%2Fpicture%2Fev319_drama_picture_1.png",
+                    id: "image_01",
+                    type: "image"
+                },
+            ];
+
+            sounds = [{
+                    src: "voice_id1",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id2",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id3",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id4",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id5",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id6",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id7",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id8",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id9",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id10",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id11",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id12",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id13",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id14",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id15",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id16",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id17",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id18",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id19",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id20",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id21",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id22",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id23",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id24",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id25",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/se/speakse_548fd7d1de53ec24fec22fe2b438977a.mp4",
+                    id: "sound_voice_id26"
+                },
+                {
+                    src: "voice_id27",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id28",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id29",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id30",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id31",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id32",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id33",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id34",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id35",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id36",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id37",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id38",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id39",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id40",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id41",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id42",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id43",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id44",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id45",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id46",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id47",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id48",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id49",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id50",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id51",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/se/speakse_0b0f21cecab5059d625b25d178f7b633.mp4",
+                    id: "sound_voice_id52"
+                },
+                {
+                    src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/se/speakse_17adedc7d500bc539e6961295b2029a1.mp4",
+                    id: "sound_voice_id53"
+                },
+                {
+                    src: "voice_id54",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id55",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id56",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id57",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id58",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id59",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id60",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id61",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/se/speakse_af843a519a0dbdb160b33797c6e62474.mp4",
+                    id: "sound_voice_id62"
+                },
+                {
+                    src: "voice_id63",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id64",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id65",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id66",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id67",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id68",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id69",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id70",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id71",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id72",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "voice_id73",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+                {
+                    src: "NonVoiceFile",
+                    id: "NonVoiceFile"
+                },
+            ];
+            speakBGM = {};
+            speakBGM["sound_bgm_id2"] = {
+                src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/bgm/speakbgm_b312aef67ac65cc344e269421cb424b7.mp4"
+            };
+            speakBGM["sound_bgm_id4"] = {
+                src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/bgm/speakbgm_b4269f48d3fc6f58d30aaa8a5b1370c2.mp4"
+            };
+            speakBGM["sound_bgm_id27"] = {
+                src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/bgm/speakbgm_22d32621466c460c215efe5838ebff8b.mp4"
+            };
+            speakBGM["sound_bgm_id62"] = {
+                src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/bgm/speakbgm_e5e8921f90b0589d2435ba37ab156408.mp4"
+            };
+            speakBGM["sound_bgm_id63"] = {
+                src: "https://sp-bahamut-cdn.cygames.jp/bahamut/sound/bgm/speakbgm_b3442001b027d12f58ba4d7cb91f851c.mp4"
+            };
+
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function(evt) {
+                handleFileLoad(evt, comp)
+            });
+            loader.addEventListener("complete", function(evt) {
+                handleComplete(evt, comp)
+            });
+            loader.setMaxConnections(6);
+            loader.loadManifest(manifest);
+        }
+        $(function() {
+            $(window).resize(function() {
+                if (aas_f == 1) {
+                    if (oldw + oldh != innerWidth + innerHeight) {
+
+                        allhideText();
+                        window.scrollTo(0, 1);
+                        setTimeout("auto_adjust_Size()", 50);
+                        oldw = innerWidth;
+                        oldh = innerHeight;
+                    }
+                }
+            });
+        });
+
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && (evt.item.type == "image")) {
+                images[evt.item.id] = evt.result;
+            }
+        }
+
+        function MenuScroll() {
+            window.scrollTo(0, 1);
+        }
+
+        function handleComplete(evt, comp) {
+            if (!canvas.style.visibility) {
+                canvas.style.visibility = "hidden";
+            }
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+                    "images": [queue.getResult(ssMetadata[i].name)],
+                    "frames": ssMetadata[i].frames
+                })
+            }
+            exportRoot = new lib.event_000_speak_7_acc();
+            if (createjs.Touch.isSupported()) {
+
+                cjsEvent = 1;
+            } else {
+                cjsEvent = 0;
+            }
+            stage = new lib.Stage(canvas);
+            stage.enableMouseOver();
+            //Registers the "tick" event listener.
+            fnStartAnimation = function() {
+                //stage.update();
+                stage.addChild(exportRoot);
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+                stage.addEventListener("tick", handleTick)
+
+                function getProjectionMatrix(container, totalDepth) {
+                    var focalLength = 528.25;
+                    var projectionCenter = {
+                        x: lib.properties.width / 2,
+                        y: lib.properties.height / 2
+                    };
+                    var scale = (totalDepth + focalLength) / focalLength;
+                    var scaleMat = new createjs.Matrix2D;
+                    scaleMat.a = 1 / scale;
+                    scaleMat.d = 1 / scale;
+                    var projMat = new createjs.Matrix2D;
+                    projMat.tx = -projectionCenter.x;
+                    projMat.ty = -projectionCenter.y;
+                    projMat = projMat.prependMatrix(scaleMat);
+                    projMat.tx += projectionCenter.x;
+                    projMat.ty += projectionCenter.y;
+                    return projMat;
+                }
+
+                function handleTick(event) {
+                    var cameraInstance = exportRoot.___camera___instance;
+                    if (cameraInstance !== undefined && cameraInstance.pinToObject !== undefined) {
+                        cameraInstance.x = cameraInstance.pinToObject.x + cameraInstance.pinToObject.pinOffsetX;
+                        cameraInstance.y = cameraInstance.pinToObject.y + cameraInstance.pinToObject.pinOffsetY;
+                        if (cameraInstance.pinToObject.parent !== undefined && cameraInstance.pinToObject.parent.depth !== undefined)
+                            cameraInstance.depth = cameraInstance.pinToObject.parent.depth + cameraInstance.pinToObject.pinOffsetZ;
+                    }
+                    applyLayerZDepth(exportRoot);
+                }
+
+                function applyLayerZDepth(parent) {
+                    var cameraInstance = parent.___camera___instance;
+                    var focalLength = 528.25;
+                    var projectionCenter = {
+                        'x': 0,
+                        'y': 0
+                    };
+                    if (parent === exportRoot) {
+                        var stageCenter = {
+                            'x': lib.properties.width / 2,
+                            'y': lib.properties.height / 2
+                        };
+                        projectionCenter.x = stageCenter.x;
+                        projectionCenter.y = stageCenter.y;
+                    }
+                    for (child in parent.children) {
+                        var layerObj = parent.children[child];
+                        if (layerObj == cameraInstance)
+                            continue;
+                        applyLayerZDepth(layerObj, cameraInstance);
+                        if (layerObj.layerDepth === undefined)
+                            continue;
+                        if (layerObj.currentFrame != layerObj.parent.currentFrame) {
+                            layerObj.gotoAndPlay(layerObj.parent.currentFrame);
+                        }
+                        var matToApply = new createjs.Matrix2D;
+                        var cameraMat = new createjs.Matrix2D;
+                        var totalDepth = layerObj.layerDepth ? layerObj.layerDepth : 0;
+                        var cameraDepth = 0;
+                        if (cameraInstance && !layerObj.isAttachedToCamera) {
+                            var mat = cameraInstance.getMatrix();
+                            mat.tx -= projectionCenter.x;
+                            mat.ty -= projectionCenter.y;
+                            cameraMat = mat.invert();
+                            cameraMat.prependTransform(projectionCenter.x, projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                            cameraMat.appendTransform(-projectionCenter.x, -projectionCenter.y, 1, 1, 0, 0, 0, 0, 0);
+                            if (cameraInstance.depth)
+                                cameraDepth = cameraInstance.depth;
+                        }
+                        if (layerObj.depth) {
+                            totalDepth = layerObj.depth;
+                        }
+                        //Offset by camera depth
+                        totalDepth -= cameraDepth;
+                        if (totalDepth < -focalLength) {
+                            matToApply.a = 0;
+                            matToApply.d = 0;
+                        } else {
+                            if (layerObj.layerDepth) {
+                                var sizeLockedMat = getProjectionMatrix(parent, layerObj.layerDepth);
+                                if (sizeLockedMat) {
+                                    sizeLockedMat.invert();
+                                    matToApply.prependMatrix(sizeLockedMat);
+                                }
+                            }
+                            matToApply.prependMatrix(cameraMat);
+                            var projMat = getProjectionMatrix(parent, totalDepth);
+                            if (projMat) {
+                                matToApply.prependMatrix(projMat);
+                            }
+                        }
+                        layerObj.transformMatrix = matToApply;
+                    }
+                }
+                exportRoot.scaleX = exportRoot.scaleY = adjust_scale;
+                aas_f = 1;
+                document.getElementById("percentBar").style.display = 'none';
+            }
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+
+        function tick() {
+            if (!is_exception_Terminal()) {
+                context.clearRect(0, 0, canvas.width + 1, canvas.height + 1);
+            }
+            stage.update();
+        }
+
+        function auto_adjust_Size() {
+            var iw, w;
+            var ih, h;
+            cjsScale = 1;
+            inwc = innerWidth + innerHeight;
+            iw = innerWidth * cjsScale / base_scale;
+            ih = innerHeight * cjsScale / base_scale;
+            if (ih > (iw * (tate / yoko))) {
+                adjust_scale = (iw / yoko) * (base_scale);
+            } else {
+                adjust_scale = (ih / tate) * (base_scale);
+            }
+            w = Math.round(yoko * adjust_scale) / base_scale;
+            h = Math.round(tate * adjust_scale) / base_scale;
+            canvas.style.width = w + "px";
+            canvas.style.height = h + "px";
+            canvas.width = w;
+            canvas.height = h;
+            ww = (iw - w) / 2 * base_scale;
+            hh = (ih - h) / 2 * base_scale;
+
+            if (aas_f == 1) {
+                exportRoot.scaleX = exportRoot.scaleY = adjust_scale;
+
+                setTimeout("redrawText()", 50);
+            }
+            cvdv.style.marginLeft = ww + "px";
+            cvdv.style.marginTop = hh + "px";
+            canvas.setAttribute('style', 'zoom:' + base_scale);
+            if (canvas.style.visibility != "visible") {
+                canvas.style.visibility = "visible";
+            }
+            if (is_canvasFault()) {
+
+                if (canvas.width < 256 && canvas.height < 256) {
+
+                    if (ih < iw) {
+                        canvas.width = 257;
+                        canvas.style.width = canvas.width + "px";
+                    } else {
+                        canvas.height = 257;
+                        canvas.style.height = canvas.height + "px";
+                    }
+                }
+            }
+        }
+
+        function is_apple() {
+            var media = [
+                'iPhone',
+                'iPad'
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        }
+
+        function is_smartPhone() {
+            var media = [
+                'iPhone',
+                'iPad',
+                'dream', // Pre 1.5 Android
+                'CUPCAKE', // 1.5+ Android
+                'Android' // Android
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        }
+
+        function is_canvasFault() {
+
+            var media = [
+                'SonySO-04E',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        }
+
+        function is_Android5OrClearTerminal() {
+
+            var media = [
+                'Android 5.',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        }
+
+        function is_exception_Terminal() {
+            var media = [
+                'exception_Terminal',
+            ];
+            var pattern = new RegExp(media.join('|'), 'i');
+            return pattern.test(navigator.userAgent);
+        };
+        setCharVoiceMode = function() {
+            var local_storage = '';
+            if (charVoiceAdmitSwitch == 0) {
+                local_storage = 'ON';
+                charVoiceAdmitSwitch = 1;
+            } else {
+                local_storage = 'OFF';
+                charVoiceAdmitSwitch = 0;
+                createjs.Sound.stop();
+            }
+            window.localStorage.setItem("charVoiceAdmitSwitch", local_storage);
+        };
+        cjsFontSize = "10";
+        cjsFontFamily = " Hiragino Kaku Gothic Pro";
+    </script>
+    <script type="text/javascript">
+        var cjsBgmVolume = 1;
+        var cjsVoiceVolume = 1;
+        $(function() {
+            if (window.localStorage) {
+                if (localStorage.getItem("cjsBgmVolume")) {
+                    cjsBgmVolume = localStorage.getItem("cjsBgmVolume");
+                }
+                if (localStorage.getItem("cjsVoiceVolume")) {
+                    cjsVoiceVolume = localStorage.getItem("cjsVoiceVolume");
+                }
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0;
+        var bgm_flg = 0;
+    </script>
+    <script type='text/javascript' src='../../../../bahamut/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="../../../../css/base.css" />
+</head>
+
+<body id="cvdv" onload="init();" style="margin-left: auto; margin-right: auto;overflow:hidden;" ontouchmove="event.preventDefault()">
+    <p id="percentBar">Loading 0%</p>
+    <canvas id="canvas" style="margin-left: auto; margin-right: auto;visibility:hidden;"></canvas>
+    <br />
+    <p style="margin-bottom:1500px;"><img src="http://ava-a.mbga.jp/i/dot.gif" height="1" width="1" alt="dot" /></p><br />
+
+    <div id="mbga-pf-footer">
+        <script type="text/javascript" charset="UTF-8">
+            (function() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    var list = document.getElementsByClassName('mbga-pf-footer-li');
+                    var i = 0,
+                        l = list.length;
+                    for (; i < l; i++) {
+                        var elem = list[i];
+                        elem.addEventListener('touchstart', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/$/, ' mbga-pf-tapped');
+                        });
+                        elem.addEventListener('touchend', function(e) {
+                            e.currentTarget.className = e.currentTarget.className.replace(/ mbga-pf-tapped/, '');
+                        });
+                        elem.addEventListener('touchmove', function(e) {});
+                    }
+                });
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
