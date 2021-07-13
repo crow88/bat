@@ -32728,6 +32728,38 @@ a.check_close_btn.petit {
     z-index: 0;
 }
 
+.margin-auto-tb10 {
+    margin: 10px auto;
+}
+
 .padding-t2 {
     padding-top: 2px;
+}
+
+.padding-tb10 {
+    padding: 10px 0;
+}
+
+.margin-t10 {
+    margin-top: 10px;
+}
+
+.margin-auto-tb15 {
+    margin: 15px auto;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.margin-auto-t5 {
+    margin: 5px auto 0;
+}
+
+.margin-auto-t5 {
+    margin: 5px auto 0;
+}
+
+.width-100 {
+    width: 100%;
 }
