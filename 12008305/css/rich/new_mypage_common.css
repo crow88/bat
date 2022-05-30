@@ -17956,7 +17956,7 @@ body#battles .fukidashiWrap .fukidashi img.voiceIdol {
 }
 
 .idolProfile.deck .profile_content .profile_box.detail_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fstar_cool.png%3F1285858800) right bottom no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/star_cool.png) right bottom no-repeat;
     background-size: 100px
 }
 
@@ -17964,7 +17964,7 @@ body#battles .fukidashiWrap .fukidashi img.voiceIdol {
     margin-right: 5px;
     top: -2px;
     position: relative;
-    background-image: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800);
+    background-image: url(../../../12008305/image_sp/ui/gallery/cool.png);
     background-size: 50px;
     background-repeat: no-repeat;
     width: 50px;
@@ -21531,7 +21531,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .detail .star_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fstar_cool.png%3F1285858800) no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/star_cool.png) no-repeat;
     background-size: 85px 83px;
     background-position: right bottom;
     width: 140px;
@@ -21727,7 +21727,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_kana_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 0px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png) 0 0px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21736,7 +21736,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_age_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -17.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -17.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21745,7 +21745,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_height_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -35px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -35px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21754,7 +21754,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_weight_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -52.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -52.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21763,7 +21763,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_size_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -70px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -70px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21772,7 +21772,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_birthday_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -87.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -87.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21781,7 +21781,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_constellation_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -105px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -105px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21790,7 +21790,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_blood_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -122.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -122.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21799,7 +21799,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_arm_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -140px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -140px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21808,7 +21808,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_from_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -157.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -157.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21817,7 +21817,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_hobby_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -175px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -175px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
@@ -21826,7 +21826,7 @@ input[type="submit"].submit_reset_style {
 }
 
 .profile_area .profile_content .icon_cv_cool {
-    background: url(../../../12008305/image_sp/ui/gallery%2Fcool.png%3F1285858800) 0 -192.5px no-repeat;
+    background: url(../../../12008305/image_sp/ui/gallery/cool.png) 0 -192.5px no-repeat;
     background-size: 42px 210px;
     width: 42px;
     height: 17.5px;
